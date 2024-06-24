@@ -16,7 +16,8 @@ const Footer = () => {
                             <li><a href="/">Class 6th - 8th</a></li>
                             <li><a href="/">Class 9th - 12th</a></li>
                         </ul>
-                    </Col><Col md={4} className="footer-section">
+                    </Col>
+                    <Col md={4} className="footer-section">
 
                         <h5>Top Colleges</h5>
                         <ul className="list-unstyled">
@@ -118,9 +119,11 @@ const Footer = () => {
                                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                         <FontAwesomeIcon icon={faFacebook} className="icon" />
                                     </a>
+                                    {"\u00A0"}{"\u00A0"}
                                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                                         <FontAwesomeIcon icon={faTwitter} className="icon" />
                                     </a>
+                                    {"\u00A0"}{"\u00A0"}
                                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                                         <FontAwesomeIcon icon={faLinkedin} className="icon" />
                                     </a>

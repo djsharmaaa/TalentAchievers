@@ -1,0 +1,27 @@
+
+
+ .main-goal-section h3,
+.main-goal-section h5{
+    font-weight: 600;
+    color: #222222;
+}
+
+ .LeftGoal-section p{
+    color: #5F5F5F;
+ }
+
+
+
+ .RightGoal-section a{
+    text-decoration: none;
+    color: #707070;
+ }
+ .btn-join {
+    background-color: #470083;
+    border: none;
+    font-weight: 600;
+    height: 45px;
+    width: 112px;
+    border-radius: 10px;
+    
+ }

@@ -1,0 +1,69 @@
+/* .courses-section { 
+    padding: 80px 0; 
+    text-align: left;
+    
+}
+
+.courses-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.courses-section p {
+    font-size: 16px;
+    color: #745F86;
+}
+
+.courses-section .card {
+    margin-bottom: 20px; 
+} */
+
+
+.courses-section {
+    padding: 80px 0; 
+    text-align: left;
+  
+}
+
+.courses-section h3 {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.courses-section p {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+
+.cardbody{
+    background-color: #007bff;
+}
+
+.courses-section .card {
+    margin-bottom: 20px; /* Add spacing between cards */
+}
+
+.course-image {
+    width: 80px; /* Adjust as necessary */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between image and text */
+}
+
+.card-body .btn-link {
+    display: block; /* Make button links block elements */
+    text-align: left; /* Align text to the left */
+    padding: 0; /* Remove default button padding */
+    color: #007bff; /* Bootstrap link color */
+    text-decoration: none;
+}
+
+.card-body .btn-link:hover {
+    text-decoration: underline;
+}
+
+.card-body .btn-primary {
+    display: block; /* Make Explore button block element */
+    width: 100%; /* Full width */
+    margin-top: 1rem; /* Margin from previous buttons */
+}
