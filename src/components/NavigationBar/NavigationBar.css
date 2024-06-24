@@ -1,0 +1,57 @@
+.navbar-custom {
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+.container{
+    max-width: 1250px;
+}
+.navbar-brand img{
+    height: 40px; 
+    width: auto; 
+    margin-right: 10px; 
+}
+
+.navbar-custom .nav-link {
+    color: #ffffff; 
+    margin-right: 15px; 
+}
+
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #27202D; 
+    font-weight: 500;
+    font-size: 13px;
+   
+ 
+}
+
+.navbar-custom .navbar-nav{
+    margin-left: 80px;
+}
+.navbar-custom .nav-link:hover {
+    
+    background-color: lightgrey;
+
+}
+
+
+.navbar-custom .dropdown-item:hover {
+    color: white; /* Hover background color */
+}
+
+
+
+.navbar-custom .btn {
+    color: #470083!important;
+    font-weight: 600;
+    height: 45px;
+    width: 112px;
+}
+
+.navbar-custom .btn-join {
+   background-color: #E6E1EA;
+   border: none;
+   
+}
