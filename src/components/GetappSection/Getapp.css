@@ -1,0 +1,24 @@
+
+.Leftapp-section{
+    margin-top: 100px;
+}
+
+
+.Leftapp-section h2{
+    font-weight: 600;
+    color: #222222;
+}
+
+ .Leftapp-section p{
+    color: #707070;
+ }
+
+
+
+
+ .Rightapp-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+}

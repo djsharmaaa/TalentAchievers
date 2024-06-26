@@ -1,6 +1,7 @@
 .navbar-custom {
     background-color: #ffffff;
     padding: 5px;
+    box-shadow: 0px 1px 4px rgb(222, 219, 219);
 }
 
 .container{
@@ -31,27 +32,37 @@
     margin-left: 80px;
 }
 .navbar-custom .nav-link:hover {
-    
-    background-color: lightgrey;
+    color: #ffffff;
+    background-color: #470083;
 
 }
 
 
 .navbar-custom .dropdown-item:hover {
     color: white; /* Hover background color */
+
 }
 
 
 
-.navbar-custom .btn {
-    color: #470083!important;
+.btn-login {
+    color: #470083;
     font-weight: 600;
     height: 45px;
     width: 112px;
 }
 
-.navbar-custom .btn-join {
-   background-color: #E6E1EA;
-   border: none;
-   
+ .btn-login:hover{
+    background-color: #470083;
+    color: #ffffff;
+}
+
+.btn-join{  
+     background-color: #ffffff;
+     color: #470083;
+    border: none;
+    font-weight: 600;
+    height: 45px;
+    width: 112px;
+    border-radius: 10px;
 }

@@ -1,0 +1,55 @@
+.skill-development-section {
+    padding: 20px;
+  }
+  
+  .Skills-course-card {
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    border: none; 
+   
+  }
+  
+  .Skills-course-card img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .Skills-course-card .card-body {
+    max-height: 100%;
+    padding: 20px;
+  }
+  
+  .Skill-btn-outline {
+    color: black;
+    font-weight: 600;
+    border: 1px solid rgb(210, 207, 207);
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+  }
+  
+  .Skill-btn-outline:hover {
+    background-color: black;
+    color: #FFFFFF;
+    transform: translateY(-8px) scale(1.3);
+  }
+  
+  .Skill-explore-btn {
+    font-size: 16px;
+    color: black;
+    background-color: #E6E1EA;
+    border: none;
+    margin-top: 20px; /* Added margin */
+  }
+  
+  .carousel-item-padding-40-px {
+    padding: 10px 20px; 
+  }
+  
+  .previous-price {
+    color: #999999;
+    text-decoration: line-through;
+    margin-left: 5px;
+  }

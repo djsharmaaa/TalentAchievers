@@ -28,8 +28,8 @@ const NavigationBar = () => {
                  
                     </Nav>
                     <Nav>
-                        <Button variant="outline-none btn" className="me-2">Login</Button>
-                        <Button variant="primary btn-sm" className='btn-join'>Join for free</Button>
+                        <Button variant="outline-none btn" className="me-2 btn-login ">Login</Button>
+                        <Button variant="primary btn-sm" className="btn-join">Join for free</Button>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -10,7 +10,7 @@ const HeroSection = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://via.placeholder.com/1200x400.png?text=First+Slide"
+                            src="appstore-btn.png"
                             alt="First slide"
                         />
                         <Carousel.Caption>
@@ -21,7 +21,7 @@ const HeroSection = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://via.placeholder.com/1200x400.png?text=Second+Slide"
+                            src="playstore-btn.png"
                             alt="Second slide"
                         />
                         <Carousel.Caption>
@@ -32,7 +32,7 @@ const HeroSection = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://via.placeholder.com/1200x400.png?text=Third+Slide"
+                            src="appstore-btn.png"
                             alt="Third slide"
                         />
                         <Carousel.Caption>

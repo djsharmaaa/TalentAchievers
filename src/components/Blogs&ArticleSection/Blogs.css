@@ -1,0 +1,31 @@
+.Blogs-section {
+    padding: 20px;
+  }
+  
+  .Blogs-card {
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    border: none; 
+  }
+  
+  .Blogs-card img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .Blogs-card .card-body {
+    max-height: 100%;
+    padding: 20px;
+  }
+
+
+  
+.blog-link {
+    color: #470083;
+    text-align: left;
+    text-decoration: none;
+    font-weight: 500;
+
+}

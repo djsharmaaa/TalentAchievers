@@ -9,15 +9,17 @@ const CoursesSection = () => {
             <Row className=" mb-5">
                     <Col md={12} className="d-flex ">
                         <h2 className="mb-0  ">Explore Our Courses</h2>
-                        <p className="mb-0 ms-3 align-self-end">(Pre-12th)</p>
+                        {/* <p className="mb-0 ms-3 align-self-end ">(Pre-12th)</p> */}
+                        <h6  className="mb-1 ms-3 align-self-end"> (Pre-12th)</h6>
+                        
                     </Col>
                 </Row>
                 <Row>
                 <Col md={4}>
-                        <Card className="mb-4 h-100">
-                            <Card.Body className='cardbody d-flex flex-column'>
+                        <Card  className="mb-4 h-100 Course-card">
+                            <Card.Body className='cardbody d-flex flex-column '> 
                             <div className='d-flex align-items-start'>
-                                <img src="Card1.png" alt="Course" className="course-image mb-3"/>
+                                <img src="Card1.png" alt="Course" className="course-image mb-2"/>
                                 <Card.Title>
                                         <h3>  CLASS PRE - 2</h3>
                                         <p>
@@ -25,18 +27,18 @@ const CoursesSection = () => {
                                         </p>
                                     </Card.Title>
                                 </div>
-                                <div className="mt-3 mb-3">
-                                    <Button variant="secondary" className='me-4 mb-2' href="#">Worksheet</Button>
-                                    <Button variant="secondary" className='me-4 mb-2' href="#">Storybook</Button>
-                                    <Button variant="secondary" className='me-4 mb-2' href="#">Spoken English</Button>
-                                    <Button variant="secondary" className='me-4 mb-2' href="#">General Knowledge</Button>
+                                <div className="mt-3 mb-3 ">
+                                    <Button variant="secondary" className='me-4 mb-2 course-card-btn ' href="#">Worksheet</Button>
+                                    <Button variant="secondary" className='me-4 mb-2 course-card-btn' href="#">Storybook</Button>
+                                    <Button variant="secondary" className='me-4 mb-2 course-card-btn' href="#">Spoken English</Button>
+                                    <Button variant="secondary" className='me-4 mb-2 course-card-btn' href="#">General Knowledge</Button>
                                 </div>
-                                <Button variant="primary" href="#">Explore</Button>
+                                <Button variant="light" className='explore-btn align-self-start' href="#">Explore</Button>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col md={4}>
-                        <Card className="mb-4 h-100">
+                        <Card className="mb-4 h-100 Course-card">
                             <Card.Body  className='cardbody d-flex flex-column'>
                             <div className='d-flex align-items-start'>
                                 <img src="Card2.png" alt="Course" className="course-image mb-3"/>
@@ -46,16 +48,16 @@ const CoursesSection = () => {
                                     </Card.Title>
                                 </div>
                                 <div className="mt-3 mb-3">
-                                    <Button variant="secondary" className='me-4 mb-2' href="#">Study Material</Button>
-                                    <Button variant="secondary" className='me-4 mb-2' href="#">Practice</Button>
-                                    <Button variant="secondary" className='me-4 mb-2' href="#">Test Series</Button>
+                                    <Button variant="secondary" className='me-4 mb-2 course-card-btn' href="#">Study Material</Button>
+                                    <Button variant="secondary" className='me-4 mb-2 course-card-btn' href="#">Practice</Button>
+                                    <Button variant="secondary" className='me-4 mb-2 course-card-btn' href="#">Test Series</Button>
                                 </div>
-                                <Button variant="primary" href="#">Explore</Button>
+                                <Button variant="light"  className='explore-btn align-self-start' href="#">Explore</Button>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col md={4}>
-                        <Card className="mb-4 h-100">
+                        <Card className="mb-4 h-100 Course-card">
                             <Card.Body  className='cardbody d-flex flex-column'>
                                 <div className='d-flex align-items-start'>
                                 <img src="Card3.png" alt="Course" className="course-image mb-3"/>
@@ -65,12 +67,12 @@ const CoursesSection = () => {
                                     </Card.Title>
                                 </div>
                                 <div className="mt-3 mb-3">
-                                    <Button variant="secondary" className='me-4 mb-2' href="#">Study Material</Button>
-                                    <Button variant="secondary" className='me-4 mb-2' href="#">Practice</Button>
-                                    <Button variant="secondary" className='me-4 mb-2' href="#">Revision</Button>
-                                    <Button variant="secondary" className='me-4 mb-2' href="#">Test Series</Button>
+                                    <Button variant="secondary" className='me-4 mb-2 course-card-btn' href="#">Study Material</Button>
+                                    <Button variant="secondary" className='me-4 mb-2 course-card-btn' href="#">Practice</Button>
+                                    <Button variant="secondary" className='me-4 mb-2 course-card-btn' href="#">Revision</Button>
+                                    <Button variant="secondary" className='me-4 mb-2 course-card-btn' href="#">Test Series</Button>
                                 </div>
-                                <Button variant="primary"  href="#">Explore</Button>
+                                <Button variant="light"  className='explore-btn align-self-start' href="#">Explore</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -81,3 +83,4 @@ const CoursesSection = () => {
 };
 
 export default CoursesSection;
+

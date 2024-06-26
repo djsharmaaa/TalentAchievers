@@ -1,0 +1,59 @@
+.Educators-section {
+    padding: 20px 0;
+  }
+  
+  .teacher-card {
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px; 
+  }
+  
+  .teacher-card .card-body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px; 
+  }
+  
+  .teacher-image img {
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%;
+    margin-right: 15px; /* Reduce margin between image and text */
+  }
+  
+  .teacher-info {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .teacher-info h5 {
+    margin-bottom: 8px; 
+    font-size: 1.1rem; 
+    font-weight: bold;
+  }
+  
+  .teacher-info p {
+    margin-bottom: 4px; 
+    color: #666;
+    font-size: 0.8rem; 
+  }
+  
+  .view-profile-link {
+    color: #27202D;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 60px;
+  }
+  
+ 
+  .rating-stars {
+    color: #dcbe13;
+    font-size: 1rem;
+    margin-right: 5px;
+  }
+  
+
+  

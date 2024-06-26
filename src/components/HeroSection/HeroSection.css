@@ -1,0 +1,51 @@
+.hero-section {
+    background-color: #f8f9fa; /* Adjust the background color as needed */
+    padding: 50px 0;
+}
+
+.carousel-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; /* Adjust the height as needed */
+    background-color: #fff; /* Background color for the carousel item */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.carousel-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.student-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.student-details {
+    text-align: center;
+}
+
+.student-ranking {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.student-name {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.student-location {
+    font-size: 0.9rem;
+    color: #666;
+}
