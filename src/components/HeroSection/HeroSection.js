@@ -10,7 +10,7 @@ const HeroSection = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="appstore-btn.png"
+                            src="./images/Heroframe.png"
                             alt="First slide"
                         />
                         <Carousel.Caption>
@@ -21,7 +21,8 @@ const HeroSection = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="playstore-btn.png"
+                            src="./images/Heroframe.png"
+
                             alt="Second slide"
                         />
                         <Carousel.Caption>
@@ -32,7 +33,8 @@ const HeroSection = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="appstore-btn.png"
+                            src="./images/Heroframe.png"
+
                             alt="Third slide"
                         />
                         <Carousel.Caption>

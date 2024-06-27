@@ -2,7 +2,7 @@
 
 .Abroad-section h2{
     font-weight: 600;
-    color: #222222;
+    color: var(--accent-color);
 }
 
  .LeftAbroad-section p{
@@ -13,18 +13,22 @@
 
   .LeftAbroad-section ul li a{
     text-decoration: none;
-    color: #27202D;
+    color: var(--accent-color);
   }
 
  .Abroad-join {
-    background-color: #470083;
+    background-color: var(--primary-color);
     border: none;
     font-weight: 600;
-    height: 45px;
-    width: 112px;
     border-radius: 10px;
     
  }
+
+ 
+ .Abroad-join:hover {
+   background-color: var(--stroke-color);
+    color: var(--primary-color);
+}
 
 
  .RightAbroad-section img {

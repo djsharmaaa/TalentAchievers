@@ -16,7 +16,7 @@ const skillCoursesData = [
     rating: 4.5,
     price: '$200',
     previousPrice:'$300',
-    imgSrc: 'collegeimage.png',
+    imgSrc: '/images/course.png',
     level:'Advance'
   },
   {
@@ -27,7 +27,7 @@ const skillCoursesData = [
     rating: 4.7,
     price: '$250',
     previousPrice:'$300',
-    imgSrc: 'course.png',
+    imgSrc: '/images/course.png',
     level:'Intermediate'
 
   },
@@ -39,7 +39,7 @@ const skillCoursesData = [
     rating: 4.8,
     price: '$300',
     previousPrice:'$300',
-    imgSrc: 'course.png',
+    imgSrc: '/images/course.png',
     level:'advance'
 
   },
@@ -51,7 +51,7 @@ const skillCoursesData = [
     rating: 4.9,
     price: '$350',
     previousPrice:'$300',
-    imgSrc: 'course.png',
+    imgSrc: '/images/course.png',
     level:'Intermediate'
 
   },
@@ -63,7 +63,7 @@ const skillCoursesData = [
     rating: 4.6,
     price: '$220',
     previousPrice:'$300',
-    imgSrc: 'course.png',
+    imgSrc: '/images/course.png',
     level:'Advance'
 
   },
@@ -75,7 +75,7 @@ const skillCoursesData = [
     rating: 4.7,
     price: '$280',
     previousPrice:'$300',
-    imgSrc: 'course.png',
+    imgSrc: '/images/course.png',
     level:'Intermediate'
 
   },
@@ -178,7 +178,7 @@ const SkillDevelopment = () => {
 
         <Row>
           <Col md={12} className="d-flex justify-content-left mt-5 mb-5">
-            <Button variant="primary" className="Skill-explore-btn">Explore All Courses</Button>
+            <Button variant="primary" className="Skill-explore-btn px-4 py-2">Explore All Courses</Button>
           </Col>
         </Row>
       </Container>

@@ -1,14 +1,19 @@
 import React from "react";
+
+import { Routes, Route } from 'react-router-dom';
 import LandingPage from "./pages/LandingPage";
-
-function App() {
+import LoginPage  from "./pages/LoginPage";
+import "./global.css";
+const App = () => {
   return (
-    <div className="App">
 
-      <LandingPage/>
-     
-</div>
-       
+
+    <Routes>
+    <Route path="/" element={<LandingPage />} />
+    <Route path="/LoginPage" element={<LoginPage />} />
+  </Routes>
+      
+
     
   );
 }

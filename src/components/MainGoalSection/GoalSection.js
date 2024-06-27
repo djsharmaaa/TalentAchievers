@@ -16,11 +16,11 @@ const GoalSection = () => {
                     <Col md={5} className="RightGoal-section  ps-5">
                         <h5 className='mb-4'>Here's what you'll get</h5>
                         <ul className="list-unstyled ">
-                            <li className='mb-2'><img src="/Goal1.png" alt='Goals1'/><a href="/">Engage with expert educators</a></li>
-                            <li className='mb-2'><img src="/Goal2.png" alt='Goals2'/><a href="/">Get Career Guidence</a></li>
-                            <li className='mb-2'><img src="/Goal3.png" alt='Goals3'/><a href="/">Learn at your own pace</a></li>
-                            <li className='mb-2'><img src="/Goal4.png" alt='Goals4'/><a href="/">Enhance your skills and broaden your horizons</a></li>
-                            <li className='mb-2'><img src="/Goal5.png" alt='Goals5'/><a href="/">Explore your higher education options</a></li>
+                            <li className='mb-2'><img src="/images/Goal1.png" alt='Goals1'/><a href="/">Engage with expert educators</a></li>
+                            <li className='mb-2'><img src="/images/Goal2.png" alt='Goals2'/><a href="/">Get Career Guidence</a></li>
+                            <li className='mb-2'><img src="/images/Goal3.png" alt='Goals3'/><a href="/">Learn at your own pace</a></li>
+                            <li className='mb-2'><img src="/images/Goal4.png" alt='Goals4'/><a href="/">Enhance your skills and broaden your horizons</a></li>
+                            <li className='mb-2'><img src="/images/Goal5.png" alt='Goals5'/><a href="/">Explore your higher education options</a></li>
 
                         </ul>
                     </Col>

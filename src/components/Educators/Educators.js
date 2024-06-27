@@ -91,7 +91,7 @@ const EducatorssData = [
                       <p>Rating: {teacher.rating} {getRatingStars(teacher.rating)}</p>
                       <p>Experience: {teacher.experience}</p>
                       <hr/>
-                      <a href={teacher.profileLink} className="view-profile-link">View Profile <FontAwesomeIcon className='ms-2' icon={faCaretRight} /> </a>
+                      <a href={"./"} className="view-profile-link">View Profile <FontAwesomeIcon className='ms-2' icon={faCaretRight} /> </a>
                    </div>
                
                 </Card>

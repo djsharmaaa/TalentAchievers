@@ -8,18 +8,18 @@
 
 .courses-section h3 {
     font-size: 20px;
-    color: #D1BDFF;
+    color: var(--white-color);
     margin-bottom: 15px;
 }
 
 .courses-section p {
     font-size: 14px;
-    color: #FFFFFF;
+    color: var(--white-color);
 }
 
 .courses-section h6 {
     font-size: 14px;
-    color: #745F86;
+    color: var(--ac2-color);
     margin-bottom: 10px;
 
 }

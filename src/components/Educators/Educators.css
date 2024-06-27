@@ -37,12 +37,12 @@
   
   .teacher-info p {
     margin-bottom: 4px; 
-    color: #666;
+    color: #4E3F5A;
     font-size: 0.8rem; 
   }
   
   .view-profile-link {
-    color: #27202D;
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: 600;
     margin-left: 60px;
@@ -50,7 +50,7 @@
   
  
   .rating-stars {
-    color: #dcbe13;
+    color: var(--secondary-color);
     font-size: 1rem;
     margin-right: 5px;
   }

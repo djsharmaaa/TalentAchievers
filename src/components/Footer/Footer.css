@@ -1,16 +1,9 @@
 
-/* Footer.css
-
-
-*/
-
 
 
 .footer {
-    /* background-color:;  */
-    /* color: #707070; */
     padding: 40px 0; 
-    background-color: #fbfbff;
+    background: linear-gradient(to left, #eae7f0, #ffffff);
   
 }
 
@@ -24,15 +17,11 @@
 }
 
 .footer-section h5 {
-    color: #27202D;
+    color: var(--accent-color);
     font-size: 18px; 
 
 }
 
-
-.footer img{
-    margin-bottom: 1rem;
-}
 
 .footer-section1, .footer-section2, .footer-section3{
     margin-bottom: 10%;
@@ -73,15 +62,7 @@
     margin-bottom: 10px; 
 }
 
-.footer-section ul li a {
-    color: #707070;
-    text-decoration: none;
-    transition: color 0.3s ease; 
-}
 
-.footer-section ul li a:hover {
-    color: gray; 
-}
 
 .small {
     font-size: 12px; 
@@ -118,7 +99,7 @@
 }
 
 .text-center ul li a:hover {
-    color: blue;
+    color: var(--primary-color);
 }
 
 .footer-section1, .footer-section2, .footer-section3 {

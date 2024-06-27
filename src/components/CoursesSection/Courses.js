@@ -19,7 +19,7 @@ const CoursesSection = () => {
                         <Card  className="mb-4 h-100 Course-card">
                             <Card.Body className='cardbody d-flex flex-column '> 
                             <div className='d-flex align-items-start'>
-                                <img src="Card1.png" alt="Course" className="course-image mb-2"/>
+                                <img src="/images/CourseCard1.png" alt="Course" className="course-image mb-2"/>
                                 <Card.Title>
                                         <h3>  CLASS PRE - 2</h3>
                                         <p>
@@ -41,7 +41,7 @@ const CoursesSection = () => {
                         <Card className="mb-4 h-100 Course-card">
                             <Card.Body  className='cardbody d-flex flex-column'>
                             <div className='d-flex align-items-start'>
-                                <img src="Card2.png" alt="Course" className="course-image mb-3"/>
+                                <img src="/images/CourseCard2.png" alt="Course" className="course-image mb-3"/>
                                 <Card.Title>
                                         <h3>  CLASS 3 - 12</h3>
                                         <p> Nurturing High School Excellence State Boards</p>
@@ -60,7 +60,7 @@ const CoursesSection = () => {
                         <Card className="mb-4 h-100 Course-card">
                             <Card.Body  className='cardbody d-flex flex-column'>
                                 <div className='d-flex align-items-start'>
-                                <img src="Card3.png" alt="Course" className="course-image mb-3"/>
+                                <img src="/images/CourseCard3.png" alt="Course" className="course-image mb-3"/>
                                 <Card.Title>
                                         <h3>BUILD FOUNDATION</h3>
                                         <p>Building Stronger Foundations for Future Success (8 - 12)</p>

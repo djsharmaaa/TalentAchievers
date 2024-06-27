@@ -1,11 +1,11 @@
-.navbar-custom {
-    background-color: #ffffff;
-    padding: 5px;
+.navbar-container {
+    background-color: var(--white-color);
+    padding: 10px;
     box-shadow: 0px 1px 4px rgb(222, 219, 219);
 }
 
 .container{
-    max-width: 1250px;
+    max-width: 1400px;
 }
 .navbar-brand img{
     height: 40px; 
@@ -13,53 +13,55 @@
     margin-right: 10px; 
 }
 
-.navbar-custom .nav-link {
-    color: #ffffff; 
+.navbar-container .nav-link {
     margin-right: 15px; 
 }
 
 
-.navbar-custom .navbar-brand,
-.navbar-custom .nav-link {
-    color: #27202D; 
+
+.navbar-container .navbar-brand,
+.navbar-container .nav-link {
+    color: var(--accent-color); 
     font-weight: 500;
     font-size: 13px;
    
  
 }
 
-.navbar-custom .navbar-nav{
+.navbar-container .navbar-nav{
     margin-left: 80px;
 }
-.navbar-custom .nav-link:hover {
-    color: #ffffff;
-    background-color: #470083;
+.navbar-container .nav-link:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
 
 }
 
 
-.navbar-custom .dropdown-item:hover {
-    color: white; /* Hover background color */
-
+.navbar-container .dropdown-item:hover {
+    color: var(--white-color); 
 }
 
 
 
 .btn-login {
-    color: #470083;
+    color: var(--primary-color);
     font-weight: 600;
     height: 45px;
     width: 112px;
+    text-decoration: none;
 }
 
- .btn-login:hover{
-    background-color: #470083;
-    color: #ffffff;
+ .btn-login:hover,
+ .btn-join:hover
+ {
+    background-color: var(--primary-color);
+    color: var( --MainLight-color);
 }
 
 .btn-join{  
-     background-color: #ffffff;
-     color: #470083;
+     background-color: var(--stroke-color);
+     color: var(--primary-color);
     border: none;
     font-weight: 600;
     height: 45px;

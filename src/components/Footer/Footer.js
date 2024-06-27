@@ -2,14 +2,14 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'; // Import icons 
+import { faFacebook, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'; // Import icons 
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 const Footer = () => {
     return (
         <footer className="footer">
             <Container>
                 <Row>
-                    <Col md={4} className="footer-section">
+                    <Col sx={12} md={4} className="footer-section">
                         <h5>Kids Learning</h5>
                         <ul className="list-unstyled">
                             <li><a href="/">Class Pre - 5th</a></li>
@@ -17,7 +17,7 @@ const Footer = () => {
                             <li><a href="/">Class 9th - 12th</a></li>
                         </ul>
                     </Col>
-                    <Col md={4} className="footer-section">
+                    <Col sx={12} md={4} className="footer-section">
 
                         <h5>Top Colleges</h5>
                         <ul className="list-unstyled">
@@ -32,7 +32,7 @@ const Footer = () => {
                             <li><a href="/">MA</a></li>
                         </ul>
                     </Col>
-                    <Col md={4} className="footer-section">
+                    <Col sx={12} md={4} className="footer-section">
                         <h5>Top Exams</h5>
                         <ul className="list-unstyled">
                             <li><a href="/">CAT</a></li>
@@ -43,7 +43,7 @@ const Footer = () => {
                             <li><a href="/">UPSE</a></li>
                         </ul>
                     </Col>
-                    <Col md={4} className="footer-section">
+                    <Col sx={12} md={4} className="footer-section">
                         <h5>Skills</h5>
                         <ul className="list-unstyled">
                             <li><a href="/">Project Management</a></li>
@@ -57,7 +57,7 @@ const Footer = () => {
                             <li><a href="/">SQL</a></li>
                         </ul>
                     </Col>
-                    <Col md={4} className="footer-section">
+                    <Col sx={12} md={4} className="footer-section">
                         <h5>Study Abroad</h5>
                         <ul className="list-unstyled">
                             <li><a href="/">Canada</a></li>
@@ -71,10 +71,10 @@ const Footer = () => {
                 </Row>
             </Container>
             <Container>
-                <Row>
+                <Row className="footer-section1">
 
-                    <Col md={4} className="footer-section1">
-                        <img src="/Logo.png" alt='Talent Achievers' />
+                    <Col sx={12} md={4} >
+                        <img src="/images/CompanyLogo.png" alt='Talent Achievers' />
                         <p>Don't miss out on the opportunity to elevate your education and achieve your goals. Click below to enroll now and take the first step towards a brighter future with Talent Achievers</p>
                         <div className='footer-btn'>
                             <button><img src="/playstore-btn.png" alt='playstore' /></button>
@@ -86,7 +86,7 @@ const Footer = () => {
                             </p>
                         </a>
                     </Col>
-                    <Col md={4} className="footer-section2">
+                    <Col sx={12} md={4} className="footer-section2">
                         <h5>Company</h5>
                         <ul className="list-unstyled">
                             <li><a href="/about">About Us</a></li>
@@ -97,12 +97,12 @@ const Footer = () => {
                             <li><a href="/about">Terms & Conditions</a></li>
                         </ul>
                     </Col>
-                    <Col md={4} className="footer-section3">
-                        <h5>Company apps</h5>
+                    <Col sx={12} md={4} className="footer-section3">
+                        <h5 className='mb-3'>Company apps</h5>
                         <ul className="list-unstyled">
-                            <li><a href="/">Learner app</a></li>
-                            <li><a href="/about">Educator app</a></li>
-                            <li><a href="/services">Parent app</a></li>
+                            <li className=' mb-3'><img src="./images/footerapp1.png" alt='footer app' className='pe-3' /><a href="/">Learner app</a></li>
+                            <li className=' mb-3'><img src="./images/footerapp2.png" alt='footer app'className='pe-3' /><a href="/about">Educator app</a></li>
+                            <li className=' mb-3'><img src="./images/footerapp3.png" alt='footer app' className='pe-3'/><a href="/services">Parent app</a></li>
                         </ul>
                     </Col>
                 </Row>
@@ -110,21 +110,27 @@ const Footer = () => {
             </Container>
             <Container>
                 <Row>
-                    <Col md={12} className="text-center">
+                    <Col xs={12} md={12} className="text-center">
                         <p className="small">&copy; 2024 Your Company. All rights reserved.</p>
                         <Col md={4} className="text-center">
 
                             <ul className="list-unstyled">
                                 <li>
                                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                                        <FontAwesomeIcon icon={faFacebook} className="icon" />
+                                        <FontAwesomeIcon icon={faFacebook} className="icon pe-2" />
                                     </a>
-                                    {"\u00A0"}{"\u00A0"}
+                                   
                                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                                        <FontAwesomeIcon icon={faTwitter} className="icon" />
+                                        <FontAwesomeIcon icon={faTwitter} className="icon pe-2" />
                                     </a>
-                                    {"\u00A0"}{"\u00A0"}
+                                  
                                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon={faLinkedin} className="icon pe-2" />
+                                    </a>
+                                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon={faInstagram} className="icon pe-2" />
+                                    </a>
+                                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                                         <FontAwesomeIcon icon={faLinkedin} className="icon" />
                                     </a>
                                 </li>

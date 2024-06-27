@@ -3,8 +3,8 @@
     height: 100px;
 }
 .college-btn-light{
-    background-color: #FFFFFF;
-    color: black;
+    background-color: var(--white-color);
+    color: var(--accent-color);
     padding: 6px 20px;
     font-weight: 600;
     transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
@@ -13,15 +13,15 @@
 }
 
 .college-btn-light:hover{
-    background-color: #470083;
-    color: #FFFFFF;
+    background-color: var(--primary-color);
+    color: var(--white-color);
 
     transform: translateY(1px) scale(1.3);
 }
 
 
 .college-btn-outline{
-    color: black;
+    color: var(--accent-color);
     font-weight: 600;
     border: 1px solid rgb(210, 207, 207);
     transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
@@ -31,14 +31,14 @@
 
 .college-btn-outline:hover{
     background-color: black;
-    color: #FFFFFF;
+    color: var(--white-color);
     transform: translateY(-8px) scale(1.3);
 
 }
 
 
 .college-overlay{
-    color: #FFFFFF;
+    color: var(--white-color);
     margin-top: 96px;
     padding: 12px;
     height: 31%;
@@ -56,12 +56,20 @@
 
 
 .college-btn-link {
-    color: black;
+    color:var(--accent-color);
     text-align: left;
     padding-bottom: 10px;
     text-decoration: none;
     font-weight: 500;
     border-bottom: 0.5px solid #E6E1EA;
+    transition:  transform 0.3s ease;
+
+
+}
+
+.college-btn-link:hover {
+    color: var(--primary-color);
+    transform: translate(3px) scale(1.1);
 
 }
 
@@ -70,7 +78,14 @@
 }
 
 .College-btn{
-    color: black;
-    background-color: #E6E1EA;
+    font-weight: 600;
+    color: var(--accent-color);
+    background-color: var(--stroke-color);
     border: none;
+}
+
+.College-btn:hover{
+    
+    color: var(--white-color);
+    background-color: var(--primary-color);
 }

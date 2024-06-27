@@ -8,18 +8,18 @@
 
 .Competitive-section h3 {
     font-size: 20px;
-    color: #27202D;
+    color: var(--accent-color);
     margin-bottom: 15px;
 }
 
 .Competitive-section p {
     font-size: 14px;
-    color: #27202D;
+    color: var(--text-color);
 }
 
 .Competitive-section h6 {
     font-size: 14px;
-    color: #745F86;
+    color: var(--accent-color);
     margin-bottom: 10px;
 
 }
@@ -50,31 +50,34 @@
     background-color: transparent;
     border-radius: 18px;
     border: 1px solid #e1dfe4;
-    color: #4E3F5A;
+    color: var(--text-color);
     padding: 6px 14px;
 }
 
-.course-card-btn:hover{
-    color: #470083;
-    background-color: #FFFFFF;
-}
+
 
 .Competitive-btn {
     width: 120px; 
     margin-top: auto;
-    color: #470083;
+    color: var(--primary-color);
     font-weight: 600;
-    border: 1px solid #470083;
+    border: 1px solid var(--primary-color);
     background-color: transparent;
 }
 
 .Competitive-btn:hover{
-    color: #ffffff;
-    background-color: #470083;
+    color: var(--white-color);
+    background-color:var(--primary-color);
 }
 .Competitive-Explore-btn{
     color: black;
     background-color: #E6E1EA;
     border: none;
 
+}
+
+
+.Competitive-Explore-btn:hover{
+    color: var(--white-color);
+    background-color: var(--primary-color);
 }

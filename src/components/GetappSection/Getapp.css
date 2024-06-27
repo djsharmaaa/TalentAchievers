@@ -6,11 +6,11 @@
 
 .Leftapp-section h2{
     font-weight: 600;
-    color: #222222;
+    color: var(--accent-color);
 }
 
  .Leftapp-section p{
-    color: #707070;
+    color: var(--stroke-color);
  }
 
 

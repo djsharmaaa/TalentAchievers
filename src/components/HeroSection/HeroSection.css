@@ -1,5 +1,5 @@
 .hero-section {
-    background-color: #f8f9fa; /* Adjust the background color as needed */
+    /* background-color: #f8f9fa; Adjust the background color as needed */
     padding: 50px 0;
 }
 
@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     height: 400px; /* Adjust the height as needed */
-    background-color: #fff; /* Background color for the carousel item */
+    background-color: var(--white-color); /* Background color for the carousel item */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

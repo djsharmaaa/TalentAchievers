@@ -22,7 +22,7 @@ export const Studyabroad = () => {
 
                         </ul>
                         <div>
-                        <Button variant="primary btn-sm mt-4" cl className='Abroad-join mt-2'>Join for free</Button>
+                        <Button variant="primary btn-lg mt-4" cl className='Abroad-join mt-2'>Join for free</Button>
 
                         </div>
                     </Col>

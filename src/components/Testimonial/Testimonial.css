@@ -4,7 +4,7 @@
   }
   
   .testimonial-card {
-    width: 80%;
+    width: 78%;
     border: none;
     transition: transform 0.3s ease;
     margin: 0 10px; 
@@ -30,7 +30,7 @@
     margin-right: 20px; 
   }
   .testimonial-content h5 {
-    color: #27202D;
+    color: var(--accent-color);
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -38,10 +38,7 @@
 
   .testimonial-content p {
     font-size: 14px;
-    color: #4E3F5A;
+    color: var(--ac2-color);
   }
 
 
-  /* .react-multi-carousel-arrow {
-    display: none !important;
-  } */

@@ -17,7 +17,7 @@ const Competitive = () => {
                         <Card  className="mb-4 h-100 Competitive-card">
                             <Card.Body className='cardbody d-flex flex-column '> 
                             <div className='d-flex align-items-start'>
-                                <img src="Card1.png" alt="Competitive" className="course-image mb-2"/>
+                                <img src="/images/ExamCard1.png" alt="Competitive" className="course-image mb-2"/>
                                 <Card.Title>
                                         <h3> NEET </h3>
                                         <p>
@@ -38,7 +38,7 @@ const Competitive = () => {
                         <Card className="mb-4 h-100 Competitive-card">
                             <Card.Body  className='cardbody d-flex flex-column'>
                             <div className='d-flex align-items-start'>
-                                <img src="Card2.png" alt="Competitive" className="course-image mb-3"/>
+                                <img src="/images/ExamCard2.png" alt="Competitive" className="course-image mb-3"/>
                                 <Card.Title>
                                         <h3>  CLASS 3 - 12</h3>
                                         <p> Nurturing High School Excellence State Boards</p>
@@ -57,7 +57,7 @@ const Competitive = () => {
                         <Card className="mb-4 h-100 Competitive-card">
                             <Card.Body  className='cardbody d-flex flex-column'>
                                 <div className='d-flex align-items-start'>
-                                <img src="Card3.png" alt="Competitive" className="course-image mb-3"/>
+                                <img src="/images/ExamCard3.png" alt="Competitive" className="course-image mb-3"/>
                                 <Card.Title>
                                         <h3>BUILD FOUNDATION</h3>
                                         <p>Building Stronger Foundations for Future Success (8 - 12)</p>
@@ -76,7 +76,7 @@ const Competitive = () => {
                 </Row>
                 <Row>
             <Col md={12} className="d-flex justify-content-left mt-5 ">
-                <Button variant="primary" className="Competitive-Explore-btn mb-5">Explore All Categories</Button>
+                <Button variant="primary" className="Competitive-Explore-btn mb-5 px-4 py-2">Explore All Categories</Button>
                 
             </Col>
         </Row>

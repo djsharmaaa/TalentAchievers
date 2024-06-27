@@ -3,7 +3,7 @@
  .main-goal-section h3,
 .main-goal-section h5{
     font-weight: 600;
-    color: #222222;
+    color: var(--accent-color);
 }
 
  .LeftGoal-section p{
@@ -14,10 +14,10 @@
 
  .RightGoal-section a{
     text-decoration: none;
-    color: #707070;
+    color: #5F5F5F;
  }
  .Goal-join {
-    background-color: #470083;
+    background-color: var(--primary-color);
     border: none;
     font-weight: 600;
     height: 45px;
@@ -25,3 +25,8 @@
     border-radius: 10px;
     
  }
+ .Goal-join:hover
+ {
+   color: var(--primary-color);
+    background-color: var( --MainLight-color);
+}

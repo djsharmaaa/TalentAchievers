@@ -43,7 +43,7 @@ const blogsData = [
     title: 'How much does it cost to create an app in 2023? A detailed guide',
     Date: 'Nov,12,2013',
     Message: '1',
-    imgSrc: './images/blog.png',
+    imgSrc: './images/blog1.png',
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const blogsData = [
     title: 'How much does it cost to create an app in 2023? A detailed guide',
     Date: 'Nov,12,2013',
     Message: '1',
-    imgSrc: './images/blog.png',
+    imgSrc: './images/blog2.png',
   },
   {
     id:6,
@@ -59,7 +59,7 @@ const blogsData = [
     title: 'How much does it cost to create an app in 2023? A detailed guide',
     Date: 'Nov,12,2013',
     Message: '1',
-    imgSrc: './images/blog.png',
+    imgSrc: './images/blog3.png',
   },
 
 ];
@@ -94,9 +94,7 @@ const Blogs = () => {
         </Row>
     
         <Row className='position-relative'>
-        {/* <Button variant="link" className="carousel-control-prev" aria-label="Previous">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          </Button> */}
+      
           <Col md={12}>
             <Carousel
               responsive={responsive}
@@ -136,7 +134,7 @@ const Blogs = () => {
 
         <Row>
           <Col md={12} className="d-flex justify-content-left  mb-5">
-            <Button variant="primary" className="Skill-explore-btn">View All</Button>
+            <Button variant="primary btn-lg" className="Skill-explore-btn">View All</Button>
           </Col>
         </Row>
       </Container>
