@@ -16,7 +16,7 @@ const NavigationBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} exact to="/">Academic</Nav.Link>
+                        <Nav.Link as={Link} exact to="/Academics">Academic</Nav.Link>
                         <Nav.Link as={Link} exact to="/">College Search</Nav.Link>
                         <Nav.Link  as={Link} exact to="/">Study Abroad</Nav.Link>
                         <NavDropdown title="Skill Development" id="basic-nav-dropdown">

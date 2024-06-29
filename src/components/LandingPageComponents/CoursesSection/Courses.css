@@ -24,14 +24,12 @@
 
 }
 
-
-
-
 .Course-card{
     border: 1px solid #ddd;
     border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background: linear-gradient(115deg, #470083, #810CE5);
+    /* background: var(--linear-gradient); */
 }
 
 .cardbody{
@@ -53,24 +51,24 @@
 .course-card-btn {
     background-color: transparent;
     border-radius: 18px;
-    border: 1px solid #D1BDFF;
-    color: #D1BDFF;
+    border: 1px solid var(--white-color);
+    color: var(--white-color);
     padding: 6px 14px;
 }
 
 .course-card-btn:hover{
-    color: #470083;
-    background-color: #FFFFFF;
+    color: var(--primary-color);
+    background-color: var(--white-color);
 }
 
 .explore-btn {
     width: 120px; 
     margin-top: auto;
-    color: #470083;
+    color: var(--primary-color);
     font-weight: 600;
 }
 
 .explore-btn:hover{
-    color: #ffffff;
-    background-color: #470083;
+    color: var(--white-color);
+    background-color: var(--primary-color);
 }

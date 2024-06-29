@@ -16,8 +16,8 @@ const CoursesSection = () => {
                 </Row>
                 <Row>
                 <Col md={4}>
-                        <Card  className="mb-4 h-100 Course-card">
-                            <Card.Body className='cardbody d-flex flex-column '> 
+                        <Card  className="mb-4 h-100  p-2 Course-card">
+                            <Card.Body className='cardbody d-flex flex-column mb-2'> 
                             <div className='d-flex align-items-start'>
                                 <img src="/images/CourseCard1.png" alt="Course" className="course-image mb-2"/>
                                 <Card.Title>
@@ -38,7 +38,7 @@ const CoursesSection = () => {
                         </Card>
                     </Col>
                     <Col md={4}>
-                        <Card className="mb-4 h-100 Course-card">
+                        <Card className="mb-4 h-100 p-2  Course-card">
                             <Card.Body  className='cardbody d-flex flex-column'>
                             <div className='d-flex align-items-start'>
                                 <img src="/images/CourseCard2.png" alt="Course" className="course-image mb-3"/>
@@ -57,7 +57,7 @@ const CoursesSection = () => {
                         </Card>
                     </Col>
                     <Col md={4}>
-                        <Card className="mb-4 h-100 Course-card">
+                        <Card className="mb-4 h-100 p-2  Course-card">
                             <Card.Body  className='cardbody d-flex flex-column'>
                                 <div className='d-flex align-items-start'>
                                 <img src="/images/CourseCard3.png" alt="Course" className="course-image mb-3"/>

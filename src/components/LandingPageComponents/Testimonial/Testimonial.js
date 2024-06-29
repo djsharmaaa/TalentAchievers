@@ -8,28 +8,28 @@ import './Testimonial.css';
 const testimonialData = [
   {
     id: 1,
-    name: '(Kavya)',
+    name: 'Kavya',
     Location: 'India',
     imageSrc: './images/testimonial1.png',
     testimonial: '"With their comprehensive materials and supportive teachers, I felt confident and prepared. Thanks to them, I achieved excellent results and got into my dream college"',
   },
   {
     id: 2,
-    name: "(Rayan's Mother)",
+    name: "Rayan's Mother",
     Location: 'Delhi, India',
     imageSrc: './images/testimonial2.png',
     testimonial: '"With their comprehensive materials and supportive teachers, I felt confident and prepared. Thanks to them, I achieved excellent results and got into my dream college"',
 },
   {
     id: 3,
-    name: '(Komal)',
+    name: 'Komal',
     Location: 'Mumbai, India',
     imageSrc: './images/testimonial1.png',
     testimonial: '"With their comprehensive materials and supportive teachers, I felt confident and prepared. Thanks to them, I achieved excellent results and got into my dream college"',
 },
   {
     id: 4,
-    name: '(Shreya)',
+    name: 'Shreya',
     Location: 'UP, India',
     imageSrc: './images/testimonial2.png',
     testimonial: '"With their comprehensive materials and supportive teachers, I felt confident and prepared. Thanks to them, I achieved excellent results and got into my dream college"',
@@ -59,30 +59,30 @@ const responsive = {
 
 const Testimonial = () => {
   return (
-    <section className="testimonial-section">
+    <section className="testimonial-section ">
       <Container>
-        <Row className="mb-5">
+        <Row className="my-5 text-center">
           <Col md={12}>
-            <h2 className="mb-0 ">Testimonials</h2>
+            <h2 className="pt-5 ">Testimonials</h2>
           </Col>
         </Row>
 
-        <Row>
-          <Col md={12}>
+        <Row className='pb-5'>
+          <Col md={12} className='my-2 '>
             <Carousel
               responsive={responsive}
               infinite={true}
-              autoPlay={true}
+              autoPlay={false}
               autoPlaySpeed={4000}
               keyBoardControl={true}
               showDots={false}
               containerClass="carousel-container"
               itemClass="testimonial-card"
-              removeArrowOnDeviceType={['superLargeDesktop', 'desktop', 'tablet', 'mobile']}
+              // removeArrowOnDeviceType={['superLargeDesktop', 'desktop', 'tablet', 'mobile']}
               slidesToSlide={2}
             >
               {testimonialData.map((testimonial) => (
-                <Card key={testimonial.id} className="testimonial-card">
+                <Card key={testimonial.id} className="testimonial-card p-3">
                   <Card.Body className="d-flex align-items-center">
                     <div className="testimonial-image">
                       <img src={testimonial.imageSrc} alt={testimonial.name} />

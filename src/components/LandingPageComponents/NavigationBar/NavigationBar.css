@@ -3,10 +3,10 @@
     padding: 10px;
     box-shadow: 0px 1px 4px rgb(222, 219, 219);
 }
-
+ 
 .container{
-    max-width: 1400px;
-}
+    max-width: 1250px;
+} 
 .navbar-brand img{
     height: 40px; 
     width: auto; 
