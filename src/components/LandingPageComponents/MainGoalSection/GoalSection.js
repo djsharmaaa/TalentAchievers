@@ -10,7 +10,7 @@ const GoalSection = () => {
                 <Row>
                     <Col md={6} className="LeftGoal-section "> <h3 className='mb-4 mt-5'>Our Main Goal</h3>
                         <p>At Talent Achievers, our main goal is to empower students like you to achieve academic excellence, personal growth, and career success. We're dedicated to providing you with the tools and resources you need to thrive in your learning journey.</p>
-                        <Button variant="primary btn-sm" cl className='Goal-join mt-2'>Join for free</Button>
+                        <Button variant="primary btn-sm"  className='Goal-join mt-2'>Join for free</Button>
 
                     </Col>
                     <Col md={5} className="RightGoal-section  ps-5">

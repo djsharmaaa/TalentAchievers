@@ -1,0 +1,31 @@
+.study-material-btn-section {
+    padding: 20px;
+  }
+  
+  .study-material-btn-section .btn-group {
+    width: 100%;
+    display: flex;
+  }
+  
+  .study-material-btn-section .btn-group .btn {
+    color: var(--accent-color);
+    border: 1px solid var(--stroke-color);
+  }
+  
+  .study-material-btn-section .btn-group .btn:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+  }
+  
+  .dropdown-hover .dropdown-menu {
+    display: none;
+  }
+  
+  .dropdown-hover:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+  

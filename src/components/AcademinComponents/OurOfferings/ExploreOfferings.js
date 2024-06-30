@@ -20,7 +20,7 @@ const ExploreOfferings = () => {
   const classResources = {
     'Class 12': [
       { name: 'NCERT', logo: './images/Explore.png', link: '#' },
-      { name: 'Previous Year Question Paper', logo: './images/Explore.png', link: '#' },
+      { name: 'Previous Year', title:' Question Paper', logo: './images/Explore.png', link: '#' },
       { name: 'Sample Question Papers', logo: '../images/Explore1.png', link: '#' },
       { name: 'Important Question papers', logo: './images/Explore1.png', link: '#' },
       { name: 'Revise', logo: './images/Explore.png', link: '#' },
@@ -90,10 +90,10 @@ const ExploreOfferings = () => {
   };
 
   return (
-    <section className="offerings-section">
+    <section className="offerings-section my-5">
       <Container>
         <h2>Explore all our offerings</h2>
-        <Row className="offerings-buttons">
+        <Row className="offerings-buttons my-5">
           {classes.map((className) => (
 
             <Col key={className} xs={6} lg={1}>
@@ -110,22 +110,23 @@ const ExploreOfferings = () => {
           ))}
         </Row>
 
-        {selectedClass && (
-          <Row className="study-material">
+        
+          <Row className="study-material ">
             <Col md={12}>
-              <h3>Study Materials</h3>
+              <h3 className='mb-4'>Study Materials</h3>
               <div className="resource-links">
                 {classResources[selectedClass].map((resource) => (
-                  <a key={resource.name} href={resource.link} target="_blank" rel="">
+                  <a key={resource.name} href={resource.link} target="_blank" rel="noreferrer">
                     <img src={resource.logo} alt={resource.name} title={resource.name} />
-                    <p>{resource.name}</p>
+                    <p>{resource.name} </p>
+                    <p>{resource.title}</p>
 
                   </a>
                 ))}
               </div>
             </Col>
           </Row>
-        )}
+      
       </Container>
     </section>
   );

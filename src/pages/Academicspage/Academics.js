@@ -7,6 +7,7 @@ import CoursesSection from '../../components/LandingPageComponents/CoursesSectio
 import BookDemo from '../../components/AcademinComponents/BookDemo/BookDemo';
 import BestEducators from '../../components/AcademinComponents/BestEducators/BestEducators';
 import ExploreOfferings from '../../components/AcademinComponents/OurOfferings/ExploreOfferings';
+import Studymaterialbtn from '../../components/AcademinComponents/Studymaterialbtn/Studymaterialbtn';
 
 const Academics = () => {
   return (
@@ -14,6 +15,7 @@ const Academics = () => {
 
 
         <NavigationBar/>
+        <Studymaterialbtn/>
         <HeroSection/>
         <CoursesSection/>
         <ExploreOfferings/>

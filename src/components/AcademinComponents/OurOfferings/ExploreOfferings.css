@@ -1,23 +1,22 @@
 .offerings-section {
-    margin: 3rem 0;
+    
   }
   
   .offerings-buttons {
-    margin: 1rem 0;
-
+    gap: 20px;
+ 
   }
   
   .offerings-buttons button{
     width: 100%;
+    font-size: 0.8rem;
   }
-  .study-material {
-    margin-top: 2rem;
-  }
-  
+
+
   .resource-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 3rem;
   }
   
   .resource-links a {
@@ -32,6 +31,7 @@
 
   .resource-links p{
     font-size: 0.8rem;
+    margin: 0;
   }
   
   .resource-links img {
@@ -43,6 +43,6 @@
   .button-active {
     background-color: var(--accent-color); 
     color: var(--white-color);
-    border: none; 
+    /* border: none;  */
   }
   
