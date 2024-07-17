@@ -1,0 +1,66 @@
+.skill-development-section {
+    padding: 20px;
+  }
+  
+  .Skills-course-card {
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    border: none; 
+   
+  }
+  
+  .Skills-course-card img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .Skills-course-card .card-body {
+    max-height: 100%;
+    padding: 20px;
+  }
+  
+  .Skill-btn-outline {
+    color: black;
+    font-weight: 600;
+    border: 1px solid rgb(210, 207, 207);
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+  }
+  
+  .Skill-btn-outline:hover {
+    background-color: black;
+    color: var(--white-color);
+  }
+  
+
+  
+  .carousel-item-padding-40-px {
+    padding: 10px 20px; 
+  }
+  
+  .previous-price {
+    color: var(--ac2-color);
+    text-decoration: line-through;
+    margin-left: 5px;
+  }
+
+
+  .Skill-explore-btn {
+    font-size: 16px;
+    color: var(--accent-color);
+    background-color: var(--stroke-color);
+    border: none;
+    margin-top: 20px;
+  }
+
+  .Skill-explore-btn:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+  
+  }
+
+  .react-multi-carousel-list {
+    position: static !important;
+  }

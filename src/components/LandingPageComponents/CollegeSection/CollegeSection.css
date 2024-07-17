@@ -1,0 +1,85 @@
+
+.college-card{
+    height: 100px;
+}
+.college-btn-light{
+    background-color: var(--white-color);
+    color: var(--accent-color);
+    padding: 6px 20px;
+    font-weight: 600;
+
+
+}
+
+.college-btn-light:hover{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+
+}
+
+
+.college-btn-outline{
+    color: var(--accent-color);
+    font-weight: 600;
+    border: 1px solid rgb(210, 207, 207);
+
+}
+
+
+.college-btn-outline:hover{
+    background-color: black;
+    color: var(--white-color);
+
+}
+
+
+.college-overlay{
+    color: var(--white-color);
+    margin-top: 96px;
+    padding: 12px;
+    height: 31%;
+}
+
+
+.college-overlay h3{
+   margin-top: 8px;
+    font-size: 20px;
+}
+.college-overlay p{
+    font-size: 10px;
+}
+
+
+
+.college-btn-link {
+    color:var(--accent-color);
+    text-align: left;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 0.5px solid #E6E1EA;
+
+
+}
+
+.college-btn-link:hover {
+    color: var(--primary-color);
+
+}
+
+.college-card-body{
+    height: 100%;
+}
+
+.College-btn{
+    font-weight: 600;
+    color: var(--accent-color);
+    background-color: var(--stroke-color);
+    border: none;
+}
+
+.College-btn:hover{
+    
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}

@@ -1,0 +1,35 @@
+import React from 'react'
+import NavigationBar from '../../components/LandingPageComponents/NavigationBar/NavigationBar'
+import HeroSection from '../../components/LandingPageComponents/HeroSection/HeroSection'
+import Testimonial from '../../components/LandingPageComponents/Testimonial/Testimonial';
+import Footer from '../../components/LandingPageComponents/Footer/Footer';
+import CoursesSection from '../../components/LandingPageComponents/CoursesSection/Courses';
+import BookDemo from '../../components/AcademinComponents/BookDemo/BookDemo';
+import BestEducators from '../../components/AcademinComponents/BestEducators/BestEducators';
+import ExploreOfferings from '../../components/AcademinComponents/OurOfferings/ExploreOfferings';
+import Studymaterialbtn from '../../components/AcademinComponents/Studymaterialbtn/Studymaterialbtn';
+import Getapp from '../../components/LandingPageComponents/GetappSection/Getapp';
+
+const Academics = () => {
+  return (
+       <div>
+
+
+        <NavigationBar/>
+        <Studymaterialbtn/>
+        <HeroSection/>
+        <CoursesSection/>
+        <ExploreOfferings/>
+        <BestEducators/>
+        <BookDemo/>
+        <Testimonial/>
+        <Getapp/>
+        <Footer/>
+       
+       </div>
+
+
+  );
+;}
+
+export default Academics;

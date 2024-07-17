@@ -1,0 +1,16 @@
+
+:root {
+    --white-color:#FFFFFF;
+    --primary-color: #470083;
+    --secondary-color: #ED9811;
+    --MainLight-color: #F8F1FF;
+    --accent-color: #27202D;
+    --text-color: #4E3F5A;
+    --ac2-color: #745F86;
+    --success-color: #01A91B;
+    --stroke-color: #E6E1EA;
+    --linear-gradient: linear-gradient(to bottom, #4937EC, #6E5FFA);
+    --linear1-gradient: linear-gradient(to right, #E9DFFF, #D1BDFF);
+    --gra-gradiebt:linear-gradient(circle, #470083, #1E0038, #10001D);
+
+}
