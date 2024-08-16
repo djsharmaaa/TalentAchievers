@@ -1,0 +1,40 @@
+
+.transparent-button {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: none;
+}
+
+.transparent-button:hover {
+
+  border: none;
+}
+
+.course-batch-card {
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 10px -4px #D6EBFF;
+  overflow: hidden; 
+}
+
+.Batches-card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; 
+  display: block;
+}
+
+
+.course-card-info img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.fullschedule-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

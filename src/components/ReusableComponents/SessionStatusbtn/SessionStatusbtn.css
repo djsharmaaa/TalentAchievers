@@ -1,0 +1,52 @@
+.custom-button {
+  border: none;
+  border-radius: 50px;
+  padding: 5px 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+
+
+.recorded-button {
+  background-color: #E2DEFC;
+  color: #3D2AE7;
+  font-weight: 600;
+}
+
+.recorded-button .dot {
+  background-color: #3D2AE7;
+}
+
+.live-button {
+  background-color: #E7F2EB;
+  color: #16A34A;
+  font-weight: 600;
+}
+
+.live-button .dot {
+  background-color: #16A34A;
+}
+
+.offline-button {
+  background-color: #FDF1DE;
+  color: #ED9811;
+  font-weight: 600;
+}
+
+.offline-button .dot {
+  background-color: #ED9811;
+}
+
+.one-on-one-button {
+  background-color: #F1DEFC;
+  color: #8812D1;
+  font-weight: 600;
+}
+
+.one-on-one-button .dot {
+  background-color: #8812D1;
+}

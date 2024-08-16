@@ -36,7 +36,7 @@ const Studymaterialbtn = () => {
             
               <DropdownButton
                 as={Link}
-                to="/Courses"
+                to="/Academics/CoursesListing"
                 key="light"
                 id="dropdown-variants-light"
                 variant="light"

@@ -2,7 +2,6 @@
 
 .filters-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
@@ -26,13 +25,18 @@
 .filters-section h5 {
   margin-top: 20px;
 }
+
+.filters-section label {
+  margin-left: 6px;
+}
+
 .courses-card-section{
   padding: 20px;
 
 }
 
-.course-card {
-  border: 1px solid #dee2e6;
+.course-batch-card {
+  border: none;
   margin-bottom: 20px;
   
 }
@@ -46,7 +50,18 @@
   color: green;
   display: flex;
   align-items: center;
+  margin-bottom: 10px ;
+  margin-top: 25px;
+  font-size: 12px;
 }
+.course-card-info{
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* .course-card-info img{
+
+} */
 
 .course-status .status-dot {
   height: 10px;
@@ -70,8 +85,43 @@
  color: var(--primary-color);
   background-color: var( --MainLight-color);
 }
-.pagination {
+
+
+
+
+.custom-pagination .page-link {
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.75rem 1.5rem;
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.custom-pagination .page-item .page-link {
+  color: #007bff;
+  border: none;
+}
+
+.custom-pagination-prev, .custom-pagination-next {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
 }
+
+.custom-pagination-prev:hover, .custom-pagination-next:hover {
+  background-color: #0056b3;
+  color: white;
+}
+

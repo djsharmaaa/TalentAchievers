@@ -21,7 +21,7 @@ export const Getapp = () => {
                    
                     </Col>
                     <Col md={6} className="Rightapp-section ">
-                    <img src="./images/getapp.png" alt='get app' className="img-fluid" />
+                    <img src="/images/getapp.png" alt='get app' className="img-fluid" />
                     </Col>
                 </Row>
             </Container>

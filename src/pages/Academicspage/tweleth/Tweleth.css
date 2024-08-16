@@ -1,0 +1,306 @@
+/* Full year course section start */
+
+.FullYearCourse-section {
+  padding: 30px 0;
+  /* background-color: #f8f9fa; */
+}
+
+.FullYearCourse-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.FullYearCourse-section h5 {
+  margin-bottom: 1rem;
+}
+
+.subject-button {
+  background-color: #F3EFF5;
+  margin: 0 10px 10px 0;
+  border-radius: 20px;
+  border: none;
+ 
+}
+
+.subject-button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.Course-offering-card {
+  border: 1px solid #ddd;
+  background-color: #FAF9FB;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.Course-offering-card .course-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.Course-offering-card:hover{
+  border: 2px solid black;
+}
+
+/* .Course-offering-card .fas.fa-chevron-right {
+  color: #007bff;
+  font-size: 1.2rem;
+} */
+
+/* Full year course section ended */
+
+
+
+
+
+
+/* choose plan section */
+
+.ChooseplanSection {
+  padding: 80px 0;
+  background: linear-gradient(to bottom,#6E5FFA,#3D2AE7);
+}
+
+.ChooseplanSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--white-color);
+}
+
+.ChoosePlan-card {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.ChoosePlan-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.ChoosePlan-card h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.ChoosePlan-card h6 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #4E3F5A;
+}
+
+.premium {
+  color: #810CE5;
+  font-weight: bold;
+}
+
+.rate {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.batch-start-date {
+  background-color: transparent;
+  border: 1px solid #CDC3D5;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+
+
+.date-highlight{
+ color: var(--secondary-color);
+}
+.features-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.discount {
+  color: #01A91B;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.rate {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+
+
+.course-duration .btn {
+  width: 50%;
+}
+
+.buy-button {
+  width: 100%;
+  padding: 10px 0;
+ 
+  background-color: #470083;
+  border-color: #810CE5;
+}
+
+.buy-button:hover {
+  background-color: #5e0aab;
+  border-color: #5e0aab;
+}
+/* choose plan section end */
+
+/* teacher section started */
+.TeachersT-section {
+  padding: 40px 0px;
+ }
+ 
+
+ .T-card {
+   width: 90%;
+   height: 100%;
+   border-radius: 8%;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+   border: none;
+
+ }
+
+ 
+ .T-card img {
+   width: 90%; 
+  
+ }
+
+
+ .T-info h4,
+ .T-info h6
+ {
+   color: var(--accent-color);
+ }
+ 
+
+ .T-info p {
+  
+   color: #4E3F5A;
+   font-size: 0.8rem; 
+   margin: 0;
+ }
+ 
+
+ .status.online
+ {
+   color: green;
+   margin-bottom: 10px;
+ }
+ .status.offline{
+  margin-bottom: 10px;
+
+ }
+
+ .view-link {
+   color: var(--accent-color);
+   text-decoration: none;
+   font-weight: 600;
+   
+   
+
+ }
+ 
+
+ .rating-stars {
+   color: var(--secondary-color);
+   font-size: 1rem;
+   margin-right: 5px;
+ }
+ 
+ 
+/* teacher section started  ended*/
+ 
+
+
+/* bacthes and subjects section started */
+
+
+.BatchSection {
+  padding: 80px 0;
+ 
+}
+
+.BatchSection h6 {
+   color: var(--primary-color);
+  font-weight: bold;
+}
+
+.BatchSection h2{
+  font-weight: bold;
+}
+
+.ChooseBatch-card {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+
+.ChooseBatch-card h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.ChooseBatch-card h6 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #910FFE;
+}
+
+.Choosebatchimg{
+  height: 350px;
+  width: 500px;
+
+ 
+  object-fit: cover;
+}
+
+
+
+.batch-start-date {
+  background-color: transparent;
+  border: 1px solid #610fa4;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+
+
+.date-highlight{
+ color: var(--secondary-color);
+}
+.Batch-features-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.recommended-btn{
+  background-color: #910FFE;
+  color: var(--white-color);
+  border: none;
+  font-weight: 600;
+  height: 45px;
+  width: 180px;
+  border-radius: 10px;
+  padding: 9px;
+}

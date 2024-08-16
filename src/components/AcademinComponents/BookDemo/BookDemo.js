@@ -19,7 +19,7 @@ export const BookDemo = () => {
                    
                     </Col>
                     <Col md={4} className="RightDemo-section ">
-                    <img src="./images/Demo.png" alt='get app' className="img-fluid" />
+                    <img src="/images/Demo.png" alt='get app' className="img-fluid" />
                     </Col>
                 </Row>
             </Container>

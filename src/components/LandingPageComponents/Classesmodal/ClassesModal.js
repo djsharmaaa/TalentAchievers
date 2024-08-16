@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import './ClassesModal.css';
+import { Link } from 'react-router-dom';
+
 
 const ClassesModal = ({ show, handleClose, handleViewCoursePlan }) => {
     const [selectedClass, setSelectedClass] = useState('');
@@ -21,11 +23,8 @@ const ClassesModal = ({ show, handleClose, handleViewCoursePlan }) => {
     const onModalViewCoursePlan = () => {
         // handleViewCoursePlan(selectedClass, selectedBoard);
         // onModalClose();
-        setSelectedClass('');
-        setSelectedBoard('');
-        setSelectedYear('');
-
-        handleClose();
+    
+      
     };
     const classOptions = [
       { name: 'Class 3', image: '/images/ClassesModal.png' },
@@ -69,7 +68,7 @@ const ClassesModal = ({ show, handleClose, handleViewCoursePlan }) => {
                           className="m-1"
                           onClick={() => handleClassSelect(classOption.name)}
                       >
-                          <img src={classOption.image} className="me-2 " />
+                          <img src={classOption.image} alt='ClassImage' className="me-2 " />
                            {classOption.name}
                       </Button>
                   ))}
@@ -120,7 +119,8 @@ const ClassesModal = ({ show, handleClose, handleViewCoursePlan }) => {
           <Button variant="secondary" onClick={onModalClose}>
               Close
           </Button>
-          <Button variant="primary" onClick={onModalViewCoursePlan} disabled={!selectedClass || !selectedBoard || !selectedYear}>
+          <Button      as={Link}
+                to="/Academics/Tweleth" variant="primary" onClick={onModalViewCoursePlan} disabled={!selectedClass || !selectedBoard || !selectedYear}>
               View Course Plan
           </Button>
       </Modal.Footer>

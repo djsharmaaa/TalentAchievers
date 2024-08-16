@@ -1,0 +1,200 @@
+import React from 'react';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import NavigationBar from '../../../components/LandingPageComponents/NavigationBar/NavigationBar';
+import Footer from '../../../components/LandingPageComponents/Footer/Footer';
+import Studymaterialbtn from '../../../components/AcademinComponents/Studymaterialbtn/Studymaterialbtn';
+import Testimonial from '../../../components/ReusableComponents/Testimonial/Testimonial';
+import FrequentlyAskQuestions from '../../../components/AcademinComponents/Accordian/Accordion';
+import Getapp from '../../../components/LandingPageComponents/GetappSection/Getapp';
+import OtherCourses from '../../../components/AcademinComponents/OtherCourses/OtherCourses';
+import Batches from '../../../components/ReusableComponents/Batches/Batches';
+import BackButton from '../../../components/ReusableComponents/BackButton/Backbutton';
+
+import "./MultipleBatches.css";
+
+const MultipleBatches = () => {
+  const BatchDetailsTestimonials = [
+    {
+      id: 1,
+      name: 'Kavya',
+      Location: '98.2% CBSE XII',
+      imageSrc: '/images/batchtestimonial1.png',
+      testimonial: '"With their comprehensive materials and supportive teachers, I felt confident and prepared. Thanks to them, I achieved excellent results and got into my dream college"',
+    },
+    {
+      id: 2,
+      name: "Rayan's Mother",
+      Location: '98.2% CBSE XII',
+      imageSrc: '/images/batchtestimonial2.png',
+      testimonial: '"With their comprehensive materials and supportive teachers, I felt confident and prepared. Thanks to them, I achieved excellent results and got into my dream college"',
+    },
+    {
+      id: 3,
+      name: 'Komal',
+      Location: '98.2% CBSE XII',
+      imageSrc: '/images/batchtestimonial1.png',
+      testimonial: '"With their comprehensive materials and supportive teachers, I felt confident and prepared. Thanks to them, I achieved excellent results and got into my dream college"',
+    },
+    {
+      id: 4,
+      name: 'Shreya',
+      Location: '98.2% CBSE XII',
+      imageSrc: '/images/batchtestimonial2.png',
+      testimonial: '"With their comprehensive materials and supportive teachers, I felt confident and prepared. Thanks to them, I achieved excellent results and got into my dream college"',
+    },
+  ];
+
+  return (
+    <div>
+      <NavigationBar />
+      <Studymaterialbtn />
+      <Container>
+        <Row className="align-items-center my-4">
+          <Col md={1}>
+            <BackButton />
+          </Col>
+          <Col md={11} className="text-end">
+            <nav aria-label="breadcrumb">
+              <ol className="breadcrumb mb-0">
+              <li className="breadcrumb-item"><a href="/Academics/tweleth" style={{textDecoration: 'none'}}>CBSE Class 12</a></li>
+                <li className="breadcrumb-item active" aria-current="page">Batches</li>
+              </ol>
+            </nav>
+          </Col>
+        </Row>
+        <section>
+          <Row >
+            <Col md={12} className="d-flex align-items-center mb-4">
+              <h1>Batches</h1>
+              <h5 className="ms-2 pt-3" style={{color:"#470083"}}>CBSE(2024-2025)</h5>
+            </Col>
+          </Row>
+        
+          <Row className="justify-content-left mb-4">
+            <Col xs="auto" className="wd-1">
+              <Button variant="outline-light" className="college-btn-outline mb-2">6 Months : (Apr 24 - Jun 24)</Button>
+            </Col>
+            <Col xs="auto">
+              <Button variant="outline-light" className="college-btn-outline mb-2">12 Months : (Apr 24 - Mar 225)</Button>
+            </Col>
+          </Row>
+          <Row className="mb-4">
+            <Col>
+              <div className="d-flex align-items-center">
+                <img src="/images/green-tick.png" alt="Green Check" className="me-2" />
+                <span className="me-4">Live and recorded online class</span>
+                <img src="/images/green-tick.png" alt="Green Check" className="me-2" />
+                <span  className="me-4">Digital study material</span>
+                <img src="/images/green-tick.png" alt="Green Check" className="me-2" />
+                <span>Curated by best educators</span>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={4}>
+              <Batches
+                image="/images/CBSEbatch2.png"
+                name="Courses of Maths"
+                date="Started on 25 Apr 2024"
+                timing="Evening Classes"
+                teachers="Anamika, Neha"
+                showTeachers={true}
+              />
+            </Col>
+            <Col md={4}>
+              <Batches
+                image="/images/CBSEbatch2.png"
+                name="Full Syllabus of Science"
+                date="Started on 25 Apr 2024"
+                timing="Evening Classes"
+                teachers="Anamika, Neha"
+                showTeachers={true}
+              />
+            </Col>
+            <Col md={4}>
+              <Batches
+                image="/images/CBSEbatch2.png"
+                name="Kids Basic Learning 2024 - 2025"
+                date="Started on 25 Apr 2024"
+                timing="Evening Classes"
+                teachers="Anamika, Neha"
+                showTeachers={true}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={4}>
+              <Batches
+                image="/images/CBSEbatch2.png"
+                name="Courses of Maths"
+                date="Started on 25 Apr 2024"
+                timing="Evening Classes"
+                teachers="Anamika, Neha"
+                showTeachers={true}
+              />
+            </Col>
+            <Col md={4}>
+              <Batches
+                image="/images/CBSEbatch2.png"
+                name="Full Syllabus of Science"
+                date="Started on 25 Apr 2024"
+                timing="Evening Classes"
+                teachers="Anamika, Neha"
+                showTeachers={true}
+              />
+            </Col>
+            <Col md={4}>
+              <Batches
+                image="/images/CBSEbatch2.png"
+                name="Kids Basic Learning 2024 - 2025"
+                date="Started on 25 Apr 2024"
+                timing="Evening Classes"
+                teachers="Anamika, Neha"
+                showTeachers={true}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={4}>
+              <Batches
+                image="/images/CBSEbatch2.png"
+                name="Courses of Maths"
+                date="Started on 25 Apr 2024"
+                timing="Evening Classes"
+                teachers="Anamika, Neha"
+                showTeachers={true}
+              />
+            </Col>
+            <Col md={4}>
+              <Batches
+                image="/images/CBSEbatch2.png"
+                name="Full Syllabus of Science"
+                date="Started on 25 Apr 2024"
+                timing="Evening Classes"
+                teachers="Anamika, Neha"
+                showTeachers={true}
+              />
+            </Col>
+            <Col md={4}>
+              <Batches
+                image="/images/CBSEbatch2.png"
+                name="Kids Basic Learning 2024 - 2025"
+                date="Started on 25 Apr 2024"
+                timing="Evening Classes"
+                teachers="Anamika, Neha"
+                showTeachers={true}
+              />
+            </Col>
+          </Row>
+        </section>
+      </Container>
+      <FrequentlyAskQuestions />
+      <Testimonial title="Inspiring Tales" testimonials={BatchDetailsTestimonials} />
+      <OtherCourses />
+      <Getapp />
+      <Footer />
+    </div>
+  );
+};
+
+export default MultipleBatches;

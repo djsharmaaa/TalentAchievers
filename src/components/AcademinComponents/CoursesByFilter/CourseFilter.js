@@ -56,7 +56,7 @@ const CoursesFilter = () => {
           <Col md={3} className="filters-header">
             <h4>Filter By</h4>
           </Col>
-          <Col md={7} className="filters-header text-left">
+          <Col md={7} className="filters-header ">
           <div className="selected-filters">
               {Object.keys(selectedFilters).map((category) =>
                 selectedFilters[category].map((filter) => (
@@ -90,6 +90,7 @@ const CoursesFilter = () => {
                 onChange={() => handleFilterChange('targetBoard', option)}
                   />
                   <label>{option}</label>
+                  <span className='text-black-50 ms-2 '>(2,500)</span>
                 </div>
               ))}
             </div>
@@ -103,6 +104,8 @@ const CoursesFilter = () => {
                     onChange={() => handleFilterChange('classes', option)}
                   />
                   <label>{option}</label>
+                  <span className='text-black-50 ms-2 '  >(2,500)</span>
+
                 </div>
               ))}
             </div>
@@ -116,6 +119,8 @@ const CoursesFilter = () => {
                     onChange={() => handleFilterChange('subjects', option)}
                />
                   <label>{option}</label>
+                  <span className='text-black-50 ms-2 '  >(2,500)</span>
+
                 </div>
               ))}
             </div>
@@ -129,6 +134,8 @@ const CoursesFilter = () => {
                     onChange={() => handleFilterChange('mode', option)}
                   />
                   <label>{option}</label>
+                  <span className='text-black-50 ms-2 '  >(2,500)</span>
+
                 </div>
               ))}
             </div>
@@ -142,6 +149,8 @@ const CoursesFilter = () => {
                     onChange={() => handleFilterChange('language', option)}
                   />
                 <label>{option}</label>
+                <span className='text-black-50 ms-2 '  >(2,500)</span>
+
                 </div>
               ))}
             </div>
@@ -153,25 +162,25 @@ const CoursesFilter = () => {
             <Row>
               {courses.map((course) => (
                 <Col key={course.name} md={12}>
-                  <Card className="course-card">
+                  <Card className="course-batch-card">
                     <Row>
-                      <Col md={5}>
+                      <Col md={4}>
                     
                         <Card.Img variant="top" src={course.image} />
                       </Col>
-                      <Col md={4}>
-                        <Card.Body>
+                      <Col md={5}>
+                        <Card.Body className='p-0'>
                           <Card.Title>{course.name}</Card.Title>
                           <Card.Text className="course-status"><span className="status-dot"></span>{course.status}</Card.Text>
-                          <Card.Text><img src='/images/syllabusL.png' alt='syllabus'/>{course.syallabus}</Card.Text>
-                          <Card.Text><img src='/images/notesL.png' alt='notes'/>{course.notes}</Card.Text>
-                          <Card.Text><img src='/images/timingL.png' alt='timing'/>{course.timing}</Card.Text>
-                          <Card.Text><img src='/images/teachersL.png' alt='teachers'/>{course.teachers}</Card.Text>
+                          <Card.Text className='course-card-info'><img src='/images/syllabusL.png' alt='syllabus' className='me-2'/>{course.syallabus}</Card.Text>
+                          <Card.Text className='course-card-info'><img src='/images/teachersL.png' alt='notes'className='me-2'/>{course.notes}</Card.Text>
+                          <Card.Text className='course-card-info'><img src='/images/timingL.png' alt='timing'className='me-2'/>{course.timing}</Card.Text>
+                          <Card.Text className='course-card-info'><img src='/images/notesL.png' alt='teachers'className='me-2'/>{course.teachers}</Card.Text>
                           
 
                         </Card.Body>
                       </Col>
-                      <Col md={3} className='mt-5'>
+                      <Col md={2} className='mt-5'>
                       
                         <Card.Text><strong>{course.price}</strong> {course.previousPrice && (
                         <span className="previous-price">{' '}( {course.previousPrice})</span>
@@ -183,6 +192,7 @@ const CoursesFilter = () => {
                       </Col>
                     </Row>
                   </Card>
+                  <hr></hr>
                 </Col>
               ))}
             </Row>
@@ -191,15 +201,23 @@ const CoursesFilter = () => {
         </Row>
 
         <Row>
-          <Col className="d-flex justify-content-center">
-            <Pagination className="mt-3">
-              <Pagination.Prev />
-              <Pagination.Item>{1}</Pagination.Item>
-              <Pagination.Item>{2}</Pagination.Item>
-              <Pagination.Item>{3}</Pagination.Item>
-              <Pagination.Next />
-            </Pagination>
-          </Col>
+        <Col className="d-flex justify-content-center">
+                        <Pagination className="custom-pagination mt-3">
+                            <Pagination.Prev className="custom-pagination-prev">
+                                
+                            </Pagination.Prev>
+                            <Pagination.Item>{1}</Pagination.Item>
+                            <Pagination.Item>{2}</Pagination.Item>
+                            <Pagination.Item>{3}</Pagination.Item>
+                            <Pagination.Item>{}</Pagination.Item>
+
+                            <Pagination.Item>{5}</Pagination.Item>
+
+                            <Pagination.Next className="custom-pagination-next">
+                                &raquo;
+                            </Pagination.Next>
+                        </Pagination>
+                    </Col>
         </Row>
       </Container>
     </div>

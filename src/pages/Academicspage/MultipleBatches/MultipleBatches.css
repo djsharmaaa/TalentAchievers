@@ -1,0 +1,136 @@
+
+.batchdetails-hero-section {
+  background-image: url('/public/images/Batchdetails-hero.png'); 
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  color: white;
+  margin-bottom: 60px;
+  
+}
+
+/* .batchdetails-hero-content h1 {
+  margin-bottom: 20px;
+}
+
+.batchdetails-hero-content p {
+
+} */
+
+.batchdetails-hero-card{
+  background: var(--white-color);
+  padding: 20px;
+  left: 20%;
+  border-radius: 5%;
+}
+
+
+
+.batchdetails-hero-cardimg{
+  position: relative;
+  padding: 10px; 
+  
+}
+.zoom-image{
+  transition: transform 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5%;  
+}
+
+
+.batchdetails-hero-cardimg:hover .zoom-image {
+  transform: scale(1.1);
+}
+
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.play-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+}
+
+.current-price {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: grey;
+ 
+}
+
+.discount {
+  color: black;
+ 
+}
+
+
+/* //
+
+=----------------------------------------*/
+
+
+.Batchdetails-aboutcard {
+  border: none;
+    background-color: #FAF9FB;
+  cursor: pointer;
+}
+
+
+.CBatchdetails-aboutcard.course-logo {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+.batchdetails-syllabus-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  border: none;
+  background-color: var(--white-color);
+  font-weight: 600;
+}
+
+/* .batchdetails-syllabus-link:hover {
+  text-decoration: underline;
+} */
+
+
+
+
+/* ....................schedule Button ------------------ */
+
+
+.Btachdetail-Schedulebtn {
+  width: 100%;
+  padding: 10px 0;
+ color: var(--accent-color);
+  background-color: #F3E5FF;
+  border: none;
+
+}
+
+
+.Btachdetail-Schedulebtn:hover{
+  background-color:  var(--accent-color);
+  color: #F3E5FF;
+}

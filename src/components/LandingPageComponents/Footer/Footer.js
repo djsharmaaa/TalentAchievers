@@ -78,7 +78,7 @@ const Footer = () => {
                         <p>Don't miss out on the opportunity to elevate your education and achieve your goals. Click below to enroll now and take the first step towards a brighter future with Talent Achievers</p>
                         <div className='footer-btn'>
                             <button><img src="/playstore-btn.png" alt='playstore' /></button>
-                            <button><img src='appstore-btn.png' alt='appstore' /></button>
+                            <button><img src='/appstore-btn.png' alt='appstore' /></button>
                         </div>
                         <h5>Reach out to Us</h5>
                         <a href="/">
@@ -100,9 +100,9 @@ const Footer = () => {
                     <Col sx={12} md={4} className="footer-section3">
                         <h5 className='mb-3'>Company apps</h5>
                         <ul className="list-unstyled">
-                            <li className=' mb-3'><img src="./images/footerapp1.png" alt='footer app' className='pe-3' /><a href="/">Learner app</a></li>
-                            <li className=' mb-3'><img src="./images/footerapp2.png" alt='footer app'className='pe-3' /><a href="/about">Educator app</a></li>
-                            <li className=' mb-3'><img src="./images/footerapp3.png" alt='footer app' className='pe-3'/><a href="/services">Parent app</a></li>
+                            <li className=' mb-3'><img src="/images/footerapp1.png" alt='footer app' className='pe-3' /><a href="/">Learner app</a></li>
+                            <li className=' mb-3'><img src="/images/footerapp2.png" alt='footer app'className='pe-3' /><a href="/about">Educator app</a></li>
+                            <li className=' mb-3'><img src="/images/footerapp3.png" alt='footer app' className='pe-3'/><a href="/services">Parent app</a></li>
                         </ul>
                     </Col>
                 </Row>
