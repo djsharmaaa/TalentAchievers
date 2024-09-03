@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 import "./Studyabroad.css"
+import ReusableButtons from '../../ReusableComponents/ReusableButtons/ReusableButtons';
 
 export const Studyabroad = () => {
   
@@ -22,8 +23,8 @@ export const Studyabroad = () => {
 
                         </ul>
                         <div>
-                        <Button variant="primary btn-lg mt-4"  className='Abroad-join mt-2'>Join for free</Button>
-
+                        <ReusableButtons label="Start learning" linkTo="" customClass="primary" />
+                            
                         </div>
                     </Col>
                     <Col md={6} className="RightAbroad-section ">

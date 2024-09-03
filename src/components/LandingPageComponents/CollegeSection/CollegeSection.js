@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import './CollegeSection.css';
-
+import ReusableButtons from '../../ReusableComponents/ReusableButtons/ReusableButtons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faAngleRight } from '@fortawesome/free-solid-svg-icons';
 export const CollegeSection = () => {
+
+  const [selectedCourse, setSelectedCourse] = useState('Popular');
+
+
+    const Courses= [
+        'Popular',
+        'M.Tech',
+        'M.sc',
+        'M.Com',
+        'AI',
+        'Buisness Management',
+        'Data Science',
+        'Finance',
+     ];
+     const handleClassClick = (className) => {
+        setSelectedCourse(className);
+      };
+    
+
+
     return (
         <section className="college-section">
             <Container>
@@ -25,32 +48,22 @@ export const CollegeSection = () => {
 
                     <hr />
                 </Row>
-                <Row className="mb-4 justify-content-left">
-                    <Col xs="auto" className="wd-1" >
-                        <Button variant="outline-light" className="college-btn-outline mb-2">Popular</Button>
-                    </Col>
-                    <Col xs="auto">
-                        <Button variant="outline-light" className="college-btn-outline mb-2">M.Tech</Button>
-                    </Col>
-                    <Col xs="auto" >
-                        <Button variant="outline-light" className="college-btn-outline mb-2">M.sc</Button>
-                    </Col>
-                    <Col xs="auto" >
-                        <Button variant="outline-light" className="college-btn-outline mb-2">M.Com</Button>
-                    </Col>
-                    <Col xs="auto">
-                        <Button variant="outline-light" className="college-btn-outline mb-2">AI</Button>
-                    </Col>
-                    <Col xs="auto">
-                        <Button variant="outline-light" className="college-btn-outline mb-2">Buisness Management</Button>
-                    </Col>
-                    <Col xs="auto" >
-                        <Button variant="outline-light" className="college-btn-outline mb-2">Data Science</Button>
-                    </Col>
-                    <Col xs="auto">
-                        <Button variant="outline-light" className="college-btn-outline mb-2">Finance</Button>
-                    </Col>
-                </Row>
+
+                <Row className="Courses-buttons my-5 justify-content-left">
+  {Courses.map((className) => (
+    <Col key={className} xs="auto">
+      <Button
+        variant="outline-dark"
+        className={selectedCourse === className ? 'button-active' : ''}
+        onClick={() => handleClassClick(className)}
+      >
+        {className}
+      </Button>
+    </Col>
+  ))}
+</Row>
+
+              
                 <Row >
                     <Col md={3}>
                         <Card className=" h-100 college-card">
@@ -67,9 +80,14 @@ export const CollegeSection = () => {
                                 </div>
                             </Card.ImgOverlay>
                             <Card.Body className="d-flex flex-column college-card-body ">
-                                <a href="/" className="text-start college-btn-link">View All Courses</a>
-                                <a href="/" className="text-start college-btn-link">Brochure</a>
-                                <a href="/" className="text-start college-btn-link">Compare</a>
+                                <a href="/" className="d-flex justify-content-between college-btn-link">View All Courses <FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+                                
+                                <hr></hr>
+                                <a href="/" className="d-flex justify-content-between college-btn-link">Brochure<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+                               
+                                <hr></hr>
+                                <a href="/" className="d-flex justify-content-between  college-btn-link">Compare<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+                               
 
                             </Card.Body>
                         </Card>
@@ -88,10 +106,15 @@ export const CollegeSection = () => {
 
                                 </div>
                             </Card.ImgOverlay>
-                            <Card.Body className="d-flex flex-column  ">
-                                <a href="/" className="text-start college-btn-link">View All Courses</a>
-                                <a href="/" className="text-start college-btn-link">Brochure</a>
-                                <a href="/" className="text-start college-btn-link">Compare</a>
+                            <Card.Body className="d-flex flex-column college-card-body ">
+                                <a href="/" className="d-flex justify-content-between college-btn-link">View All Courses <FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+                                
+                                <hr></hr>
+                                <a href="/" className="d-flex justify-content-between college-btn-link">Brochure<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+                               
+                                <hr></hr>
+                                <a href="/" className="d-flex justify-content-between  college-btn-link">Compare<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+                               
 
                             </Card.Body>
                         </Card>
@@ -110,10 +133,15 @@ export const CollegeSection = () => {
 
                                 </div>
                             </Card.ImgOverlay>
-                            <Card.Body className="d-flex flex-column  ">
-                                <a href="/" className="text-start college-btn-link">View All Courses</a>
-                                <a href="/" className="text-start college-btn-link">Brochure</a>
-                                <a href="/" className="text-start college-btn-link">Compare</a>
+                            <Card.Body className="d-flex flex-column college-card-body ">
+                                <a href="/" className="d-flex justify-content-between college-btn-link">View All Courses <FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+                                
+                                <hr></hr>
+                                <a href="/" className="d-flex justify-content-between college-btn-link">Brochure<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+                               
+                                <hr></hr>
+                                <a href="/" className="d-flex justify-content-between  college-btn-link">Compare<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+                               
 
                             </Card.Body>
                         </Card>
@@ -132,10 +160,15 @@ export const CollegeSection = () => {
 
                                 </div>
                             </Card.ImgOverlay>
-                            <Card.Body className="d-flex flex-column  ">
-                                <a href="/" className="text-start college-btn-link">View All Courses</a>
-                                <a href="/" className="text-start college-btn-link">Brochure</a>
-                                <a href="/" className="text-start college-btn-link">Compare</a>
+                            <Card.Body className="d-flex flex-column college-card-body ">
+                                <a href="/" className="d-flex justify-content-between college-btn-link">View All Courses <FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+                                
+                                <hr></hr>
+                                <a href="/" className="d-flex justify-content-between college-btn-link">Brochure<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+                               
+                                <hr></hr>
+                                <a href="/" className="d-flex justify-content-between  college-btn-link">Compare<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+                               
 
                             </Card.Body>
                         </Card>
@@ -144,8 +177,7 @@ export const CollegeSection = () => {
                 </Row>
                 <Row>
                     <Col md={12} className="d-flex justify-content-left mt-5 ">
-                        <Button variant="primary" className="College-btn mb-5 px-4 py-2">Explore more Master's Degree</Button>
-
+                        <ReusableButtons label="Explore more Master's Degree" linkTo="/" customClass="secondary" />
                     </Col>
                 </Row>
             </Container>

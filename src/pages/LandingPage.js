@@ -8,7 +8,7 @@ import CoursesSection from '../components/LandingPageComponents/CoursesSection/C
 import  CollegeSection  from '../components/LandingPageComponents/CollegeSection/CollegeSection';
 import Competitive from '../components/LandingPageComponents/CompetitiveSection/Competitive';
 import  SkillDevelopment  from '../components/LandingPageComponents/SkillDevelopmentSection/SkillDevelopment';
-import { Studyabroad } from '../components/LandingPageComponents/StudyabroadSection/Studyabroad';
+import  Studyabroad  from '../components/LandingPageComponents/StudyabroadSection/Studyabroad';
 import Getapp from '../components/LandingPageComponents/GetappSection/Getapp';
 import Blogs from '../components/LandingPageComponents/Blogs&ArticleSection/Blogs';
 import Testimonial from '../components/ReusableComponents/Testimonial/Testimonial';

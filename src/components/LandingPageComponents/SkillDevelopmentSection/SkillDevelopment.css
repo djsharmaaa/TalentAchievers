@@ -47,19 +47,7 @@
   }
 
 
-  .Skill-explore-btn {
-    font-size: 16px;
-    color: var(--accent-color);
-    background-color: var(--stroke-color);
-    border: none;
-    margin-top: 20px;
-  }
 
-  .Skill-explore-btn:hover {
-    color: var(--white-color);
-    background-color: var(--primary-color);
-  
-  }
 
   .react-multi-carousel-list {
     position: static !important;

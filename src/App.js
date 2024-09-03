@@ -15,6 +15,8 @@ import DigitalResources from "./pages/Academicspage/DIgitalResources/DigitalReso
 import Practice from "./pages/Academicspage/Practice/Practice";
 import TestSeries from "./pages/Academicspage/TestSeries/TestSeries";
 import NCERTSolution from "./pages/Academicspage/NCERTsolution/NCERTSolution";
+import BestEducators from "./components/AcademinComponents/BestEducators/BestEducators";
+import TeacherProfile from "./pages/TeacherProfilePage/TeacherProfilepage";
 
 
 const App = () => {
@@ -36,7 +38,9 @@ const App = () => {
     <Route path="/Academics/Tweleth/Practice" element={<Practice/>}  />
     <Route path="/Academics/Tweleth/TestSeries" element={<TestSeries/>} />
     <Route path="/Academics/Tweleth/NCERTSolution" element={<NCERTSolution/>} />
-
+    <Route path="/Academics/BatchDetails" element={<BatchDetails/>}/>
+    <Route path="/" element={<BestEducators/>} />
+    <Route path="/profile/:id" element={<TeacherProfile/>} />
   </Routes>
    </>
    

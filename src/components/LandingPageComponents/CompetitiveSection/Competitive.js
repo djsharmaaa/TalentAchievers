@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import './Competitive.css';
+import ReusableButtons from '../../ReusableComponents/ReusableButtons/ReusableButtons';
 
 const Competitive = () => {
     return (
@@ -76,7 +77,7 @@ const Competitive = () => {
                 </Row>
                 <Row>
             <Col md={12} className="d-flex justify-content-left mt-5 ">
-                <Button variant="primary" className="Competitive-Explore-btn mb-5 px-4 py-2">Explore All Categories</Button>
+                <ReusableButtons label="Explore All Categories" linkTo="" customClass="secondary" />
                 
             </Col>
         </Row>

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Card, Pagination } from 'react-bootstrap';
+import ReusableButtons from '../../ReusableComponents/ReusableButtons/ReusableButtons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {   faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
 import './CourseFilter.css';
 
 const CoursesFilter = () => {
@@ -18,9 +21,9 @@ const CoursesFilter = () => {
   const languageOptions = ['English', 'Hindi'];
 
   const courses = [
-    {  image: '/images/CBSEbatch.png', name: 'CBSE Batch (2024-2025)', status:'Live Classes', syallabus: 'Full CBSE Class 6 Syllabus', notes:'Topic wise syllabus notes and revision',timing:'Evening Classes',teachers:'Anamika, Neha',    price: '$280', previousPrice:'$300' },
-    {  image: '/images/CBSEbatch.png', name: 'CBSE Batch (2024-2025)', status:'Live Classes', syallabus: 'Full CBSE Class 6 Syllabus', notes:'Topic wise syllabus notes and revision',timing:'Evening Classes',teachers:'Anamika, Neha',price: '$280', previousPrice:'$300' },
-    {  image: '/images/CBSEbatch.png', name: 'CBSE Batch (2024-2025)', status:'Live Classes', syallabus: 'Full CBSE Class 6 Syllabus', notes:'Topic wise syllabus notes and revision',timing:'Evening Classes',teachers:'Anamika, Neha',price: '$280', previousPrice:'$300'},
+    {  image: '/images/CBSEbatch.png', name: 'CBSE Batch (2024-2025)', status:'Live Classes', syallabus: 'Full CBSE Class 6 Syllabus', notes:'Topic wise syllabus notes and revision',timing:'Evening Classes',teachers:'Anamika, Neha',    price: '₹280', previousPrice:'₹300' },
+    {  image: '/images/CBSEbatch.png', name: 'CBSE Batch (2024-2025)', status:'Live Classes', syallabus: 'Full CBSE Class 6 Syllabus', notes:'Topic wise syllabus notes and revision',timing:'Evening Classes',teachers:'Anamika, Neha',price: '₹280', previousPrice:'₹300' },
+    {  image: '/images/CBSEbatch.png', name: 'CBSE Batch (2024-2025)', status:'Live Classes', syallabus: 'Full CBSE Class 6 Syllabus', notes:'Topic wise syllabus notes and revision',timing:'Evening Classes',teachers:'Anamika, Neha',price: '₹280', previousPrice:'₹300'},
   ];
 
   const handleFilterChange = (category, option) => {
@@ -60,15 +63,26 @@ const CoursesFilter = () => {
           <div className="selected-filters">
               {Object.keys(selectedFilters).map((category) =>
                 selectedFilters[category].map((filter) => (
-                  <Button variant="secondary" key={filter} onClick={() => handleFilterChange(category, filter)}>
-                    {filter} <span>&times;</span>
-                  </Button>
+                  // <Button className='filter-opn-btn' key={filter} onClick={() => handleFilterChange(category, filter)}>
+                  <Button
+                  className={`filter-opn-btn ${selectedFilters[category].includes(filter) ? 'active' : ''}`}
+                  key={filter}
+                  variant='transparent'
+                  onClick={() => handleFilterChange(category, filter)}
+                >
+                  {filter} <span>&times;</span>
+                </Button>
+                
+
+                  
                 ))
               )}
             </div>
-            <Button variant="danger" onClick={clearFilters}>
-              Clear Filters
-            </Button>
+        
+                 
+       
+            <Button variant="outline-none btn-md" className="me-2 btn-login " onClick={clearFilters}> Clear Filters</Button>
+
           
           </Col>
           <Col md={2} className='text-center'>
@@ -160,7 +174,7 @@ const CoursesFilter = () => {
 
           <Col md={9} className="courses-card-section">
             <Row>
-              {courses.map((course) => (
+              {courses.map((course, index) => (
                 <Col key={course.name} md={12}>
                   <Card className="course-batch-card">
                     <Row>
@@ -180,19 +194,19 @@ const CoursesFilter = () => {
 
                         </Card.Body>
                       </Col>
-                      <Col md={2} className='mt-5'>
+                      <Col md={3} className='mt-5 '>
                       
                         <Card.Text><strong>{course.price}</strong> {course.previousPrice && (
                         <span className="previous-price">{' '}( {course.previousPrice})</span>
                       )}</Card.Text>
-                        <Button variant="primary btn-sm"  className='Batch-details mt-2'>View Btach Details</Button>
+                        <ReusableButtons label="View Batch Details" linkTo="/Academics/BatchDetails" customClass="primary"  />
                        
                        
                         
                       </Col>
                     </Row>
                   </Card>
-                  <hr></hr>
+                  {index < courses.length - 1 && <hr className="my-5" />}
                 </Col>
               ))}
             </Row>
@@ -201,20 +215,21 @@ const CoursesFilter = () => {
         </Row>
 
         <Row>
-        <Col className="d-flex justify-content-center">
+        <Col className="d-flex justify-content-center align-items-center">
                         <Pagination className="custom-pagination mt-3">
                             <Pagination.Prev className="custom-pagination-prev">
-                                
+                            <FontAwesomeIcon className='ms-auto' icon={faCircleChevronLeft} />
                             </Pagination.Prev>
                             <Pagination.Item>{1}</Pagination.Item>
                             <Pagination.Item>{2}</Pagination.Item>
                             <Pagination.Item>{3}</Pagination.Item>
-                            <Pagination.Item>{}</Pagination.Item>
+                            <Pagination.Item>{"..."}</Pagination.Item>
 
                             <Pagination.Item>{5}</Pagination.Item>
 
                             <Pagination.Next className="custom-pagination-next">
-                                &raquo;
+                            <FontAwesomeIcon className='ms-auto' icon={faCircleChevronRight} />
+                                
                             </Pagination.Next>
                         </Pagination>
                     </Col>

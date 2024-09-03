@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, CardText } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faCaretRight, faCircle } from '@fortawesome/free-solid-svg-icons';
 import "./BestEducators.css"
+import { Link } from 'react-router-dom';
 
 
 
@@ -77,7 +78,7 @@ const BestEducators = () => {
                   <CardText className= {`status ${Bestteacher.status.toLowerCase()}`}>
                     <FontAwesomeIcon icon={faCircle} /> {Bestteacher.status}
                   </CardText>
-                  <a href={"./"} className="view-link">View Profile <FontAwesomeIcon className='ms-2' icon={faCaretRight} /> </a>
+                  <Link to={`/profile/${Bestteacher.id}`} className="view-link">View Profile <FontAwesomeIcon className='ms-2' icon={faCaretRight} /> </Link>
                </div>
            
             </Card>

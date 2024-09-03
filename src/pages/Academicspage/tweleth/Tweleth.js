@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react';
+
 import NavigationBar from '../../../components/LandingPageComponents/NavigationBar/NavigationBar'
 import Footer from '../../../components/LandingPageComponents/Footer/Footer';
-import Studymaterialbtn from '../../../components/AcademinComponents/Studymaterialbtn/Studymaterialbtn';
 import Testimonial from '../../../components/ReusableComponents/Testimonial/Testimonial';
 import FrequentlyAskQuestions from '../../../components/AcademinComponents/Accordian/Accordion';
 import Getapp from '../../../components/LandingPageComponents/GetappSection/Getapp';
@@ -11,14 +11,16 @@ import BookDemo from '../../../components/AcademinComponents/BookDemo/BookDemo';
 
 import { Container, Row, Col, Card,  Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import {  faAngleRight , faClock} from '@fortawesome/free-solid-svg-icons';
 
 import './Tweleth.css'
 import OtherCourses from '../../../components/AcademinComponents/OtherCourses/OtherCourses';
-import { faClock } from '@fortawesome/free-regular-svg-icons';
-import { Link } from 'react-router-dom';
+
 import TeachersCard from '../../../components/ReusableComponents/TeachersCard/TeachersCard';
 import SubjectCard from '../../../components/ReusableComponents/SubjectCard/SubjectCard';
+import { Link } from 'react-router-dom';
+import ReusableButtons from '../../../components/ReusableComponents/ReusableButtons/ReusableButtons';
+
 
 
 const TwelethTestimonials = [
@@ -67,7 +69,7 @@ const BestEducatorssData = [
     {
         id: 2,
         name: 'Vinod',
-        imageSrc: '/images/t2.png',
+        imageSrc: ' ',
         rating: 4.8,
         status: 'Offline',
         subject: 'Hindi Teacher | M.Sc',
@@ -103,12 +105,49 @@ const BestEducatorssData = [
 
 
 const Tweleth = () => {
+
+
+    const [selectedClass, setSelectedClass] = useState('Class 12');
+
+
+    const classes = [
+        'Class 12',
+        'Class 11',
+        'Class 10',
+        'Class 9',
+        'Class 8',
+        'Class 7',
+        'Class 6',
+        'Class 5',
+        'Class 4',
+        'Class 3',       
+      ];
+      const handleClassClick = (className) => {
+        setSelectedClass(className);
+      };
+
     return (
         <div>
             <NavigationBar />
-            <Studymaterialbtn />
             <section >
                 <Container>
+                <Row className="offerings-buttons my-5">
+          {classes.map((className) => (
+
+            <Col key={className} xs={6} lg={1}>
+              <Button
+
+                variant="outline-dark"
+                className={selectedClass === className ? 'button-active' : ''}
+                onClick={() => handleClassClick(className)}
+              >
+                {className}
+
+              </Button>
+            </Col>
+          ))}
+        </Row>
+
                     <span className='d-flex flex-row'>
                         <img src="/images/group6.png" alt='get app' className='me-2 ' />
                         <h4 style={{ color: 'var(--primary-color)' }}>
@@ -267,7 +306,7 @@ const Tweleth = () => {
                                                 <Button variant='outline-dark' className='mb-2 me-4'>6 Months : (Apr 24 - Jun 24)</Button>
                                                 <Button variant='outline-dark' className='mb-2'>12 Months : (Apr 24 - Jun 24)</Button>
                                             </div>
-                                            <Button variant='primary' className='buy-button'>Buy Full Course</Button>
+                                            <ReusableButtons label="Buy Full Course" linkTo="/" customClass="primary"/>
                                         </Col>
                                     </Row>
                                 </Card.Body>
@@ -308,7 +347,10 @@ const Tweleth = () => {
                     </Row>
                     <Row className='mb-3'>
                        <Col> <h2>Batch and Subjects</h2></Col>
-                       <Col md={2}><Button as={Link} to="/Academics/Tweleth/MultipleBatches" variant='primary' className='buy-button'>View more Batches</Button>
+                       <Col md={2}>
+                       <ReusableButtons label="View more Batches" linkTo="/Academics/Tweleth/MultipleBatches" customClass="primary"/>
+
+                       
                        </Col>
                     </Row>
                     <Row>
@@ -354,7 +396,10 @@ const Tweleth = () => {
                                             <Card.Text className='course-card-info'><img src='/images/notesL.png' alt='teachers' className='me-2' />'Anamika, Neha'</Card.Text>
                                           
                                             <Row className='my-4 '>
-                       <Col md={4}><Button as={Link} to="/Academics/Tweleth/BatchDetails" variant='primary' className='buy-button'>View batch details</Button>
+                       <Col md={4}>
+                       <ReusableButtons label="View batch details" linkTo="/Academics/Tweleth/BatchDetails" customClass="primary"/>
+
+                       
                        </Col>
                        <Col className='mt-2'><FontAwesomeIcon icon={faClock} />
                        <span className='ms-3'>Starts in 7 days</span></Col>

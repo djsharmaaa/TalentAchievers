@@ -6,6 +6,7 @@ import 'react-multi-carousel/lib/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock , faChartBar} from '@fortawesome/free-regular-svg-icons';
 import './SkillDevelopment.css';
+import ReusableButtons from '../../ReusableComponents/ReusableButtons/ReusableButtons';
 
 const skillCoursesData = [
   {
@@ -178,7 +179,8 @@ const SkillDevelopment = () => {
 
         <Row>
           <Col md={12} className="d-flex justify-content-left mt-5 mb-5">
-            <Button variant="primary" className="Skill-explore-btn px-4 py-2">Explore All Courses</Button>
+            <ReusableButtons label="Explore All Courses" linkTo="" customClass="secondary" />
+          
           </Col>
         </Row>
       </Container>

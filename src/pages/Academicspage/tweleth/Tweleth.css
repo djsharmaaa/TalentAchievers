@@ -42,7 +42,8 @@
 }
 
 .Course-offering-card:hover{
-  border: 2px solid black;
+  border: 1px solid #470083;
+
 }
 
 /* .Course-offering-card .fas.fa-chevron-right {
@@ -148,18 +149,8 @@
   width: 50%;
 }
 
-.buy-button {
-  width: 100%;
-  padding: 10px 0;
- 
-  background-color: #470083;
-  border-color: #810CE5;
-}
 
-.buy-button:hover {
-  background-color: #5e0aab;
-  border-color: #5e0aab;
-}
+
 /* choose plan section end */
 
 /* teacher section started */

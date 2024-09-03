@@ -1,11 +1,14 @@
 
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar , faFileText, faHandPointRight, } from '@fortawesome/free-regular-svg-icons';
+import { faCalendar , faFileText } from '@fortawesome/free-regular-svg-icons';
+import {  faAngleRight } from '@fortawesome/free-solid-svg-icons';
+
 import './Blogs.css';
+import ReusableButtons from '../../ReusableComponents/ReusableButtons/ReusableButtons';
 
 const blogsData = [
   {
@@ -118,8 +121,8 @@ const Blogs = () => {
                         <FontAwesomeIcon  icon={faCalendar} /> {blog.Date}  
                         <FontAwesomeIcon className='ms-4' icon={faFileText} /> {blog.Message} </Card.Text>
                     <Card.Text>
-                    <a href="/" className="text-start blog-link">Read more 
-                    <FontAwesomeIcon className='ms-2' icon={faHandPointRight} /> 
+                    <a href="/" className="text-start blog-link ">Read more 
+                    <FontAwesomeIcon className='ms-2' icon={faAngleRight} /> 
                     </a>
                     </Card.Text>
               
@@ -132,9 +135,10 @@ const Blogs = () => {
   
         </Row>
 
-        <Row>
-          <Col md={12} className="d-flex justify-content-left  mb-5">
-            <Button variant="primary btn-lg" className="Skill-explore-btn">View All</Button>
+        <Row className='mb-5'>
+          <Col md={12} className="d-flex justify-content-left  my-3">
+            <ReusableButtons label="View All" linkTo="" customClass="secondary" />
+
           </Col>
         </Row>
       </Container>

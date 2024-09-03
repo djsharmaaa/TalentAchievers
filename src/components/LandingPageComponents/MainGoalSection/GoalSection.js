@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import './GoalSection.css'; 
+import ReusableButtons from '../../ReusableComponents/ReusableButtons/ReusableButtons';
 
 const GoalSection = () => {
     return (
@@ -10,8 +11,10 @@ const GoalSection = () => {
                 <Row>
                     <Col md={6} className="LeftGoal-section "> <h3 className='mb-4 mt-5'>Our Main Goal</h3>
                         <p>At Talent Achievers, our main goal is to empower students like you to achieve academic excellence, personal growth, and career success. We're dedicated to providing you with the tools and resources you need to thrive in your learning journey.</p>
-                        <Button variant="primary btn-sm"  className='Goal-join mt-2'>Join for free</Button>
-
+                        {/* <Button variant="primary btn-sm"  className='Goal-join mt-2'>Join for free</Button> */}
+                  
+                        <ReusableButtons label="Join for free" linkTo="" customClass="primary" />
+                    
                     </Col>
                     <Col md={5} className="RightGoal-section  ps-5">
                         <h5 className='mb-4'>Here's what you'll get</h5>

@@ -19,16 +19,51 @@
 .filters-section {
   padding: 20px;
   background-color: #f8f9fa;
-  border-right: 1px solid #dee2e6;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
 }
 
 .filters-section h5 {
-  margin-top: 20px;
+  margin-bottom: 10px;
 }
+
+.filters-section div {
+  margin-bottom: 20px;
+}
+
+
 
 .filters-section label {
   margin-left: 6px;
 }
+
+.filter-opn-btn{
+min-width: 80px;
+height: 36px;
+color: #9A88AA;
+background: #FAF9FB;
+border: 1px solid #9A88AA;
+border-radius: 24px;
+
+
+}
+.filter-opn-btn.active {
+    min-width: 80px;
+    height: 36px;
+    color: #9A88AA;
+    background: #FAF9FB;
+    border: 1px solid #9A88AA;
+    border-radius: 24px;
+  }
+
+  
+  input[type="checkbox"]:checked {
+    accent-color: #470082; 
+
+
+  }
+
 
 .courses-card-section{
   padding: 20px;
@@ -87,41 +122,48 @@
 }
 
 
+/* pagination style */
+/* CourseFilter.css */
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+}
 
+.custom-pagination .page-item {
+  margin: 0 25px;
+}
 
 .custom-pagination .page-link {
-  font-size: 1.5rem;
+  color: black;
+  padding: 8px 12px;
+  font-size: 28px;
+  font-weight: bold;
   border: none;
-  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+}
+
+.custom-pagination .page-link:hover {
+  color: var(--primary-color);
 }
 
 .custom-pagination .page-item.active .page-link {
   background-color: #007bff;
   color: white;
-  border: none;
 }
 
-.custom-pagination .page-item .page-link {
-  color: #007bff;
-  border: none;
+
+.custom-pagination .custom-pagination-prev .page-link,
+.custom-pagination .custom-pagination-next .page-link {
+  border-radius: 50%; /* Circular shape */
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 50px; /* Increased icon size */
 }
 
-.custom-pagination-prev, .custom-pagination-next {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 1px solid black;
-  border-radius: 50%;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  font-size: 1.5rem;
+.custom-pagination .page-item .page-link:focus {
+  outline: none; /* Remove Bootstrap's default outline */
+  box-shadow: none; /* Remove shadow on focus */
+  background-color: #ffffff;
 }
-
-.custom-pagination-prev:hover, .custom-pagination-next:hover {
-  background-color: #0056b3;
-  color: white;
-}
-

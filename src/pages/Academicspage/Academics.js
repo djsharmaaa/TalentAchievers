@@ -7,8 +7,8 @@ import CoursesSection from '../../components/LandingPageComponents/CoursesSectio
 import BookDemo from '../../components/AcademinComponents/BookDemo/BookDemo';
 import BestEducators from '../../components/AcademinComponents/BestEducators/BestEducators';
 import ExploreOfferings from '../../components/AcademinComponents/OurOfferings/ExploreOfferings';
-import Studymaterialbtn from '../../components/AcademinComponents/Studymaterialbtn/Studymaterialbtn';
 import Getapp from '../../components/LandingPageComponents/GetappSection/Getapp';
+import CoursesFilter from '../../components/AcademinComponents/CoursesByFilter/CourseFilter';
 
 
 
@@ -49,9 +49,11 @@ const Academics = () => {
 
 
         <NavigationBar/>
-        <Studymaterialbtn/>
+      
         <HeroSection/>
         <CoursesSection/>
+       
+        <CoursesFilter/>
         <ExploreOfferings/>
         <BestEducators/>
         <BookDemo/>

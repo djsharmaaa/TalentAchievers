@@ -16,7 +16,6 @@ const CoursesSection = () => {
             <Row className=" mb-5">
                     <Col md={12} className="d-flex ">
                         <h2 className="mb-0  ">Explore Our Courses</h2>
-                        {/* <p className="mb-0 ms-3 align-self-end ">(Pre-12th)</p> */}
                         <h6  className="mb-1 ms-3 align-self-end"> (Pre-12th)</h6>
                         
                     </Col>

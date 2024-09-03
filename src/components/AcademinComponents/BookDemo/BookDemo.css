@@ -8,22 +8,6 @@
 
 
 
-
-.Demo-btn {
-    background-color: var(--primary-color);
-    border: none;
-    font-weight: 600;
-    border-radius: 10px;
-      z-index: 1;
- }
-
- 
- .Demo-btn:hover{
-   background-color: var(--stroke-color);
-    color: var(--primary-color);
-}
-
-
 .RightDemo-section {
     position: relative;
   }

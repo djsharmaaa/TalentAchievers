@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import "./BookDemo.css"
+import ReusableButtons from '../../ReusableComponents/ReusableButtons/ReusableButtons';
 
 export const BookDemo = () => {
   
@@ -13,7 +14,7 @@ export const BookDemo = () => {
                         <h1 className='my-5'>Unlock your potential with Talent Achievers. Experience the benefits of free online counseling today.
                         </h1>
                         <div>
-                        <Button variant="primary btn-lg mt-4"  className='Demo-btn mt-2'>Join for free</Button>
+                        <ReusableButtons label="Book a free demo" linkTo="" customClass="primary" />
 
                         </div>
                    

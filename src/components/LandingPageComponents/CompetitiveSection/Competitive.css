@@ -69,15 +69,3 @@
     color: var(--white-color);
     background-color:var(--primary-color);
 }
-.Competitive-Explore-btn{
-    color: black;
-    background-color: #E6E1EA;
-    border: none;
-
-}
-
-
-.Competitive-Explore-btn:hover{
-    color: var(--white-color);
-    background-color: var(--primary-color);
-}
