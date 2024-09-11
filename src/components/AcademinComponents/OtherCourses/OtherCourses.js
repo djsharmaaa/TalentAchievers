@@ -33,7 +33,7 @@ const OtherCourses = () => {
                         </Card> */}
                            <Card  className="mb-4 " style={{border:'none'}}>
 
-<img src='/images/classpre-5.png' alt='class pre card' />
+<img src='/images/classpre.png' alt='class pre card' />
 </Card>
                     </Col>
                     <Col md={5}>
@@ -56,7 +56,7 @@ const OtherCourses = () => {
                             </Card.Body>
                         </Card> */}
                         <Card  className="mb-4 " style={{border:'none'}} >
-                          <img src='/images/class-foundation.png' alt='class pre card' />
+                          <img src='/images/classiit.png' alt='class pre card' />
 
                         </Card>
                     </Col>

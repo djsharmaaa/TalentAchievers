@@ -45,9 +45,8 @@ const CoursesSection = () => {
                             </Card.Body> */}
                         <Card  className="mb-4 " style={{border:'none'}}>
 
-                            {/* <img src='./images/classpre.png' alt='class pre card' /> */}
-                            <img src={`${process.env.PUBLIC_URL}/images/classpre.png`} alt="Class Pre 5" />
-
+                            <img src='./images/classpre.png' alt='class pre card' />
+                            
                         </Card>
                     </Col>
                     <Col md={4}>
@@ -70,7 +69,7 @@ const CoursesSection = () => {
                         </Card> */}
                         <Card as={Link} to="/Academics/Tweleth" className="mb-4 " style={{border:'none'}}>
                         {/* <img src='/images/class3-12.png' alt='class pre card' /> */}
-                        <img src='/images/class12.png' alt='class pre card' />
+                        <img src='/images/classpro.png' alt='class pre card' />
 
                         </Card>
                     </Col>
@@ -94,7 +93,7 @@ const CoursesSection = () => {
                             </Card.Body>
                         </Card> */}
                           <Card  className="mb-4 " style={{border:'none'}} >
-                          <img src='/images/class-foundation.png' alt='class pre card' />
+                          <img src='/images/classiit.png' alt='class pre card' />
 
                         </Card>
                     </Col>
