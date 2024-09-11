@@ -394,9 +394,10 @@ const handleClassClick = (className) => {
             </Col>
           </Row>
           <Row>
+         
             <Col md={4}>
               <Batches
-                image="/images/CBSEbatch.png"
+                image="/images/CBSEbatch2.png"
                 name="Courses of Maths"
                 date="Started on 25 Apr 2024"
                 timing="Evening Classes"
@@ -406,7 +407,7 @@ const handleClassClick = (className) => {
             </Col>
             <Col md={4}>
               <Batches
-                image="/images/CBSEbatch.png"
+                image="/images/CBSEbatch2.png"
                 name="Full Syllabus of Science"
                 date="Started on 25 Apr 2024"
                 timing="Evening Classes"
@@ -417,7 +418,7 @@ const handleClassClick = (className) => {
             </Col>
             <Col md={4}>
               <Batches
-                image="/images/CBSEbatch.png"
+                image="/images/CBSEbatch2.png"
                 name="Kids Basic Learning 2024 - 2025"
                 date="Started on 25 Apr 2024"
                 timing="Evening Classes"
