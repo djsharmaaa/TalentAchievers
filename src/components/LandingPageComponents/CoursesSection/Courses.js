@@ -47,13 +47,10 @@ const CoursesSection = () => {
                           <img src='/images/classiit.png' alt='class pre card' />
 
                         </Card>
-                        <Card  className="mb-4 " style={{border:'none'}}>
+                        <Card  className="mb-4 " style={{border:'none'}} >
+                          <img src='/images/classproo.png' alt='class pre card' />
 
-<img src='/images/class.png' alt='class precard' />
-
-
-
-</Card>
+                        </Card>
                     </Col>
                     <Col md={4}>
                         {/* <Card className="mb-4 h-100 p-2  Course-card">
