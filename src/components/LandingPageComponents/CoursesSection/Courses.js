@@ -43,10 +43,7 @@ const CoursesSection = () => {
                                 </div>
                                 <Button variant="light" className='explore-btn align-self-start' href="#">Explore</Button>
                             </Card.Body> */}
-                      <Card  className="mb-4 " style={{border:'none'}} >
-                          <img src='/images/classiit.png' alt='class pre card' />
-
-                        </Card>
+            
                         <Card  className="mb-4 " style={{border:'none'}} >
                           <img src='/images/classproo.png' alt='class pre card' />
 
