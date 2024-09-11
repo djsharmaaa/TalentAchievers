@@ -42,11 +42,12 @@
 
 
 /* Form section on the right */
-.login-form {
+.login-page {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: relative;
+  /* justify-content: center; */
+  align-items: center;
+  /* position: relative; */
   padding: 30px;
   
 

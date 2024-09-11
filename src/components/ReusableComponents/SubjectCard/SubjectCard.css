@@ -1,0 +1,27 @@
+.subject-card{
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.subject-card .card-title{
+  font-size: 1.2rem;
+}
+
+.subject-card .card-text{
+  color: var(--ac2-color);
+  margin-top: 1px;
+}
+
+
+.subject-card {
+  color: var(--ac2-color);
+  margin-top: 1px;
+}
+
+.batchdetails-syllabus-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  border: none;
+  background-color: var(--white-color);
+  font-weight: 600;
+}

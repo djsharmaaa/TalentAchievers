@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook,  faLinkedin, faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
 
 import './LoginPage.css'; 
+import { faClose} from '@fortawesome/free-solid-svg-icons';
 
 
 const LoginPage = () => {
@@ -45,8 +46,10 @@ const LoginPage = () => {
        
                 <Col  className="login-page">
     {/* Close icon */}
-    <div className="close-icon">
-      <i className="fas fa-times"></i>
+    <div className="close-icon  ">
+    <Link to="/">
+    <FontAwesomeIcon className='ms-auto' icon={faClose} />
+    </Link>
     </div>
     
     {/* Company logo */}

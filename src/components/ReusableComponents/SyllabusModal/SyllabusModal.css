@@ -1,0 +1,13 @@
+.batchdetails-syllabus-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  border: none;
+  background-color: var(--white-color);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.batchdetails-syllabus-link .ms-3 {
+  margin-left: 0.75rem;
+}

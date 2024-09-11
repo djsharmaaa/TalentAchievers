@@ -73,9 +73,8 @@
 .text-center{
     color: #B0B0B0;
     display: flex;
-    justify-items: center;
     align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
     
 }
 
@@ -90,6 +89,7 @@
 
 .text-center ul li {
     margin: 0 10px;
+
 }
 
 .text-center ul li a {
@@ -98,9 +98,9 @@
     transition: color 0.3s ease;
 }
 
-.text-center ul li a:hover {
+/* .text-center ul li a:hover {
     color: var(--primary-color);
-}
+} */
 
 .footer-section1, .footer-section2, .footer-section3 {
     margin-bottom: 20px;
@@ -121,4 +121,5 @@
     margin-top: 10px;
     font-size: 14px; 
 }
+
 

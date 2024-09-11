@@ -2,16 +2,20 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import './PracticeCard.css';
+import { Link } from 'react-router-dom';  
 
-const PracticeCard = ({ title, imageStyle, borderColor }) => {
+
+const PracticeCard = ({ title, imageStyle, borderColor,linkTo }) => {
   const cardStyle = {
     borderLeft: `5px solid ${borderColor}`, // Set the border color dynamically
     paddingLeft: '10px',
+    textDecoration: 'none', 
+    color: 'inherit' 
   };
 
   return (
     <Col md={4} className='mb-4'>
-      <Card className='Practice-card' style={cardStyle}>
+      <Card as={Link} to={linkTo} className='Practice-card' style={cardStyle}>
         <Card.Body>
           <div className='d-flex align-items-center justify-content-between'>
             <Card.Title className='mb-0'>{title}</Card.Title>

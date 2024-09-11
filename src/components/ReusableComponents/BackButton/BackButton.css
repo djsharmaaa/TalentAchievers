@@ -4,7 +4,9 @@
   align-items: center;
   background-color: transparent;
   border: 1px solid #ddd;
-}
+
+
+  }
 
 .back-button:hover {
   background-color: rgba(0, 0, 0, 0.1); /* Optional: Add a slight background color on hover */

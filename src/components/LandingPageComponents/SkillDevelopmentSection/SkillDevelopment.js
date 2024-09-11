@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -101,7 +101,32 @@ const responsive = {
   }
 };
 
+
+
+
 const SkillDevelopment = () => {
+
+
+
+  const [selectedCourse, setSelectedCourse] = useState('Web Development');
+
+
+  const Courses = [
+      'Web Development',
+      'JavaScript',
+      'UX Design',
+      'Android Development',
+      'CSS',
+      'Angular',
+      'React js',
+      'AWS',
+      'Communication'
+  ];
+  const handleClassClick = (className) => {
+      setSelectedCourse(className);
+  };
+
+
   return (
     <section className="skill-development-section">
       <Container>
@@ -110,40 +135,31 @@ const SkillDevelopment = () => {
             <h2 className="mb-0">Skill Development Courses</h2>
           </Col>
         </Row>
-        <Row className="mb-4 justify-content-left">
-            <Col xs="auto" className= "wd-1" >
-                <Button variant="outline-light" className="Skill-btn-outline mb-2">Web Development</Button>
-            </Col>
-            <Col xs="auto">
-                <Button variant="outline-light" className="Skill-btn-outline mb-2">JavaScript</Button>
-            </Col>
-            <Col xs="auto" >
-                <Button variant="outline-light" className="Skill-btn-outline mb-2">UX Design</Button>
-            </Col>
-            <Col xs="auto" >
-                <Button variant="outline-light" className="Skill-btn-outline mb-2">Android Development</Button>
-            </Col>
-            <Col  xs="auto">
-                <Button variant="outline-light" className="Skill-btn-outline mb-2">CSS</Button>
-            </Col>
-            <Col xs="auto">
-                <Button variant="outline-light" className="Skill-btn-outline mb-2"> Angular</Button>
-            </Col>
-            <Col xs="auto" >
-                <Button variant="outline-light" className="Skill-btn-outline mb-2">React JS</Button>
-            </Col>
-            <Col xs="auto">
-                <Button variant="outline-light" className="Skill-btn-outline mb-2">AWS</Button>
-            </Col>
-            <Col xs="auto">
-                <Button variant="outline-light" className="Skill-btn-outline mb-2">Communication</Button>
-            </Col>
-        </Row>
+     
+
+{/*  */}
+
+<Row className="Courses-buttons my-5 justify-content-left">
+                    {Courses.map((className) => (
+                        <Col key={className} xs="auto">
+                            <Button
+                                variant="outline-dark"
+                                className={selectedCourse === className ? 'button-active' : ''}
+                                onClick={() => handleClassClick(className)}
+                            >
+                                {className}
+                            </Button>
+                        </Col>
+                    ))}
+                </Row>
+
+
+{/*  */}
         <Row className='position-relative'>
           <Button variant="link" className="carousel-control-prev" aria-label="Previous">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
           </Button>
-          <Col md={12}>
+          <Col md={12} className='Skills-course-carousel'>
             <Carousel
               responsive={responsive}
               infinite={true}

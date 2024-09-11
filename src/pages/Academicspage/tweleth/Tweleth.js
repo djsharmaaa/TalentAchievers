@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 import NavigationBar from '../../../components/LandingPageComponents/NavigationBar/NavigationBar'
-import Footer from '../../../components/LandingPageComponents/Footer/Footer';
+import Footer from '../../../components/ReusableComponents/Footer/Footer';
+
 import Testimonial from '../../../components/ReusableComponents/Testimonial/Testimonial';
 import FrequentlyAskQuestions from '../../../components/AcademinComponents/Accordian/Accordion';
 import Getapp from '../../../components/LandingPageComponents/GetappSection/Getapp';
@@ -69,7 +70,7 @@ const BestEducatorssData = [
     {
         id: 2,
         name: 'Vinod',
-        imageSrc: ' ',
+        imageSrc: '/images/t2.png ',
         rating: 4.8,
         status: 'Offline',
         subject: 'Hindi Teacher | M.Sc',
@@ -108,6 +109,7 @@ const Tweleth = () => {
 
 
     const [selectedClass, setSelectedClass] = useState('Class 12');
+ 
 
 
     const classes = [
@@ -122,10 +124,18 @@ const Tweleth = () => {
         'Class 4',
         'Class 3',       
       ];
+
+      const duration=[
+        '6 Months :(Apr 24 - jun 24)',
+        '12 Months :(Apr 24 - jun 25)'
+
+      ]
       const handleClassClick = (className) => {
         setSelectedClass(className);
       };
 
+
+ 
     return (
         <div>
             <NavigationBar />
@@ -211,7 +221,7 @@ const Tweleth = () => {
                                     <div className='d-flex align-items-center mb-2'>
                                         <img src='/images/MultipleBatches.png' alt='Math Live Session' className='course-logo me-2' />
                                         <Card.Title className='d-flex justify-content-between w-100'>
-                                            Multiple Btaches <FontAwesomeIcon className='ms-auto' icon={faAngleRight} />
+                                            Courses <FontAwesomeIcon className='ms-auto' icon={faAngleRight} />
                                         </Card.Title>
                                     </div>
                                     <Card.Text>Choose from multiple batches to find a schedule that fits your needs and
@@ -265,7 +275,7 @@ const Tweleth = () => {
                     </Row>
                 </Container>
             </section>
-
+{/* 
             <section className='ChooseplanSection'>
                 <Container>
                     <Row className='mb-4'>
@@ -306,7 +316,13 @@ const Tweleth = () => {
                                                 <Button variant='outline-dark' className='mb-2 me-4'>6 Months : (Apr 24 - Jun 24)</Button>
                                                 <Button variant='outline-dark' className='mb-2'>12 Months : (Apr 24 - Jun 24)</Button>
                                             </div>
-                                            <ReusableButtons label="Buy Full Course" linkTo="/" customClass="primary"/>
+                             
+                                     <div className='planbuy-btn'>
+                                     <ReusableButtons label="Buy Full Course" linkTo="/" customClass="primary" />
+
+                                     </div>
+
+                             
                                         </Col>
                                     </Row>
                                 </Card.Body>
@@ -314,7 +330,7 @@ const Tweleth = () => {
                         </Col>
                     </Row>
                 </Container>
-            </section>
+            </section> */}
 
 
 
@@ -353,15 +369,51 @@ const Tweleth = () => {
                        
                        </Col>
                     </Row>
-                    <Row>
-                        <div className='course-duration d-flex flex-row '>
-                            <Col md={3}>
-                                <Button variant='outline-dark' style={{ width: '95%' }} className='mb-2 '>6 Months : (Apr 24 - Jun 24)</Button></Col>
-                            <Col md={3}>
-                                <Button variant='outline-dark'
-                                    style={{ width: '95%' }} className='mb-2 '>6 Months : (Apr 24 - Jun 24)</Button></Col>
+                    {/* <Row>
+                        <div className='offerings-buttons d-flex flex-row '>
+                        <Col md={3}>
+        <Button
+          variant='outline-dark'
+          style={{ width: '95%' }}
+          className={`mb-2 ${activeButton === '6 Months' ? 'button-active' : ''}`}
+          onClick={() => handleButtonClick('6 Months')}
+        >
+          6 Months : (Apr 24 - Jun 24)
+        </Button>
+        
+      </Col>
+      <Col md={3}>
+        <Button
+          variant='outline-dark'
+          style={{ width: '95%' }}
+          className={`mb-2 ${activeButton === '12 Months' ? 'bbutton-active' : ''}`}
+          onClick={() => handleButtonClick('12 Months')}
+        >
+          12 Months : (Apr 24 - Apr 25)
+        </Button>
+      </Col>
+
                         </div>
-                    </Row>
+                    </Row> */}
+
+                    <Row className="duration-buttons my-5">
+          {duration.map((className) => (
+
+            <Col key={className} xs={6} lg={1}>
+              <Button
+
+                variant="outline-dark"
+                className={selectedClass === className ? 'button-active' : ''}
+                onClick={() => handleClassClick(className)}
+              >
+                {className}
+
+              </Button>
+            </Col>
+          ))}
+        </Row>
+
+
                     <Row className="my-4">
             <Col>
               <div className="d-flex align-items-center">

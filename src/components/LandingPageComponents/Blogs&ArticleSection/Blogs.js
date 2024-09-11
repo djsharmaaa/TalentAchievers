@@ -116,7 +116,7 @@ const Blogs = () => {
                   <Card.Img variant="top" src={blog.imgSrc} alt={`${blog.title} image`} />
                   <Card.Body className='text-start d-flex  flex-column card-body'>
                   <Card.Text>{blog.skill}</Card.Text>
-                  <Card.Title className='mb-3'>{blog.title}</Card.Title>                    
+                  <Card.Title className='mb-3 blog-title'>{blog.title}</Card.Title>                    
                   <Card.Text> 
                         <FontAwesomeIcon  icon={faCalendar} /> {blog.Date}  
                         <FontAwesomeIcon className='ms-4' icon={faFileText} /> {blog.Message} </Card.Text>
@@ -134,7 +134,7 @@ const Blogs = () => {
           </Col>
   
         </Row>
-
+     
         <Row className='mb-5'>
           <Col md={12} className="d-flex justify-content-left  my-3">
             <ReusableButtons label="View All" linkTo="" customClass="secondary" />

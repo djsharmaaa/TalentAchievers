@@ -2,13 +2,14 @@ import React from 'react'
 import NavigationBar from '../../components/LandingPageComponents/NavigationBar/NavigationBar'
 import HeroSection from '../../components/LandingPageComponents/HeroSection/HeroSection'
 import Testimonial from '../../components/ReusableComponents/Testimonial/Testimonial';
-import Footer from '../../components/LandingPageComponents/Footer/Footer';
-import CoursesSection from '../../components/LandingPageComponents/CoursesSection/Courses';
+import Footer from '../../components/ReusableComponents/Footer/Footer';
+
 import BookDemo from '../../components/AcademinComponents/BookDemo/BookDemo';
 import BestEducators from '../../components/AcademinComponents/BestEducators/BestEducators';
 import ExploreOfferings from '../../components/AcademinComponents/OurOfferings/ExploreOfferings';
 import Getapp from '../../components/LandingPageComponents/GetappSection/Getapp';
 import CoursesFilter from '../../components/AcademinComponents/CoursesByFilter/CourseFilter';
+import CoursesSection from '../../components/LandingPageComponents/CoursesSection/Courses';
 
 
 
@@ -44,6 +45,10 @@ const AcademicsTestimonials = [
       },
 ]
 const Academics = () => {
+
+
+
+
   return (
        <div>
 
@@ -51,8 +56,7 @@ const Academics = () => {
         <NavigationBar/>
       
         <HeroSection/>
-        <CoursesSection/>
-       
+   <CoursesSection/>
         <CoursesFilter/>
         <ExploreOfferings/>
         <BestEducators/>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import NavigationBar from '../../../components/LandingPageComponents/NavigationBar/NavigationBar';
-import Footer from '../../../components/LandingPageComponents/Footer/Footer';
-import Studymaterialbtn from '../../../components/AcademinComponents/Studymaterialbtn/Studymaterialbtn';
+import Footer from '../../../components/ReusableComponents/Footer/Footer';
+
 import Getapp from '../../../components/LandingPageComponents/GetappSection/Getapp';
 import BackButton from '../../../components/ReusableComponents/BackButton/Backbutton';
+import { FaChevronRight } from 'react-icons/fa';
 
 import "./Practice.css";
 import PracticeCard from '../../../components/ReusableComponents/PracticeCard/PracticeCard';
@@ -18,22 +19,24 @@ const Practice = () => {
   return (
     <div>
       <NavigationBar />
-      <Studymaterialbtn />
-      <section>
-        <Container>
-          <Row className="align-items-center ">
-            <Col md={1}>
-              <BackButton />
-            </Col>
-            <Col md={11} className="text-end">
-              <nav aria-label="breadcrumb">
-                <ol className="breadcrumb mb-0">
-                  <li className="breadcrumb-item"><a href="/Academics/tweleth" style={{ textDecoration: 'none' }}>CBSE Class 12</a></li>
-                  <li className="breadcrumb-item active" aria-current="page">Practice</li>
-                </ol>
-              </nav>
-            </Col>
-          </Row>
+      <section >
+        <Container >
+        <Row className="align-items-center mt-5">
+  <Col md={1}>
+    <BackButton />
+  </Col>
+  <Col md={11} className="text-end">
+    <nav aria-label="breadcrumb" className="custom-breadcrumb">
+      <ol className="breadcrumb mb-0">
+        <li className="breadcrumb-item">
+          <a href="/Academics/tweleth" className="breadcrumb-link">CBSE Class 12</a>
+        </li>
+        <li className="breadcrumb-separator"><FaChevronRight /></li> 
+        <li className="breadcrumb-item active" aria-current="page">Practice</li>
+      </ol>
+    </nav>
+  </Col>
+</Row>
 
 
           <Row className='my-4'>
@@ -54,6 +57,7 @@ const Practice = () => {
             <PracticeCard title="Electrostatic" 
                    imageStyle={{ visibility: 'hidden'}}
                   borderColor="#DB82F3"  
+                  linkTo="./PracticeTopics"
                    
               />
             <PracticeCard title="Current Electricity"   borderColor="#DB82F3"/>

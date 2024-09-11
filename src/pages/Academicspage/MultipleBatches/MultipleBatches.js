@@ -1,18 +1,40 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import NavigationBar from '../../../components/LandingPageComponents/NavigationBar/NavigationBar';
-import Footer from '../../../components/LandingPageComponents/Footer/Footer';
-import Studymaterialbtn from '../../../components/AcademinComponents/Studymaterialbtn/Studymaterialbtn';
+import Footer from '../../../components/ReusableComponents/Footer/Footer';
+
 import Testimonial from '../../../components/ReusableComponents/Testimonial/Testimonial';
 import FrequentlyAskQuestions from '../../../components/AcademinComponents/Accordian/Accordion';
 import Getapp from '../../../components/LandingPageComponents/GetappSection/Getapp';
 import OtherCourses from '../../../components/AcademinComponents/OtherCourses/OtherCourses';
 import Batches from '../../../components/ReusableComponents/Batches/Batches';
 import BackButton from '../../../components/ReusableComponents/BackButton/Backbutton';
+import { FaChevronRight } from 'react-icons/fa';
 
 import "./MultipleBatches.css";
 
 const MultipleBatches = () => {
+
+
+
+
+  const [selectedClass, setSelectedClass] = useState('Class 12');
+ 
+
+
+
+
+    const duration=[
+      '6 Months :(Apr 24 - jun 24)',
+      '12 Months :(Apr 24 - jun 25)'
+
+    ]
+    const handleClassClick = (className) => {
+      setSelectedClass(className);
+    };
+
+
+
   const BatchDetailsTestimonials = [
     {
       id: 1,
@@ -47,37 +69,47 @@ const MultipleBatches = () => {
   return (
     <div>
       <NavigationBar />
-      <Studymaterialbtn />
       <Container>
-        <Row className="align-items-center my-4">
-          <Col md={1}>
-            <BackButton />
-          </Col>
-          <Col md={11} className="text-end">
-            <nav aria-label="breadcrumb">
-              <ol className="breadcrumb mb-0">
-              <li className="breadcrumb-item"><a href="/Academics/tweleth" style={{textDecoration: 'none'}}>CBSE Class 12</a></li>
-                <li className="breadcrumb-item active" aria-current="page">Batches</li>
-              </ol>
-            </nav>
-          </Col>
-        </Row>
+      <Row className="align-items-center mt-5">
+  <Col md={1}>
+    <BackButton />
+  </Col>
+  <Col md={11} className="text-end">
+    <nav aria-label="breadcrumb" className="custom-breadcrumb">
+      <ol className="breadcrumb mb-0">
+        <li className="breadcrumb-item">
+          <a href="/Academics/tweleth" className="breadcrumb-link">CBSE Class 12</a>
+        </li>
+        <li className="breadcrumb-separator"><FaChevronRight /></li> 
+        <li className="breadcrumb-item active" aria-current="page">Digital Resources</li>
+      </ol>
+    </nav>
+  </Col>
+</Row>
         <section>
           <Row >
-            <Col md={12} className="d-flex align-items-center mb-4">
+            <Col md={12} className="d-flex align-items-center my-4">
               <h1>Batches</h1>
               <h5 className="ms-2 pt-3" style={{color:"#470083"}}>CBSE(2024-2025)</h5>
             </Col>
           </Row>
         
-          <Row className="justify-content-left mb-4">
-            <Col xs="auto" className="wd-1">
-              <Button variant="outline-light" className="college-btn-outline mb-2">6 Months : (Apr 24 - Jun 24)</Button>
+          <Row className="duration-buttons mb-4">
+          {duration.map((className) => (
+
+            <Col key={className} xs={6} lg={1}>
+              <Button
+
+                variant="outline-dark"
+                className={selectedClass === className ? 'button-active' : ''}
+                onClick={() => handleClassClick(className)}
+              >
+                {className}
+
+              </Button>
             </Col>
-            <Col xs="auto">
-              <Button variant="outline-light" className="college-btn-outline mb-2">12 Months : (Apr 24 - Mar 225)</Button>
-            </Col>
-          </Row>
+          ))}
+        </Row>
           <Row className="mb-4">
             <Col>
               <div className="d-flex align-items-center">
@@ -99,6 +131,10 @@ const MultipleBatches = () => {
                 timing="Evening Classes"
                 teachers="Anamika, Neha"
                 showTeachers={true}
+                showTiming={true}
+
+                viewButton="View Batch Details"
+                showButton={true}
               />
             </Col>
             <Col md={4}>
@@ -109,6 +145,10 @@ const MultipleBatches = () => {
                 timing="Evening Classes"
                 teachers="Anamika, Neha"
                 showTeachers={true}
+                showTiming={true}
+
+                viewButton="View Batch Details"
+                showButton={true}
               />
             </Col>
             <Col md={4}>
@@ -119,6 +159,10 @@ const MultipleBatches = () => {
                 timing="Evening Classes"
                 teachers="Anamika, Neha"
                 showTeachers={true}
+                showTiming={true}
+
+                viewButton="View Batch Details"
+                showButton={true}
               />
             </Col>
           </Row>
@@ -131,7 +175,10 @@ const MultipleBatches = () => {
                 timing="Evening Classes"
                 teachers="Anamika, Neha"
                 showTeachers={true}
-              />
+                showTiming={true}
+                viewButton="View Batch Details"
+                showButton={true}
+/>
             </Col>
             <Col md={4}>
               <Batches
@@ -141,6 +188,10 @@ const MultipleBatches = () => {
                 timing="Evening Classes"
                 teachers="Anamika, Neha"
                 showTeachers={true}
+                showTiming={true}
+
+                viewButton="View Batch Details"
+                showButton={true}
               />
             </Col>
             <Col md={4}>
@@ -151,6 +202,10 @@ const MultipleBatches = () => {
                 timing="Evening Classes"
                 teachers="Anamika, Neha"
                 showTeachers={true}
+                showTiming={true}
+
+                viewButton="View Batch Details"
+                showButton={true}
               />
             </Col>
           </Row>
@@ -163,6 +218,10 @@ const MultipleBatches = () => {
                 timing="Evening Classes"
                 teachers="Anamika, Neha"
                 showTeachers={true}
+                showTiming={true}
+
+                viewButton="View Batch Details"
+                showButton={true}
               />
             </Col>
             <Col md={4}>
@@ -173,6 +232,10 @@ const MultipleBatches = () => {
                 timing="Evening Classes"
                 teachers="Anamika, Neha"
                 showTeachers={true}
+                showTiming={true}
+                
+                viewButton="View Batch Details"
+                showButton={true}
               />
             </Col>
             <Col md={4}>
@@ -183,6 +246,10 @@ const MultipleBatches = () => {
                 timing="Evening Classes"
                 teachers="Anamika, Neha"
                 showTeachers={true}
+                showTiming={true}
+
+                viewButton="View Batch Details"
+                showButton={true}
               />
             </Col>
           </Row>

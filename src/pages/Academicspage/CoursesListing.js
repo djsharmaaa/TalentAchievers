@@ -1,7 +1,8 @@
 import React from 'react'
 import NavigationBar from '../../components/LandingPageComponents/NavigationBar/NavigationBar'
 import CourseFilter from '../../components/AcademinComponents/CoursesByFilter/CourseFilter';
-import Footer from '../../components/LandingPageComponents/Footer/Footer';
+import Footer from '../../components/ReusableComponents/Footer/Footer';
+
 import Studymaterialbtn from '../../components/AcademinComponents/Studymaterialbtn/Studymaterialbtn';
 import Testimonial from '../../components/ReusableComponents/Testimonial/Testimonial';
 import Educators from '../../components/LandingPageComponents/Educators/Educators';

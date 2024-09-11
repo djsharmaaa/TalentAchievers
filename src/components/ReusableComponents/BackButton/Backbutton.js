@@ -11,8 +11,8 @@ const BackButton = () => {
   return (
     <section>
       <Container>
-        <Button variant="light" onClick={handleGoBack} className="back-button">
-          <ArrowLeft className="me-2" />
+        <Button variant="light" onClick={handleGoBack} className="back-button ">
+          <ArrowLeft className="" />
         
         </Button>
       </Container>

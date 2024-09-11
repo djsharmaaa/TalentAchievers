@@ -111,8 +111,10 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col xs={12} md={12} className="text-center">
+                        <Col md={2} >
                         <p className="small">&copy; 2024 Your Company. All rights reserved.</p>
-                        <Col md={4} className="text-center">
+                        </Col>
+                        <Col md={2} >
 
                             <ul className="list-unstyled">
                                 <li>

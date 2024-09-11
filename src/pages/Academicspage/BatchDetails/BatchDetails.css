@@ -18,6 +18,9 @@
   border-radius: 5%;
 }
 
+.batchdetails-hero-card .primary{
+  width:100%;
+}
 
 
 .batchdetails-hero-cardimg{
@@ -125,6 +128,6 @@
 
 
 .Btachdetail-Schedulebtn:hover{
-  background-color:  var(--accent-color);
-  color: #F3E5FF;
+  color: var(--accent-color);
+  background-color: #F3E5FF;
 }

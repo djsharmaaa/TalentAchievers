@@ -4,37 +4,57 @@
     border: none;
 
 }
-.college-btn-light{
+
+.Degree-buttons{
+
+    border-bottom: 4px solid #F7F6F9;
+}
+
+.Degree-buttons Button{
+    font-size: 1.1rem;
+    border: none;
+
+}
+.Degree-buttons .button-active{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 0px;
+
+}
+
+.Degree-buttons Button:not(.button-active){
     background-color: var(--white-color);
     color: var(--accent-color);
     padding: 6px 20px;
     font-weight: 600;
-
-
+    
 }
-
-.college-btn-light:hover{
-    background-color: var(--primary-color);
-    color: var(--white-color);
-
-}
-
-
-
 
 .Courses-buttons {
     gap: 10px;
-  
  
   }
+
+.Courses-buttons Button{
+    border: 1px solid #CDC3D5;
+    font-size: 1.1rem;
+
+}
+
+  .Courses-buttons Button:not(.button-active):hover {
+    background-color: #F2F0F4;
+    color: var(--accent-color);
+    border: 1px solid #CDC3D5;
+
+}
+
 
 
 
 .college-overlay{
     color: var(--white-color);
-    margin-top: 96px;
-    padding: 12px;
-    height: 31%;
+    margin-top: 35%;
+  
 }
 
 
@@ -52,7 +72,7 @@
     color:var(--accent-color);
     text-align: left;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
 
 
 }

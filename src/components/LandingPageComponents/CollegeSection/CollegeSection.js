@@ -4,13 +4,21 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import './CollegeSection.css';
 import ReusableButtons from '../../ReusableComponents/ReusableButtons/ReusableButtons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 export const CollegeSection = () => {
 
-  const [selectedCourse, setSelectedCourse] = useState('Popular');
+    const [selectedCourse, setSelectedCourse] = useState('Popular');
+    const [selectedDegree, setSelectedDegree] = useState("Master's Degrees");
 
 
-    const Courses= [
+    const Degrees = [
+        "Master's Degrees",
+        "Bachelor's Degrees",
+        'Certificates'
+    ]
+
+
+    const Courses = [
         'Popular',
         'M.Tech',
         'M.sc',
@@ -19,11 +27,14 @@ export const CollegeSection = () => {
         'Buisness Management',
         'Data Science',
         'Finance',
-     ];
-     const handleClassClick = (className) => {
+    ];
+    const handleClassClick = (className) => {
         setSelectedCourse(className);
-      };
-    
+    };
+
+    const handleClick = (className) => {
+        setSelectedDegree(className);
+    };
 
 
     return (
@@ -34,39 +45,41 @@ export const CollegeSection = () => {
                         <h2 className="mb-0">Explore Colleges</h2>
                     </Col>
                 </Row>
-                <Row className="mb-4">
+           
 
-                    <Col md={2}>
-                        <Button variant="light" className="college-btn-light mb-2">Master's Degrees</Button>
-                    </Col>
-                    <Col md={2}>
-                        <Button variant="light" className="college-btn-light mb-2">Bachelor's Degrees</Button>
-                    </Col>
-                    <Col md={2}>
-                        <Button variant="light" className="college-btn-light mb-2">Certificates</Button>
-                    </Col>
-
-                    <hr />
+                <Row className="Degree-buttons my-5 justify-content-left">
+                    {Degrees.map((className) => (
+                        <Col key={className} xs="auto">
+                            <Button
+                                variant="transparent"
+                                className={selectedDegree === className ? 'button-active' : ''}
+                                onClick={() => handleClick(className)}
+                            >
+                                {className}
+                            </Button>
+                        
+                        </Col>
+                    ))}
                 </Row>
 
                 <Row className="Courses-buttons my-5 justify-content-left">
-  {Courses.map((className) => (
-    <Col key={className} xs="auto">
-      <Button
-        variant="outline-dark"
-        className={selectedCourse === className ? 'button-active' : ''}
-        onClick={() => handleClassClick(className)}
-      >
-        {className}
-      </Button>
-    </Col>
-  ))}
-</Row>
+                    {Courses.map((className) => (
+                        <Col key={className} xs="auto">
+                            <Button
+                                variant="outline-dark"
+                                className={selectedCourse === className ? 'button-active' : ''}
+                                onClick={() => handleClassClick(className)}
+                            >
+                                {className}
+                            </Button>
+                        </Col>
+                    ))}
+                </Row>
 
-              
+
                 <Row >
                     <Col md={3}>
-                        <Card className=" h-100 college-card">
+                        <Card className="  college-card">
                             <Card.Img variant="top" src="/images/collegeimage.png" alt="College image" />
                             <Card.ImgOverlay className='college-overlay '>
                                 <div className='d-flex align-items-center mt-4'>
@@ -80,20 +93,20 @@ export const CollegeSection = () => {
                                 </div>
                             </Card.ImgOverlay>
                             <Card.Body className="d-flex flex-column college-card-body ">
-                                <a href="/" className="d-flex justify-content-between college-btn-link">View All Courses <FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
-                                
+                                <a href="/" className="d-flex justify-content-between college-btn-link">View All Courses and fees <FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+
                                 <hr></hr>
-                                <a href="/" className="d-flex justify-content-between college-btn-link">Brochure<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
-                               
+                                <a href="/" className="d-flex justify-content-between college-btn-link">Download Brochure<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+
                                 <hr></hr>
                                 <a href="/" className="d-flex justify-content-between  college-btn-link">Compare<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
-                               
+
 
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col md={3}>
-                        <Card className="mb-4 h-100 college-card">
+                        <Card className="mb-4  college-card">
                             <Card.Img variant="top" src="/images/collegeimage.png" alt="College image" />
                             <Card.ImgOverlay className='college-overlay '>
                                 <div className='d-flex align-items-center mt-4'>
@@ -107,20 +120,20 @@ export const CollegeSection = () => {
                                 </div>
                             </Card.ImgOverlay>
                             <Card.Body className="d-flex flex-column college-card-body ">
-                                <a href="/" className="d-flex justify-content-between college-btn-link">View All Courses <FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
-                                
+                                <a href="/" className="d-flex justify-content-between college-btn-link">View All Courses and fees <FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+
                                 <hr></hr>
-                                <a href="/" className="d-flex justify-content-between college-btn-link">Brochure<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
-                               
+                                <a href="/" className="d-flex justify-content-between college-btn-link">Download Brochure<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+
                                 <hr></hr>
                                 <a href="/" className="d-flex justify-content-between  college-btn-link">Compare<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
-                               
+
 
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col md={3}>
-                        <Card className="mb-4 h-100 college-card">
+                        <Card className="mb-4  college-card">
                             <Card.Img variant="top" src="/images/collegeimage.png" alt="College image" />
                             <Card.ImgOverlay className='college-overlay '>
                                 <div className='d-flex align-items-center mt-4'>
@@ -134,20 +147,20 @@ export const CollegeSection = () => {
                                 </div>
                             </Card.ImgOverlay>
                             <Card.Body className="d-flex flex-column college-card-body ">
-                                <a href="/" className="d-flex justify-content-between college-btn-link">View All Courses <FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
-                                
+                                <a href="/" className="d-flex justify-content-between college-btn-link">View All Courses and fees <FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+
                                 <hr></hr>
-                                <a href="/" className="d-flex justify-content-between college-btn-link">Brochure<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
-                               
+                                <a href="/" className="d-flex justify-content-between college-btn-link">Download Brochure<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+
                                 <hr></hr>
                                 <a href="/" className="d-flex justify-content-between  college-btn-link">Compare<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
-                               
+
 
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col md={3}>
-                        <Card className="mb-4 h-100 college-card">
+                        <Card className="mb-4 college-card">
                             <Card.Img variant="top" src="/images/collegeimage.png" alt="College image" />
                             <Card.ImgOverlay className='college-overlay '>
                                 <div className='d-flex align-items-center mt-4'>
@@ -161,14 +174,14 @@ export const CollegeSection = () => {
                                 </div>
                             </Card.ImgOverlay>
                             <Card.Body className="d-flex flex-column college-card-body ">
-                                <a href="/" className="d-flex justify-content-between college-btn-link">View All Courses <FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
-                                
+                                <a href="/" className="d-flex justify-content-between college-btn-link">View All Courses and fees <FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+
                                 <hr></hr>
-                                <a href="/" className="d-flex justify-content-between college-btn-link">Brochure<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
-                               
+                                <a href="/" className="d-flex justify-content-between college-btn-link">Download Brochure<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
+
                                 <hr></hr>
                                 <a href="/" className="d-flex justify-content-between  college-btn-link">Compare<FontAwesomeIcon className='ms-auto' icon={faAngleRight} /></a>
-                               
+
 
                             </Card.Body>
                         </Card>

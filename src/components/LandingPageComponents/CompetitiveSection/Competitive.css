@@ -33,6 +33,10 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.Competitive-card:hover{
+    border: 1px solid grey;
+}
+
 .cardbody{
     height: 270px;
 }
@@ -55,6 +59,14 @@
 }
 
 
+.Competitive-card-btn:hover {
+    background-color: transparent;
+    border-radius: 18px;
+    border: 1px solid #e1dfe4;
+    color: var(--text-color);
+    padding: 6px 14px;
+}
+
 
 .Competitive-btn {
     width: 120px; 
@@ -69,3 +81,4 @@
     color: var(--white-color);
     background-color:var(--primary-color);
 }
+

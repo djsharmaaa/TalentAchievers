@@ -2,8 +2,7 @@ import React from 'react'
 
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import NavigationBar from '../../../components/LandingPageComponents/NavigationBar/NavigationBar'
-import Footer from '../../../components/LandingPageComponents/Footer/Footer';
-import Studymaterialbtn from '../../../components/AcademinComponents/Studymaterialbtn/Studymaterialbtn';
+import Footer from '../../../components/ReusableComponents/Footer/Footer';
 import Testimonial from '../../../components/ReusableComponents/Testimonial/Testimonial';
 import FrequentlyAskQuestions from '../../../components/AcademinComponents/Accordian/Accordion';
 import Getapp from '../../../components/LandingPageComponents/GetappSection/Getapp';
@@ -17,10 +16,32 @@ import TeachersCard from '../../../components/ReusableComponents/TeachersCard/Te
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faCircle } from '@fortawesome/free-solid-svg-icons';
+import {  faCircle } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import SubjectCard from '../../../components/ReusableComponents/SubjectCard/SubjectCard';
+import ReusableButtons from '../../../components/ReusableComponents/ReusableButtons/ReusableButtons';
 
 const BatchDetails = () => {
+  const [selectedCourse, setSelectedCourse] = useState('Recorded');
 
+  const scheduleData = [
+    { day: 'Mon', date: '29 Apr 2024', subject: 'Math', bgColor: '#E6FFEA', textColor: '#01A91B', session: 'Introduction Session', time: '7am - 8am', teacher: 'Anamika' },
+    { day: 'Tue', date: '30 Apr 2024', subject: 'Social Science', bgColor: '#E6F1FF', textColor: '#004AA8', session: 'Introduction Session', time: '7am - 8am', teacher: 'Anamika' },
+    { day: 'Wed', date: '1 May 2024', subject: 'English', bgColor: '#F7E6FF', textColor: '#7200A8', session: 'Introduction Session', time: '7am - 8am', teacher: 'Anamika' },
+    { day: 'Thu', date: '2 May 2024', subject: 'Math', bgColor: '#E6FFEA', textColor: '#01A91B', session: 'Introduction Session', time: '7am - 8am', teacher: 'Anamika' },
+    { day: 'Fri', date: '3 May 2024', subject: 'Math', bgColor: '#E6FFEA', textColor: '#01A91B', session: 'Introduction Session', time: '7am - 8am', teacher: 'Anamika' }
+  ];
+
+  const Courses = [
+    'Recorded',
+    'Live Class',
+    'Offline',
+    'One-on-one',
+
+];
+const handleClassClick = (className) => {
+  setSelectedCourse(className);
+};
 
   const BatchDetailsTestimonials = [
     {
@@ -99,26 +120,29 @@ const BatchDetails = () => {
   return (
     <div>
       <NavigationBar />
-      <Studymaterialbtn />
-      <BackButton />
+     <section>
       <Container>
-        <Row className="my-4 justify-content-left">
-          <Col xs="auto" className="wd-1" >
-            <Button variant="outline-light" className="college-btn-outline mb-2">Recorded</Button>
-          </Col>
-          <Col xs="auto">
-            <Button variant="outline-light" className="college-btn-outline mb-2">Live Classes</Button>
-          </Col>
-          <Col xs="auto" >
-            <Button variant="outline-light" className="college-btn-outline mb-2">Offline</Button>
-          </Col>
-          <Col xs="auto" >
-            <Button variant="outline-light" className="college-btn-outline mb-2">One-on-one</Button>
-          </Col>
+      <Row className=" mt-5">
 
-        </Row>
+      <BackButton/>
+      </Row>
+
+      <Row className="Courses-buttons my-5 justify-content-left">
+                    {Courses.map((className) => (
+                        <Col key={className} xs="auto">
+                            <Button
+                                variant="outline-dark"
+                                className={selectedCourse === className ? 'button-active' : ''}
+                                onClick={() => handleClassClick(className)}
+                            >
+                                {className}
+                            </Button>
+                        </Col>
+                    ))}
+                </Row>
+
       </Container>
-
+     </section>
       <section className="batchdetails-hero-section">
         <Container>
           <Row className="align-items-center">
@@ -164,8 +188,9 @@ const BatchDetails = () => {
                     <span className="discount">80% off</span>
                   </Card.Text>
                   <Card.Text className='d-flex align-item-center mb-4'> <img src='/images/syllabusL.png' alt='none' className='me-1' />Full CBSE Class 12 Syllabus</Card.Text>
-                  <Button variant='primary' className='buy-button'>Buy Full Course</Button>
-
+                    <Col md={12}>
+                <ReusableButtons label="Buy Full Course" customClass="primary"/>
+                </Col>
                 </Card.Body>
               </Card>
             </Col>
@@ -191,7 +216,7 @@ const BatchDetails = () => {
                                     <div className='d-flex align-items-center mb-2'>
                                         <img src='/images/LiveSession.png' alt='Math Live Session' className='course-logo me-2' />
                                         <Card.Title className='d-flex justify-content-between '>
-                                            Live Session 
+                                            Classes 
                                         </Card.Title>
                                     </div>
                                 </Card.Body>
@@ -245,163 +270,69 @@ const BatchDetails = () => {
 
 
             <section className='batchdetails-Schedule'>
-        <Container>
-          <Row>
-            <Col md={3} className='mb-4'>
-              <h3 className='mb-3'>Schedule</h3>
-              <p className='d-flex align-item-center'><img src='/images/timingL.png' alt='timing' className='me-2'/>Evening classes</p>
-             
-              <ul className='ps-3'>
-                <li>
-              <p >4 Times a week</p>
-
-                </li>
-                <li>
-              <p>(22 Apr 2024 - 30 Apr 2024)</p>
-
-                </li>
-              </ul>
-            </Col>
-            <Col md={9}>
-            <Row>
-        <Col md={12} className='mb-4'>
-          <Card>
-            <Card.Body>
-              <div className='d-flex align-items-center '>
-                <div className=' me-5'>
-                  <h5 className='mb-1'>Mon</h5>
-                  <p className='mb-2'>29 Apr 2024</p>
-                </div>
-                <div >
-                  <Card.Title className='mb-2'>Introduction Session</Card.Title>
-                  <Card.Text className='mb-1' style={{color:'#745F86'}}>
-                    <FontAwesomeIcon icon={faCircle} style={{ fontSize: '0.5em', marginRight: '0.3rem', marginBottom:'2px' }}  />
-                    7am - 8am
-                    <FontAwesomeIcon icon={faCircle} style={{ fontSize: '0.5em', margin: '2px 4px 2px 10px',  }} />
-                    Anamika
-                  </Card.Text>
-                  
-                  <Card.Title className='mb-0' style={{ color: '01A91B', backgroundColor: '#E6FFEA', padding: '0.2em 0.5em', borderRadius: '0.25em' }}>
-                    | Math
-                  </Card.Title>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-           </Row>
-           <Row>
-        <Col md={12} className='mb-4'>
-          <Card>
-            <Card.Body>
-              <div className='d-flex align-items-center '>
-                <div className=' me-5'>
-                  <h5 className='mb-1'>TUE</h5>
-                  <p className='mb-2'>29 Apr 2024</p>
-                </div>
-                <div >
-                  <Card.Title className='mb-2'>Introduction Session</Card.Title>
-                  <Card.Text className='mb-1' style={{color:'#745F86'}}>
-                    <FontAwesomeIcon icon={faCircle} style={{ fontSize: '0.5em', marginRight: '0.3rem', marginBottom:'2px' }}  />
-                    7am - 8am
-                    <FontAwesomeIcon icon={faCircle} style={{ fontSize: '0.5em', margin: '2px 4px 2px 10px', color:'' }} />
-                    Anamika
-                  </Card.Text>
-  <Card.Title className='mb-0' style={{ color: '#004AA8', backgroundColor: '#E6F1FF', padding: '0.2em 0.5em', borderRadius: '0.25em' }}>
-                    | Social Science
-                  </Card.Title>                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-           </Row> <Row>
-        <Col md={12} className='mb-4'>
-          <Card>
-            <Card.Body>
-              <div className='d-flex align-items-center '>
-                <div className=' me-5'>
-                  <h5 className='mb-1'>WED</h5>
-                  <p className='mb-2'>29 Apr 2024</p>
-                </div>
-                <div >
-                  <Card.Title className='mb-2'>Introduction Session</Card.Title>
-                  <Card.Text className='mb-1' style={{color:'#745F86'}}>
-                    <FontAwesomeIcon icon={faCircle} style={{ fontSize: '0.5em', marginRight: '0.3rem', marginBottom:'2px' }}  />
-                    7am - 8am
-                    <FontAwesomeIcon icon={faCircle} style={{ fontSize: '0.5em', margin: '2px 4px 2px 10px', color:'' }} />
-                    Anamika
-                  </Card.Text>
-  <Card.Title className='mb-0' style={{ color: '#7200A8', backgroundColor: '#F7E6FF', padding: '0.2em 0.5em', borderRadius: '0.25em' }}>
-                    | English
-                  </Card.Title>                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-           </Row> <Row>
-        <Col md={12} className='mb-4'>
-          <Card>
-            <Card.Body>
-              <div className='d-flex align-items-center '>
-                <div className=' me-5'>
-                  <h5 className='mb-1'>THU</h5>
-                  <p className='mb-2'>29 Apr 2024</p>
-                </div>
-                <div >
-                  <Card.Title className='mb-2'>Introduction Session</Card.Title>
-                  <Card.Text className='mb-1' style={{color:'#745F86'}}>
-                    <FontAwesomeIcon icon={faCircle} style={{ fontSize: '0.5em', marginRight: '0.3rem', marginBottom:'2px' }}  />
-                    7am - 8am
-                    <FontAwesomeIcon icon={faCircle} style={{ fontSize: '0.5em', margin: '2px 4px 2px 10px', color:'' }} />
-                    Anamika
-                  </Card.Text>
-  <Card.Title className='mb-0' style={{ color: '01A91B', backgroundColor: '#E6FFEA', padding: '0.2em 0.5em', borderRadius: '0.25em' }}>
-                    | Math
-                  </Card.Title>                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-           </Row> <Row>
-        <Col md={12} className='mb-4'>
-          <Card>
-            <Card.Body>
-              <div className='d-flex align-items-center '>
-                <div className=' me-5'>
-                  <h5 className='mb-1'>FRI</h5>
-                  <p className='mb-2'>29 Apr 2024</p>
-                </div>
-                <div >
-                  <Card.Title className='mb-2'>Introduction Session</Card.Title>
-                  <Card.Text className='mb-1' style={{color:'#745F86'}}>
-                    <FontAwesomeIcon icon={faCircle} style={{ fontSize: '0.5em', marginRight: '0.3rem', marginBottom:'2px' }}  />
-                    7am - 8am
-                    <FontAwesomeIcon icon={faCircle} style={{ fontSize: '0.5em', margin: '2px 4px 2px 10px', color:'' }} />
-                    Anamika
-                  </Card.Text>
-  <Card.Title className='mb-0' style={{ color: '01A91B', backgroundColor: '#E6FFEA', padding: '0.2em 0.5em', borderRadius: '0.25em' }}>
-                    | Math
-                  </Card.Title>                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-           </Row>
-           
-              <Row>
+      <Container>
+        <Row>
+          <Col md={3} className='mb-4'>
+            <h3 className='mb-3'>Schedule</h3>
+            <p className='d-flex align-item-center'>
+              <img src='/images/timingL.png' alt='timing' className='me-2' />
+              Evening classes
+            </p>
+            <ul className='ps-3'>
+              <li>
+                <p>4 Times a week</p>
+              </li>
+              <li>
+                <p>(22 Apr 2024 - 30 Apr 2024)</p>
+              </li>
+            </ul>
+          </Col>
+          <Col md={9}>
+            {scheduleData.map((schedule, index) => (
+              <Row key={index}>
                 <Col md={12} className='mb-4'>
-                  
-                <Button  className='Btachdetail-Schedulebtn mb-4'>View Complete Schedule</Button>
-
-                  
+                  <Card>
+                    <Card.Body>
+                      <div className='d-flex align-items-center p-3'>
+                        <div className='me-5'>
+                          <h5 className='mb-1'>{schedule.day}</h5>
+                          <p className='mb-2'>{schedule.date}</p>
+                        </div>
+                        <div>
+                          <Card.Title className='mb-2'>{schedule.session}</Card.Title>
+                          <Card.Text className='mb-1' style={{ color: '#745F86' }}>
+                            <FontAwesomeIcon icon={faCircle} style={{ fontSize: '0.5em', marginRight: '0.3rem', marginBottom: '2px' }} />
+                            {schedule.time}
+                            <FontAwesomeIcon icon={faCircle} style={{ fontSize: '0.5em', margin: '2px 4px 2px 10px' }} />
+                            {schedule.teacher}
+                          </Card.Text>
+                          <Card.Title
+                            className='mb-0'
+                            style={{
+                              color: schedule.textColor,
+                              backgroundColor: schedule.bgColor,
+                              padding: '0.2em 0.5em',
+                              borderRadius: '0.25em'
+                            }}>
+                            | {schedule.subject}
+                          </Card.Title>
+                        </div>
+                      </div>
+                    </Card.Body>
+                  </Card>
                 </Col>
-               
               </Row>
-              
-            </Col>
-          </Row>
-        </Container>
-      </section>
+            ))}
+            <Row>
+              <Col md={12} className='mb-4'>
+                <Button className='Btachdetail-Schedulebtn mb-4'>View Complete Schedule</Button>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
 
 
       
@@ -414,77 +345,15 @@ const BatchDetails = () => {
 
             <Col md={9}>
               <Row>
-                <Col md={6} className='mb-4'>
-                  <Card>
-                    <Card.Body>
-                      <div className='d-flex align-items-center'>
-                        <img src='/images/maths.png' alt='Math' className='me-2' />
-                        <div>
-                          <Card.Title className='mb-2'>Math</Card.Title>
-                          <Card.Text>
-                            <button href='#' className='batchdetails-syllabus-link '>
-                              View Syllabus <FontAwesomeIcon className='ms-3' icon={faAngleRight} />
-                            </button>
-                          </Card.Text>
-                        </div>
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col md={6} className='mb-4'>
-                  <Card>
-                    <Card.Body>
-                      <div className='d-flex align-items-center'>
-                        <img src='/images/english.png' alt='English' className='me-2' />
-                        <div>
-                          <Card.Title className='mb-2'>English</Card.Title>
-                          <Card.Text>
-                            <button href='#' className='batchdetails-syllabus-link'>
-                              View Syllabus <FontAwesomeIcon className='ms-3' icon={faAngleRight} />
-                            </button>
-                          </Card.Text>
-                        </div>
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </Col>
+            <SubjectCard linkTo="" imgSrc='/images/maths.png' imgAlt='Math' title='Math' showButton={true} colSize={6} />
+            <SubjectCard linkTo="" imgSrc='/images/english.png' imgAlt='English' title='English' showButton={true} colSize={6} />
+            <SubjectCard linkTo="" imgSrc='/images/science.png' imgAlt='Science' title='Science' showButton={true}  colSize={6}/>
+            <SubjectCard linkTo="" imgSrc='/images/socialscience.png' imgAlt='SSt' title='Social Science' showButton={true}colSize={6} />
+
+              
+            
               </Row>
-              <Row>
-                <Col md={6} className='mb-4'>
-                  <Card>
-                    <Card.Body>
-                      <div className='d-flex align-items-center'>
-                        <img src='/images/science.png' alt='Science' className='me-2' />
-                        <div>
-                          <Card.Title className='mb-2'>Science</Card.Title>
-                          <Card.Text>
-                            <button href='#' className='batchdetails-syllabus-link'>
-                              View Syllabus <FontAwesomeIcon className='ms-3' icon={faAngleRight} />
-                            </button>
-                          </Card.Text>
-                        </div>
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col md={6} className='mb-4'>
-                  <Card>
-                    <Card.Body>
-                      <div className='d-flex align-items-center'>
-                        <img src='/images/socialscience.png' alt='Social Science' className='me-2' />
-                        <div>
-                          <Card.Title className='mb-2'>Social Science</Card.Title>
-                          <Card.Text>
-                            <button href='#' className='batchdetails-syllabus-link'>
-                              View Syllabus <FontAwesomeIcon className='ms-3' icon={faAngleRight} />
-                            </button>
-                          </Card.Text>
-                        </div>
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </Row>
+        
             </Col>
           </Row>
         </Container>

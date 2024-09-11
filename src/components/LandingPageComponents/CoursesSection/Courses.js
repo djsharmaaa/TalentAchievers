@@ -1,14 +1,15 @@
-import React, {useState} from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import React from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import './Courses.css';
- import ClassesModal from '../Classesmodal/ClassesModal';
+//  import ClassesModal from '../Classesmodal/ClassesModal';
+import { Link } from 'react-router-dom';
 
 const CoursesSection = () => {
 
-    const [showModal, setShowModal] = useState(false);
+    // const [showModal, setShowModal] = useState(false);
 
-    const handleClose = () => setShowModal(false);
-    const handleShow = () => setShowModal(true);
+    // const handleClose = () => setShowModal(false);
+    // const handleShow = () => setShowModal(true);
 
     return (
         <section className="courses-section">
@@ -22,7 +23,7 @@ const CoursesSection = () => {
                 </Row>
                 <Row>
                 <Col md={4}>
-                        <Card  className="mb-4 h-100  p-2 Course-card">
+                       {/*  <Card  className="mb-4 " style={{border:'none'}}>
                             <Card.Body className='cardbody d-flex flex-column mb-2'> 
                             <div className='d-flex align-items-start'>
                                 <img src="/images/CourseCard1.png" alt="Course" className="course-image mb-2"/>
@@ -40,11 +41,14 @@ const CoursesSection = () => {
                                     <Button variant="secondary" className='me-4 mb-2 course-card-btn' href="#">General Knowledge</Button>
                                 </div>
                                 <Button variant="light" className='explore-btn align-self-start' href="#">Explore</Button>
-                            </Card.Body>
+                            </Card.Body> */}
+                        <Card  className="mb-4 " style={{border:'none'}}>
+
+                            <img src='/images/classpre-5.png' alt='class pre card' />
                         </Card>
                     </Col>
                     <Col md={4}>
-                        <Card className="mb-4 h-100 p-2  Course-card">
+                        {/* <Card className="mb-4 h-100 p-2  Course-card">
                             <Card.Body  className='cardbody d-flex flex-column'>
                             <div className='d-flex align-items-start'>
                                 <img src="/images/CourseCard2.png" alt="Course" className="course-image mb-3"/>
@@ -60,10 +64,15 @@ const CoursesSection = () => {
                                 </div>
                                 <Button variant="light"  className='explore-btn align-self-start' onClick={handleShow}>Explore</Button>
                             </Card.Body>
+                        </Card> */}
+                        <Card as={Link} to="/Academics/Tweleth" className="mb-4 " style={{border:'none'}}>
+                        {/* <img src='/images/class3-12.png' alt='class pre card' /> */}
+                        <img src='/images/class12.png' alt='class pre card' />
+
                         </Card>
                     </Col>
-                    <Col md={4}>
-                        <Card className="mb-4 h-100 p-2  Course-card">
+                    <Col md={4} >
+                        {/* <Card className="mb-4 h-100 p-2  Course-card">
                             <Card.Body  className='cardbody d-flex flex-column'>
                                 <div className='d-flex align-items-start'>
                                 <img src="/images/CourseCard3.png" alt="Course" className="course-image mb-3"/>
@@ -80,14 +89,29 @@ const CoursesSection = () => {
                                 </div>
                                 <Button variant="light"  className='explore-btn align-self-start' href="#">Explore</Button>
                             </Card.Body>
+                        </Card> */}
+                          <Card  className="mb-4 " style={{border:'none'}} >
+                          <img src='/images/class-foundation.png' alt='class pre card' />
+
                         </Card>
                     </Col>
                 </Row>
             </Container>
-            <ClassesModal show={showModal} handleClose={handleClose}  />
+            {/* <ClassesModal show={showModal} handleClose={handleClose}  /> */}
         </section>
     );
 };
 
 export default CoursesSection;
+
+
+
+
+
+
+
+
+
+
+
 

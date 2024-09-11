@@ -1,3 +1,30 @@
+/* Overlay to dim the background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
+  display: none; /* Hidden by default */
+  z-index: 999; /* Make sure it's below the dropdown but above other content */
+}
+
+/* When the overlay is active */
+.overlay.active {
+  display: block;
+}
+
+/* Other CSS styles remain the same */
+
+
+/* Other CSS styles remain the same */
+
+
+.container {
+  max-width: 1400px;
+}
+
 .navbar-container {
   background-color: var(--white-color);
   padding: 0px;
@@ -6,11 +33,6 @@
 
 }
 
-
-
-.container {
-  max-width: 1400px;
-}
 
 .navbar-brand img {
   height: 40px;
@@ -28,8 +50,8 @@
 .navbar-container .navbar-brand,
 .navbar-container .nav-link {
   color: var(--accent-color);
-  font-weight: 500;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 13.5px;
 
 
 }
@@ -66,6 +88,8 @@ background-color: none !important ;
   background-color: var(--white-color) !important;
   color: var(--accent-color) !important;
   border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 
@@ -73,10 +97,37 @@ background-color: none !important ;
   width: 48%;
 }
 
+
+
 /* dropdown items */
 .dropdown-academic-menu {
-  top: 68px !important;
-  width: 300px;
+  position: relative;
+  top: 67px !important;
+  min-height: 25rem;
+  width: 350px;
+  background-color: white;
+  border-radius: 0;
+  border: none;
+  /* border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+
+}
+
+
+
+
+.dropdown-item{
+  padding: 5px;
+}
+
+.dropdown-academic-menu-btn{
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  margin-bottom: 10px;
+
+
+
 }
 
 
@@ -84,26 +135,58 @@ background-color: none !important ;
   color: var(--primary-color);
 }
 
-.navbar-container .dropdown-item {
-  position: relative;
+/* .navbar-container .dropdown-item {
   width: 300px;
-}
+} */
 
 
 .submenu {
-
+  padding-top: 59px;
   position: absolute;
-  left: 100% !important;
-  /* top: 68px !important; */
-  min-width: 100px;
-
+  top: 0px; /* Align to the top of the parent dropdown */
+  left: 100%; /* Align to the right of the parent dropdown */
+  min-width: 100%; /* Make the submenu's width equal to the parent */
   background-color: white;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* max-height: 100%; */
-  /* overflow: auto; */
+  /* border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  z-index: 1000; 
+height: 25rem;
+box-sizing: border-box;
+
 
 }
+.submenu::before {
+  content: "";
+  position: absolute;
+  top: 12%;
+  left: -1px; /* Adjust to position the border properly */
+  height: 22rem; /* Set the height you want for the border */
+  width: 1px; /* Width of the border */
+  background-color: #E6E1EA; /* Color of the border */
+  z-index: 1000; /* Make sure it's on top */
+
+
+ 
+}
+
+
+.last-submenu{
+  padding-top: 53px;
+  position: absolute;
+  top: 0px; /* Align to the top of the parent dropdown */
+  left: 100%; /* Align to the right of the parent dropdown */
+  min-width: 100%; /* Make the submenu's width equal to the parent */
+  background-color: white;
+  /* border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  z-index: 1000; 
+height: 25rem;
+box-sizing: border-box;
+
+
+}
+
+
 
 .submenu .dropdown-item {
   padding: 5px 10px;
@@ -113,7 +196,6 @@ background-color: none !important ;
   background-color: #f8f9fa;
   color: var(--primary-color);
 }
-
 
 
 /* Login and signup buttons */

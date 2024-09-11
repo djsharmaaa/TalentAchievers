@@ -1,0 +1,14 @@
+.option-btn {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.correct-option {
+  background-color: green;
+  color: white;
+}
+
+.wrong-option {
+  background-color: red;
+  color: white;
+}

@@ -41,9 +41,8 @@
 // export default NavigationBar;
 
 
-
 import React, { useState } from 'react';
-import { Navbar, Nav, Container, Button, Dropdown, ButtonGroup } from 'react-bootstrap';
+import { Navbar, Nav, Container, Button, Dropdown, ButtonGroup} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
@@ -54,9 +53,9 @@ const NavigationBar = () => {
   const [selectedTab, setSelectedTab] = useState('Course');
 
   const [hoveredMaterial, setHoveredMaterial] = useState(null); // Track the hovered material
-
+  const [hoveredSubOption, sethoveredSubOption] = useState(null);
   // more submenu
-  const [dropdownExpanded, setDropdownExpanded] = useState(false); // Control menu width
+  // const [dropdownExpanded, setDropdownExpanded] = useState(false); // Control menu width
 
 
   // Course and Study Material options
@@ -65,29 +64,53 @@ const NavigationBar = () => {
 
   const studyMaterialSubOptions = {
     'NCERT Solution': [ 'Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+    
     'NCERT Books': [ 'Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
-    'CBSE': ['CBSE Important Questions','CBSE Notes', 'CBSE Sample Papers', 'Previous Year Question Paper Class 12','Previous Year Question Paper Class 10','CBSE Syllabus']
+    'CBSE': ['CBSE Important Questions','CBSE Notes', 'CBSE Sample Papers', 'Previous Year Question Paper Class 12','Previous Year Question Paper Class 10','CBSE Syllabus'],
+    
   };
+
+  const studyMaterialMoreOptions = {
+    'Class 12' : ['Class 12 Math', 'Class 12 Physics', 'class 12 Chemistry','Class 12 Biology', 'Class 12 Accountancy', 'Class 12 Economics', 'Class 12 Buisness Studies'],
+    'Class 11' : ['Class 11 Math', 'Class 11 Physics', 'class 11 Chemistry','Class 11 Biology', 'Class 11 Accountancy', 'Class 11 Economics', 'Class 11 Buisness Studies'],
+    'Class 10' : [],
+    'Class 9' : [],
+    'Class 8' : [],
+    'Class 7' : [],
+    'Class 6' : [],
+    'Class 5' : [],
+    'Class 4' : [],
+    'Class 3' : [],
+'CBSE Important Questions' : ['Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+'CBSE Notes': ['Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+'CBSE Sample Papers':['Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+ 'Previous Year Question Paper Class 12':['Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+ 'Previous Year Question Paper Class 10':['Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+ 'CBSE Syllabus':['Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3']
+
+  }
 
 
   // Handle selection of the tab between 'Course' and 'Study Material'
   const handleTabSelect = (tab) => {
     setSelectedTab(tab);
+    
   };
 
 //handel hover effect for dropdown
   const handleMouseEnter = () => {
     setShowDropdown(true);
+    sethoveredSubOption(null);
   };
 
   const handleMouseLeave = () => {
-    setShowDropdown(true);
+    setShowDropdown(false);
     
     setHoveredMaterial(null); // Close submenu when the dropdown is hidden
   };
 
 //  handel hover for submenu
-  const handleMaterialMouseEnter = (material) => {
+  const handleMaterialMouseEnter  = (material) => {
     setHoveredMaterial(material); // Set the hovered material
   };
 
@@ -96,9 +119,20 @@ const NavigationBar = () => {
     setShowDropdown(true);
 
   };
+const handleSubOptionMouseEnter = (subOption) => {
+  sethoveredSubOption(subOption);
+}
 
+const  handleSubOptionMouseLeave =()=>{
+  setShowDropdown(true);
+}
+  
 
   return (
+    <>
+      
+      <div className={`overlay ${showDropdown ? 'active' : ''}`} onClick={() => setShowDropdown(false)}></div>
+      
     <Navbar expand="lg" className="navbar-container sticky-top">
       <Container>
         <Navbar.Brand as={Link} to="/">
@@ -121,8 +155,8 @@ const NavigationBar = () => {
 
               <Dropdown.Menu className="dropdown-academic-menu">
                 {/* Course and Study Material buttons */}
-                <div className="d-flex justify-content-around p-2">
-                  <Button  className={`Dropdown-button ${selectedTab === 'Course' ? 'active' : ''}`}onClick={() => handleTabSelect('Course')} >
+                <div className="dropdown-academic-menu-btn">
+                  <Button  className={`Dropdown-button ${selectedTab === 'Course' ? 'active' : ''}`}onClick={() => handleTabSelect('Course')} AC>
                     Course
                   </Button>
                   <Button className={`Dropdown-button ${selectedTab === 'Study Material' ? 'active' : ''}`} onClick={() => handleTabSelect('Study Material')}>
@@ -134,28 +168,17 @@ const NavigationBar = () => {
           
                 {selectedTab === 'Course' && (
                   <>
-                    <Dropdown.Header style={{ fontWeight: "bold", color: "black" }}><img src='/images/FindCourse.png' alt='Find Course' /> Find Courses by Class</Dropdown.Header>
+                    <Dropdown.Header style={{ fontWeight: "bold", color: "black" }} className='px-4'><img src='/images/FindCourse.png' alt='Find Course' /> Find Courses by Class</Dropdown.Header>
                     {courseOptions.map((course) => (
-                      <Dropdown.Item key={course}>{course}</Dropdown.Item>
+                      <Dropdown.Item className='px-4' key={course}>{course}</Dropdown.Item>
                     ))}
                   </>
                 )}
 
 
 
-                {/* Study Material menue with submenu */}
-
                 {/* {selectedTab === 'Study Material' && (
-                  studyMaterialOptions.map((course) => (
-                    <Dropdown.Item  className='d-flex' key={course}>{course}
-                  <FontAwesomeIcon className='ms-auto' icon={faAngleRight} />
-                    
-                    </Dropdown.Item>
-                    
-                  ))
-                )} */}
-                {selectedTab === 'Study Material' && (
-                  <div className="study-material-options">
+                  <div >
                     {studyMaterialOptions.map((material) => (
                       <Dropdown.Item
                         key={material}
@@ -164,7 +187,9 @@ const NavigationBar = () => {
                         onMouseLeave={() => handleMaterialMouseEnter(material)}
                       >
                         {material}
-                        <FontAwesomeIcon className='ms-auto' icon={faAngleRight} />
+                        {studyMaterialSubOptions[material].length > 0 && (
+          <FontAwesomeIcon className='ms-auto' icon={faAngleRight} />
+        )}
                         {hoveredMaterial === material && (
                           <div className="submenu">
                             {studyMaterialSubOptions[material].map((subOption) => (
@@ -176,6 +201,58 @@ const NavigationBar = () => {
                     ))}
                   </div>
                 )}
+                 */}
+{selectedTab === 'Study Material' && (
+  <div>
+    {studyMaterialOptions.map((material) => (
+      <Dropdown.Item
+        key={material}
+        className="d-flex px-4"
+        onMouseEnter={() => handleMaterialMouseEnter(material)}
+        onMouseLeave={() => handleMaterialMouseLeave(material)}
+      >
+        {material}
+        
+        {/* Conditionally show the right arrow if there are sub-options */}
+        {studyMaterialSubOptions[material]?.length > 0 && (
+          <FontAwesomeIcon className="ms-auto" icon={faAngleRight} />
+        )}
+
+        {hoveredMaterial === material && studyMaterialSubOptions[material]?.length > 0 && (
+          <div className="submenu">
+            {studyMaterialSubOptions[material]?.map((subOption) => (
+              <Dropdown.Item
+                key={subOption}
+                className="d-flex px-4"
+                onMouseEnter={() => handleSubOptionMouseEnter(subOption)}
+                onMouseLeave={() => handleSubOptionMouseLeave(subOption)}
+              >
+                {subOption}
+                
+                {/* Conditionally show the right arrow if there are more sub-options */}
+                {studyMaterialMoreOptions[subOption] && studyMaterialMoreOptions[subOption].length > 0 && (
+                  <FontAwesomeIcon className="ms-auto" icon={faAngleRight} />
+                )}
+
+                {/* Render nested submenu for more options */}
+                {hoveredSubOption === subOption && studyMaterialMoreOptions[subOption]?.length > 0 && (
+                  <div className={`submenu ${subOption === 'Class 12' ? 'last-submenu' : ''}`}>
+                    {studyMaterialMoreOptions[subOption].map((moreOption) => (
+                      <Dropdown.Item key={moreOption}>{moreOption}</Dropdown.Item>
+                    ))}
+                  </div>
+                )}
+              </Dropdown.Item>
+            ))}
+          </div>
+        )}
+      </Dropdown.Item>
+    ))}
+  </div>
+)}
+
+
+
               </Dropdown.Menu>
               
             </Dropdown>
@@ -199,7 +276,7 @@ const NavigationBar = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
+    </>
   );
 };
 

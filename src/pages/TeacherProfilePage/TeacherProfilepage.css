@@ -1,0 +1,28 @@
+
+
+
+
+.teacherfollow-btn .custom-btn.primary{
+
+  width: 200px;
+
+}
+
+
+
+.teacherprofile-practicecard{
+
+  padding: 15px 25px;
+
+background: #FFFFFF;
+border: 1px solid #E6E1EA;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+border-radius: 16px;
+
+}
+.teacherprofile-practicecard .custom-btn.primary{
+font-size: small;
+  width: 100px;
+  min-height: 35px !important;
+
+}

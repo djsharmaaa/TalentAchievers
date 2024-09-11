@@ -1,0 +1,131 @@
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import NavigationBar from '../../../../components/LandingPageComponents/NavigationBar/NavigationBar';
+import Footer from '../../../../components/ReusableComponents/Footer/Footer';
+
+import Getapp from '../../../../components/LandingPageComponents/GetappSection/Getapp';
+import BackButton from '../../../../components/ReusableComponents/BackButton/Backbutton';
+import SubjectCard from '../../../../components/ReusableComponents/SubjectCard/SubjectCard';
+import { FaChevronRight } from 'react-icons/fa';
+
+
+
+const TextbookSubject = () => {
+
+
+
+
+
+  return (
+    <div>
+      <NavigationBar />
+      <section>
+        <Container>
+        <Row className="align-items-center mt-5">
+  <Col md={1}>
+    <BackButton />
+  </Col>
+  <Col md={11} className="text-end">
+    <nav aria-label="breadcrumb" className="custom-breadcrumb">
+      <ol className="breadcrumb mb-0">
+        <li className="breadcrumb-item">
+          <a href="/Academics/tweleth" className="breadcrumb-link">CBSE Class 12</a>
+        </li>
+        <li className="breadcrumb-separator"><FaChevronRight /></li> 
+        <li className="breadcrumb-item">
+        <a href="/Academics/tweleth/NCERTSolution" className="breadcrumb-link">NCERT Solution</a>
+        </li>
+        <li className="breadcrumb-separator"><FaChevronRight /></li> 
+        <li className="breadcrumb-item active" aria-current="page">Physics</li>
+      </ol>
+    </nav>
+  </Col>
+</Row>
+
+
+<Row className='my-5'>
+            <Row className='my-4'>
+              <h1>NCERT Physics - Class 12</h1>
+            </Row>
+            <Row className='my-3'>
+              <img src='/images/Practice-hero.png' alt='Practice' />
+            </Row>
+
+          </Row>
+
+
+          <Row > 
+            <Col md={3} className='mb-4'>
+              <h4 className='mb-3'>Chapters</h4>
+             
+              <ul className='ps-3'>
+             
+                <li style={{color:'var(--text-color)'}}>
+                  NCERT Textbook Solution
+                </li>
+              </ul>
+            </Col>
+            <Col md={9}>
+            <SubjectCard colSize={12} linkTo="/Academics/Tweleth/NCERTSolution/TextbookSubject/SubjectChapters" imgSrc='/images/1.png' imgAlt='physics' title='Electric Charges and fields' textIcon="/images/ques.png" text='34 Questions' />
+            <SubjectCard colSize={12}  imgSrc='/images/2.png' imgAlt='physics' title='Electrostatic Potential and Capacitance.' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+            <SubjectCard colSize={12}  imgSrc='/images/3.png' imgAlt='physics' title='Current Electricity' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+            <SubjectCard colSize={12}  imgSrc='/images/4.png' imgAlt='physics' title='Moving Charges and Magnetism' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+            <SubjectCard colSize={12}  imgSrc='/images/5.png' imgAlt='physics' title='Magnetism and Matter' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+            <SubjectCard colSize={12}  imgSrc='/images/6.png' imgAlt='physics' title='Electromagnetic Induction' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+            <SubjectCard colSize={12}  imgSrc='/images/7.png' imgAlt='physics' title='Alternating Current' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+            <SubjectCard colSize={12}  imgSrc='/images/8.png' imgAlt='physics' title='Electromagnetic Waves' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+            <SubjectCard colSize={12}  imgSrc='/images/9.png' imgAlt='physics' title='Ray Optics' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+            <SubjectCard colSize={12}  imgSrc='/images/10.png' imgAlt='physics' title='Wave Optics' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+            <SubjectCard colSize={12}  imgSrc='/images/11.png' imgAlt='physics' title='Dual Nature of Radiation and Matter' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+            <SubjectCard colSize={12}  imgSrc='/images/12.png' imgAlt='physics' title='Atoms' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+            <SubjectCard colSize={12}  imgSrc='/images/13.png' imgAlt='physics' title='Nuclei' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+            
+            <SubjectCard colSize={12}  imgSrc='/images/14.png' imgAlt='physics' title='Semiconductor Electronics' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+            <SubjectCard colSize={12}  imgSrc='/images/15.png' imgAlt='physics' title='Communication System' textIcon="/images/ques.png" text='34 Questions'endIcon="/images/Lock.png" />
+           
+
+            </Col>
+          </Row>
+   
+
+          
+          <Row className='my-4'> 
+            <Row className='my-2'>
+              <h4>Other Subjects NCERT Textbook Solution</h4>
+            </Row>
+            <SubjectCard  imgSrc='/images/C.png' imgAlt='Chem' title='Chemistry' text='Class 12 NCERT Solution' />
+            <SubjectCard  imgSrc='/images/B.png' imgAlt='bio' title='Biology' text='Class 12 NCERT Solution' />
+            <SubjectCard  imgSrc='/images/M.png' imgAlt='math' title='Math' text='Class 12 NCERT Solution' />
+
+            </Row>
+
+          <Row className='my-4'>
+            <Row className='my-2'>
+              <h4>Previous Year Paper solution</h4>
+            </Row>
+       
+            <SubjectCard  imgSrc='/images/p.png' imgAlt='physics' title='Physics 2023 Board - Class 12' text='Class 12 NCERT Solution' />
+            <SubjectCard  imgSrc='/images/C.png' imgAlt='Che' title='Chemistry 2023 Board - Class 12' text='Class 12 NCERT Solution' />
+            <SubjectCard  imgSrc='/images/B.png' imgAlt='Bio' title='Biology 2023 Board - Class 12' text='Class 12 NCERT Solution' />
+            <SubjectCard  imgSrc='/images/M.png' imgAlt='math' title='Math 2023 Board - Class 12' text='Class 12 NCERT Solution' />
+            <SubjectCard  imgSrc='/images/p.png' imgAlt='physics' title='Physics 2022 Board - Class 12' text='Class 12 NCERT Solution' />
+            <SubjectCard  imgSrc='/images/C.png' imgAlt='Che' title='Chemistry 2022 Board - Class 12' text='Class 12 NCERT Solution' />
+            <SubjectCard  imgSrc='/images/B.png' imgAlt='Bio' title='Biology 2022 Board - Class 12' text='Class 12 NCERT Solution' />
+            <SubjectCard  imgSrc='/images/M.png' imgAlt='math' title='Math 2022 Board - Class 12' text='Class 12 NCERT Solution' />
+            <SubjectCard  imgSrc='/images/M.png' imgAlt='math' title='Math 2021 Board - Class 12' text='Class 12 NCERT Solution' />
+            
+                    
+                        
+          </Row>
+        </Container>
+
+      </section>
+
+
+      <Getapp />
+      <Footer />
+    </div>
+  );
+};
+
+export default TextbookSubject;

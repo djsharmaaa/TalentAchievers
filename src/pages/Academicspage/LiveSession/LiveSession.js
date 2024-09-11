@@ -1,14 +1,14 @@
 import React from 'react';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import NavigationBar from '../../../components/LandingPageComponents/NavigationBar/NavigationBar';
-import Footer from '../../../components/LandingPageComponents/Footer/Footer';
-import Studymaterialbtn from '../../../components/AcademinComponents/Studymaterialbtn/Studymaterialbtn';
+import Footer from '../../../components/ReusableComponents/Footer/Footer';
+
 import Getapp from '../../../components/LandingPageComponents/GetappSection/Getapp';
 import OtherCourses from '../../../components/AcademinComponents/OtherCourses/OtherCourses';
 import Batches from '../../../components/ReusableComponents/Batches/Batches';
 import BackButton from '../../../components/ReusableComponents/BackButton/Backbutton';
 import TeachersCard from '../../../components/ReusableComponents/TeachersCard/TeachersCard';
-
+import { FaChevronRight } from 'react-icons/fa';
 import "./LiveSession.css";
 import SubjectCard from '../../../components/ReusableComponents/SubjectCard/SubjectCard';
 
@@ -66,28 +66,33 @@ const LiveSession = () => {
   return (
     <div>
       <NavigationBar />
-      <Studymaterialbtn />
+      
       <Container>
-        <Row className="align-items-center ">
-          <Col md={1}>
-            <BackButton />
-          </Col>
-          <Col md={11} className="text-end">
-            <nav aria-label="breadcrumb">
-              <ol className="breadcrumb mb-0">
-                <li className="breadcrumb-item"><a href="/Academics/tweleth" style={{textDecoration: 'none'}}>CBSE Class 12</a></li>
-                <li className="breadcrumb-item active" aria-current="page">Free Live Session</li>
-              </ol>
-            </nav>
-          </Col>
-        </Row>
+    
+        <Row className="align-items-center mt-5">
+  <Col md={1}>
+    <BackButton />
+  </Col>
+  <Col md={11} className="text-end">
+    <nav aria-label="breadcrumb" className="custom-breadcrumb">
+      <ol className="breadcrumb mb-0">
+        <li className="breadcrumb-item">
+          <a href="/Academics/tweleth" className="breadcrumb-link">CBSE Class 12</a>
+        </li>
+        <li className="breadcrumb-separator"><FaChevronRight /></li> 
+        <li className="breadcrumb-item active" aria-current="page">Free Live Session</li>
+      </ol>
+    </nav>
+  </Col>
+</Row>
+
         <section className=" py-5">
             <Container>
               <h1 className='mb-4'>Free Class for CBSE Class 12</h1>
                 <Carousel>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className=" w-100"
                             src="/images/LiveSession-hero.png"
                             alt="First slide"
                         />
@@ -95,7 +100,7 @@ const LiveSession = () => {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className=" w-100"
                             src="/images/LiveSession-hero.png"
 
                             alt="Second slide"
@@ -104,7 +109,7 @@ const LiveSession = () => {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className=" w-100"
                             src="/images/LiveSession-hero.png"
 
                             alt="Third slide"
@@ -114,8 +119,66 @@ const LiveSession = () => {
                 </Carousel>
             </Container>
         </section>
+
+
+      <section>
+      <Row className='my-4'>
+            <Row className='mb-2'>
+              <h3>Physics</h3>
+            </Row>
+            <Col md={4}>
+              <Batches
+                image="/images/Phy1.png"
+                name="Detailed Courses on Ray Optics"
+                date="Ended on 25 Apr 2023 - 2 lessons"
+              clock="01:47:39"
+              showClock={true}
+              showPlayIcon={true}
+             
+              />
+            </Col>
+            <Col md={4}>
+              <Batches
+                image="/images/Phy2.png"
+                name="Semiconductors Boards"
+                date="Ended on 25 Apr 2023 - 2 lessons"
+                clock="01:47:39"
+                showClock={true}
+              showPlayIcon={true}
+
+              />
+            </Col>
+            <Col md={4}>
+              <Batches
+                image="/images/Phy3.png"
+                name="Electrostatics"
+                date="Ended on 25 Apr 2023 - 2 lessons"
+                clock="01:47:39"
+                showClock={true}
+              showPlayIcon={true}
+
+              />
+
+            </Col>
+          </Row>
+      </section>
+
+
         <section>
           
+
+
+        <Row className='my-4'>
+            <Row className='my-3'>
+              <h3>Popular Subjects for CBSE Class 12</h3>
+            </Row>
+
+            <SubjectCard  imgSrc='/images/p.png' imgAlt='physics' title='Physics'  />
+            <SubjectCard  imgSrc='/images/C.png' imgAlt='Chemistry' title='Chemistry'  />
+            <SubjectCard  imgSrc='/images/B.png' imgAlt='Bio' title='Biology'  />
+                
+                     
+                        </Row>
 
           <Row>
             <Row>
@@ -153,17 +216,7 @@ const LiveSession = () => {
             </Col>
           </Row>
 
-          <Row className='my-4'>
-            <Row className='my-3'>
-              <h3>Popular Subjects for CBSE Class 12</h3>
-            </Row>
-
-            <SubjectCard  imgSrc='/images/p.png' imgAlt='physics' title='Physics'  />
-            <SubjectCard  imgSrc='/images/C.png' imgAlt='Chemistry' title='Chemistry'  />
-            <SubjectCard  imgSrc='/images/B.png' imgAlt='Bio' title='Biology'  />
-                
-                     
-                        </Row>
+      
 
 
     

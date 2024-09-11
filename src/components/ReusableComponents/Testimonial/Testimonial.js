@@ -30,7 +30,7 @@ const Testimonial = ({ title, testimonials }) => {
       <Container>
         <Row className="my-5 text-center">
           <Col md={12}>
-            <h2 className="pt-5 ">{title}</h2>
+            <h1 className="pt-5 ">{title}</h1>
           </Col>
         </Row>
 
@@ -40,27 +40,34 @@ const Testimonial = ({ title, testimonials }) => {
               responsive={responsive}
               infinite={true}
               autoPlay={false}
-              autoPlaySpeed={4000}
+              // autoPlaySpeed={4000}
               keyBoardControl={true}
-              showDots={false}
-              containerClass="carousel-container"
-              itemClass="testimonial-card"
-              slidesToSlide={2}
+              showDots={true}
+              slidesToSlide={1}
             >
+              
               {testimonials.map((testimonial) => (
+               
                 <Card key={testimonial.id} className="testimonial-card p-3">
-                  <Card.Body className="d-flex align-items-center">
-                    <div className="testimonial-image">
+                  <Card.Body >
+                   <Row>
+                   <Col md={4} >
                       <img src={testimonial.imageSrc} alt={testimonial.name} />
-                    </div>
-                    <div className="testimonial-content">
+                    </Col>
+                    <Col md={6}className="testimonial-content">
                       <p>{testimonial.testimonial}</p>
                       <h5>{testimonial.name}</h5>
                       <p>{testimonial.Location}</p>
-                    </div>
+                    </Col>
+                    <Col md={2}>
+                    <img src='/images/comma.png' alt='comma'/>
+                    </Col>
+                   </Row>
                   </Card.Body>
                 </Card>
+               
               ))}
+             
             </Carousel>
           </Col>
         </Row>

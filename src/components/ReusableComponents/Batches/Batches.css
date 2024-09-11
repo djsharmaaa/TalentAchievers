@@ -13,17 +13,43 @@
 .course-batch-card {
   border: none;
   border-radius: 5px;
-  margin-bottom: 20px;
   box-shadow: 0 5px 10px -4px #D6EBFF;
   overflow: hidden; 
+  
+ 
 }
 
+
 .Batches-card-img {
-  width: 100%;
+
   height: auto;
   object-fit: cover; 
   display: block;
+  position: relative;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+
+.play-icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.play-icon-overlay .Batches-card-img {
+  filter: brightness(60%);
+}
+
+.Batches-card-img:hover {
+  transform: scale(1.05);
+}
+
+
 
 
 .course-card-info img {
@@ -32,9 +58,12 @@
   margin-right: 10px;
 }
 
-.fullschedule-button {
-  display: flex;
-  justify-content: center;
+
+.fullschedule-button button{
+    display: flex;
   align-items: center;
-  width: 100%;
+margin: auto;
+padding: 10px;
+font-weight: 500;
+font-size: 1.1rem;
 }

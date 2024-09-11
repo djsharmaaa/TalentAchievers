@@ -1,0 +1,19 @@
+
+.custom-breadcrumb {
+  font-size: 1.1rem; 
+}
+
+.breadcrumb-link {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: var(--accent-color);
+
+
+}
+
+.breadcrumb-separator {
+  margin: 0 10px;
+}
