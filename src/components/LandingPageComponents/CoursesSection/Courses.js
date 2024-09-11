@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import './Courses.css';
 //  import ClassesModal from '../Classesmodal/ClassesModal';
+
 import { Link } from 'react-router-dom';
 
 const CoursesSection = () => {
@@ -44,7 +45,7 @@ const CoursesSection = () => {
                             </Card.Body> */}
                         <Card  className="mb-4 " style={{border:'none'}}>
 
-                            <img src='/images/classpre-5.png' alt='class pre card' />
+                            <img src='./images/classpre-5.png' alt='class pre card' />
                         </Card>
                     </Col>
                     <Col md={4}>
