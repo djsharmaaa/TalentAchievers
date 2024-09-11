@@ -45,7 +45,9 @@ const CoursesSection = () => {
                             </Card.Body> */}
                         <Card  className="mb-4 " style={{border:'none'}}>
 
-                            <img src='./images/classpre.png' alt='class pre card' />
+                            {/* <img src='./images/classpre.png' alt='class pre card' /> */}
+                            <img src={`${process.env.PUBLIC_URL}/images/classpre.png`} alt="Class Pre 5" />
+
                         </Card>
                     </Col>
                     <Col md={4}>
