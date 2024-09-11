@@ -43,12 +43,9 @@ const CoursesSection = () => {
                                 </div>
                                 <Button variant="light" className='explore-btn align-self-start' href="#">Explore</Button>
                             </Card.Body> */}
-                        <Card  className="mb-4 " style={{border:'none'}}>
+                      <Card  className="mb-4 " style={{border:'none'}} >
+                          <img src='/images/classiit.png' alt='class pre card' />
 
-                            <img src='/images/class.png' alt='class precard' />
-s
-
-                            
                         </Card>
                         <Card  className="mb-4 " style={{border:'none'}}>
 
@@ -77,7 +74,6 @@ s
                             </Card.Body>
                         </Card> */}
                         <Card as={Link} to="/Academics/Tweleth" className="mb-4 " style={{border:'none'}}>
-                        {/* <img src='/images/class3-12.png' alt='class pre card' /> */}
                         <img src='/images/classpro.png' alt='class pre card' />
 
                         </Card>
