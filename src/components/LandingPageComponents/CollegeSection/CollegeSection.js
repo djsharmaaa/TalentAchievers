@@ -80,7 +80,7 @@ export const CollegeSection = () => {
                 <Row >
                     <Col md={3}>
                         <Card className="  college-card">
-                            <Card.Img variant="top" src="/images/collegeimage.png" alt="College image" />
+                            <Card.Img variant="top" src="/images/Collegeimage.png" alt="College image" />
                             <Card.ImgOverlay className='college-overlay '>
                                 <div className='d-flex align-items-center mt-4'>
                                     <img src="/images/Collegelogo.png" alt="Course" className="Colloge-logo mb-3 me-2" />

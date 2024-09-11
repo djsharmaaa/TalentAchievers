@@ -33,7 +33,7 @@ const OtherCourses = () => {
                         </Card> */}
                            <Card  className="mb-4 " style={{border:'none'}}>
 
-<img src='/images/classpre.png' alt='class pre card' />
+<img src='/images/classproo.png' alt='class pre card' />
 </Card>
                     </Col>
                     <Col md={5}>

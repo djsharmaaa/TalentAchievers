@@ -159,7 +159,7 @@ const Tweleth = () => {
         </Row>
 
                     <span className='d-flex flex-row'>
-                        <img src="/images/group6.png" alt='get app' className='me-2 ' />
+                        <img src="/images/Group6.png" alt='get app' className='me-2 ' />
                         <h4 style={{ color: 'var(--primary-color)' }}>
                             Class 12 CBSE
                         </h4>
@@ -437,7 +437,7 @@ const Tweleth = () => {
 
                                         </Col>
                                         <Col md={6} className='d-flex flex-column '>
-                                            <button variant='outline-dark' className='recommended-btn d-flex justify-content-left mb-3'><img src='/images/group7.png' alt='premium'  className='mx-2'/>Recommended</button>
+                                            <button variant='outline-dark' className='recommended-btn d-flex justify-content-left mb-3'><img src='/images/Group7.png' alt='premium'  className='mx-2'/>Recommended</button>
                                             <h6 className='premium'>Top Rated</h6>
 
 
