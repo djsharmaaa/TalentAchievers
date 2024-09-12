@@ -16,8 +16,8 @@ const PracticeTopics = () => {
     {
       questionNumber: 1,
       question: "A student calculates the coulomb’s force and writes the force as +24 N. What can be inferred from this??",
-      options: ["A. London", "B. Paris", "C. Rome", "D. Madrid"],
-      correctAnswer: "B. Paris",
+      options: ["A. ", "B. ", "C. ", "D. "],
+      correctAnswer: "B. ",
     },
     // More questions
   ];

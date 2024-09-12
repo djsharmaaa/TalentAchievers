@@ -158,6 +158,7 @@ const MultipleBatches = () => {
                 timing="Evening Classes"
                 teachers="Anamika, Neha"
                 showTeachers={true}
+                link="/Academics/Tweleth/BatchDetails"
                 showTiming={true}
 
                 viewButton="View Batch Details"
@@ -172,6 +173,7 @@ const MultipleBatches = () => {
                 timing="Evening Classes"
                 teachers="Anamika, Neha"
                 showTeachers={true}
+                link="/Academics/Tweleth/BatchDetails"
                 showTiming={true}
 
                 viewButton="View Batch Details"
@@ -187,6 +189,7 @@ const MultipleBatches = () => {
                 teachers="Anamika, Neha"
                 showTeachers={true}
                 showTiming={true}
+                link="/Academics/Tweleth/BatchDetails"
 
                 viewButton="View Batch Details"
                 showButton={true}
@@ -204,6 +207,8 @@ const MultipleBatches = () => {
                 showTeachers={true}
                 showTiming={true}
                 viewButton="View Batch Details"
+                link="/Academics/Tweleth/BatchDetails"
+
                 showButton={true}
 />
             </Col>
@@ -216,6 +221,7 @@ const MultipleBatches = () => {
                 teachers="Anamika, Neha"
                 showTeachers={true}
                 showTiming={true}
+                link="/Academics/Tweleth/BatchDetails"
 
                 viewButton="View Batch Details"
                 showButton={true}
@@ -230,6 +236,7 @@ const MultipleBatches = () => {
                 teachers="Anamika, Neha"
                 showTeachers={true}
                 showTiming={true}
+                link="/Academics/Tweleth/BatchDetails"
 
                 viewButton="View Batch Details"
                 showButton={true}
@@ -246,7 +253,7 @@ const MultipleBatches = () => {
                 teachers="Anamika, Neha"
                 showTeachers={true}
                 showTiming={true}
-
+                link="/Academics/Tweleth/BatchDetails"
                 viewButton="View Batch Details"
                 showButton={true}
               />
@@ -260,7 +267,8 @@ const MultipleBatches = () => {
                 teachers="Anamika, Neha"
                 showTeachers={true}
                 showTiming={true}
-                
+                link="/Academics/Tweleth/BatchDetails"
+
                 viewButton="View Batch Details"
                 showButton={true}
               />
@@ -273,6 +281,7 @@ const MultipleBatches = () => {
                 timing="Evening Classes"
                 teachers="Anamika, Neha"
                 showTeachers={true}
+                link="/Academics/Tweleth/BatchDetails"
                 showTiming={true}
 
                 viewButton="View Batch Details"

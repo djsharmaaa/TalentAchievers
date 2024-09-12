@@ -4,7 +4,7 @@ import { Card, Button } from 'react-bootstrap';
 const QuizCard = ({ questionData, onNext }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(null);
+  const [, setIsCorrect] = useState(null);
 
   const handleOptionClick = (option) => {
     if (!isSubmitted) {

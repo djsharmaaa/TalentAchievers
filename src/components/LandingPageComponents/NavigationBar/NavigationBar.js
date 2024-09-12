@@ -63,16 +63,19 @@ const NavigationBar = () => {
   const studyMaterialOptions = ['NCERT Solution', 'NCERT Books', 'CBSE'];
 
   const studyMaterialSubOptions = {
-    'NCERT Solution': [ 'Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+    'NCERT Solution': [ 'Class 12 Solution', 'Class 11 Solution','Class 10 Solution', 'Class 9 Solution', 'Class 8 Solution', 'Class 7 Solution', 'Class 6 Solution', 'Class 5 Solution', 'Class 4 Solution', 'Class 3 Solution'],
     
-    'NCERT Books': [ 'Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+    'NCERT Books': [ 'Class 12 Books', 'Class 11 Books','Class 10 Books', 'Class 9 Books', 'Class 8 Books', 'Class 7 Books', 'Class 6 Books', 'Class 5 Books', 'Class 4 Books', 'Class 3 Books'],
     'CBSE': ['CBSE Important Questions','CBSE Notes', 'CBSE Sample Papers', 'Previous Year Question Paper Class 12','Previous Year Question Paper Class 10','CBSE Syllabus'],
     
   };
 
   const studyMaterialMoreOptions = {
-    'Class 12' : ['Class 12 Math', 'Class 12 Physics', 'class 12 Chemistry','Class 12 Biology', 'Class 12 Accountancy', 'Class 12 Economics', 'Class 12 Buisness Studies'],
-    'Class 11' : ['Class 11 Math', 'Class 11 Physics', 'class 11 Chemistry','Class 11 Biology', 'Class 11 Accountancy', 'Class 11 Economics', 'Class 11 Buisness Studies'],
+    'Class 12 Solution' : ['Class 12 Math', 'Class 12 Physics', 'class 12 Chemistry','Class 12 Biology', 'Class 12 Accountancy', 'Class 12 Economics', 'Class 12 Buisness Studies'],
+    'Class 11 Solution' : ['Class 11 Math', 'Class 11 Physics', 'class 11 Chemistry','Class 11 Biology', 'Class 11 Accountancy', 'Class 11 Economics', 'Class 11 Buisness Studies'],
+    'Class 12 Books' : ['Class 12 Math', 'Class 12 Physics', 'class 12 Chemistry','Class 12 Biology', 'Class 12 Accountancy', 'Class 12 Economics', 'Class 12 Buisness Studies'],
+    'Class 11 Books' : ['Class 11 Math', 'Class 11 Physics', 'class 11 Chemistry','Class 11 Biology', 'Class 11 Accountancy', 'Class 11 Economics', 'Class 11 Buisness Studies'],
+   
     'Class 10' : [],
     'Class 9' : [],
     'Class 8' : [],
@@ -81,12 +84,12 @@ const NavigationBar = () => {
     'Class 5' : [],
     'Class 4' : [],
     'Class 3' : [],
-'CBSE Important Questions' : ['Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
-'CBSE Notes': ['Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
-'CBSE Sample Papers':['Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
- 'Previous Year Question Paper Class 12':['Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
- 'Previous Year Question Paper Class 10':['Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
- 'CBSE Syllabus':['Class 12', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3']
+'CBSE Important Questions' : ['Class 12 Questions', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+'CBSE Notes': ['Class 12 Notes', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+'CBSE Sample Papers':['Class 12 Sample Papers', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+ 'Previous Year Question Paper Class 12':['Class 12 Previous Year Paper', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+ 'Previous Year Question Paper Class 10':['Class 12 Previous Year Paper', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+ 'CBSE Syllabus':['Class 12 Syllabus', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3']
 
   }
 

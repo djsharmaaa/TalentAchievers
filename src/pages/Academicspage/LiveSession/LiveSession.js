@@ -187,9 +187,14 @@ const LiveSession = () => {
                         </Row>
 
           <Row>
-            <Row>
-              <h3>Trending Class</h3>
-            </Row>
+          <Row className='mb-2 d-flex align-items-center'>
+  <Col>
+    <h3>Trending Classes</h3>
+  </Col>
+  <Col className="text-end">
+    <ReusableButtons label="View All" linkTo="" customClass="secondary"style={{ padding: '8px 18px' }} />
+  </Col>
+</Row>
             <Col md={4}>
               <Batches
                 image="/images/CBSEbatch2.png"

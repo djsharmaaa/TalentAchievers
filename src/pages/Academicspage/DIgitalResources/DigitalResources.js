@@ -10,6 +10,7 @@ import { FaChevronRight } from 'react-icons/fa';
 
 import "./DigitalResources.css";
 import SubjectCard from '../../../components/ReusableComponents/SubjectCard/SubjectCard';
+import ReusableButtons from '../../../components/ReusableComponents/ReusableButtons/ReusableButtons';
 
 const DigitalResources = () => {
 
@@ -68,9 +69,14 @@ const DigitalResources = () => {
                         </Row>
 
           <Row className='my-4'>
-            <Row className='mb-2'>
-              <h3>Physics</h3>
-            </Row>
+          <Row className='mb-2 d-flex align-items-center'>
+  <Col>
+    <h3>Chemistry</h3>
+  </Col>
+  <Col className="text-end">
+    <ReusableButtons  label="View All" linkTo="/Academics/Tweleth/DigitalResources/DigitalResourcesSubjectChapters" customClass="secondary"  style={{ padding: '8px 18px' }}  />
+  </Col>
+</Row>
             <Col md={4}>
               <Batches
                 image="/images/Phy1.png"
@@ -103,9 +109,14 @@ const DigitalResources = () => {
             </Col>
           </Row>
           <Row className='my-5'>
-            <Row className='mb-2'>
-              <h3>Chemistry</h3>
-            </Row>
+          <Row className='mb-2 d-flex align-items-center'>
+  <Col>
+    <h3>Chemistry</h3>
+  </Col>
+  <Col className="text-end">
+    <ReusableButtons  label="View All" linkTo="/Academics/Tweleth/DigitalResources/DigitalResourcesSubjectChapters" customClass="secondary"  style={{ padding: '8px 18px' }}  />
+  </Col>
+</Row>
             <Col md={4}>
               <Batches
                 image="/images/Che1.png"

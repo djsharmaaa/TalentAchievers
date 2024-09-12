@@ -1,9 +1,10 @@
 // src/components/CourseCard.js
 import React from 'react';
 import { Card, Button, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Batches.css';
 
-const Batches = ({ image, name, date, timing, teachers,clock,showPlayIcon, showClock, showTeachers, showButton, showTiming,viewButton, showLockIcon}) => {
+const Batches = ({ image, name, date, timing, teachers,clock,showPlayIcon, showClock, showTeachers, showButton, showTiming,viewButton, showLockIcon, link}) => {
   return (
     <Card className="course-batch-card mb-5">
       <Row>
@@ -48,15 +49,23 @@ const Batches = ({ image, name, date, timing, teachers,clock,showPlayIcon, showC
             )}
 
 
-            {showButton && (
+{showButton && (
               <>
                 <hr />
-
                 <div className='fullschedule-button'>
-                  <Button variant=" btn-sm transparent-button" className=" mt-2">
-                    <img src="/images/LiveSession.png" alt="Live Session" className="course-logo me-2" />
-                    {viewButton}
-                  </Button>
+                  {link ? (
+                    <Link to={link}  style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <Button variant=" btn-sm transparent-button" className="mt-2">
+                        <img src="/images/LiveSession.png" alt="Live Session" className="course-logo me-2" />
+                        {viewButton}
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Button variant=" btn-sm transparent-button" className="mt-2">
+                      <img src="/images/LiveSession.png" alt="Live Session" className="course-logo me-2" />
+                      {viewButton}
+                    </Button>
+                  )}
                 </div>
               </>
             )}
