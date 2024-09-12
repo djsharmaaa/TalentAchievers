@@ -49,7 +49,7 @@ const DigitalResources = () => {
             </Row>
                        <Col className='my-3' >
                        <Row>
-            <SubjectCard linkTo="/Academics/Tweleth/DigitalResources/DigitalResources2" imgSrc='/images/p.png' imgAlt='physics' title='Physics' text='500 Courses' />
+            <SubjectCard linkTo="/Academics/Tweleth/DigitalResources/DigitalResourcesSubjects" imgSrc='/images/p.png' imgAlt='physics' title='Physics' text='500 Courses' />
             <SubjectCard  imgSrc='/images/C.png' imgAlt='Chemistry' title='Chemistry' text='500 Courses'  />
             <SubjectCard  imgSrc='/images/B.png' imgAlt='Biology' title='Biology' text='500 Courses' />
             <SubjectCard  imgSrc='/images/M.png' imgAlt='Math' title='Math'  text='500 Courses' />

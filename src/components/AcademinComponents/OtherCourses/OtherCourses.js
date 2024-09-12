@@ -6,13 +6,13 @@ const OtherCourses = () => {
     return (
         <section className="OtherCourses-section">
             <Container>
-                <Row className="mb-5">
-                    <Col md={12} className="text-center">
+                <Row className="mb-5 text-center">
+             
                         <h1 className="mb-0">Explore Our Other Courses</h1>
-                    </Col>
+                
                 </Row>
                 <Row className="justify-content-center">
-                    <Col md={5}>
+                    <Col md={4}>
                         {/* <Card className="mb-4 h-100 p-2 Course-card">
                             <Card.Body className="cardbody d-flex flex-column">
                                 <div className="d-flex align-items-start">
@@ -33,10 +33,10 @@ const OtherCourses = () => {
                         </Card> */}
                            <Card  className="mb-4 " style={{border:'none'}}>
 
-<img src='/images/classproo.png' alt='class pre card' />
+<img src='/images/class.png' alt='class pre card' />
 </Card>
                     </Col>
-                    <Col md={5}>
+                    <Col md={4}>
                         {/* <Card className="mb-4 h-100 p-2 Course-card">
                             <Card.Body className="cardbody d-flex flex-column">
                                 <div className="d-flex align-items-start">

@@ -4,3 +4,25 @@
   border: none;
   box-shadow: 0 5px 10px -4px #D6EBFF;
 }
+
+/* Remove default hover and active styles */
+.custom-dropdown {
+  background-color: transparent !important;
+  border-color: #ccc !important; /* You can customize this */
+  box-shadow: none !important;
+}
+
+/* Remove hover and active background color */
+.custom-dropdown:hover, 
+.custom-dropdown:active, 
+.custom-dropdown:focus, 
+.custom-dropdown.show {
+  background-color: transparent !important;
+  border-color: #ccc !important; /* Keep consistent border on hover */
+  box-shadow: none !important;
+}
+
+/* Customize the text margin as per your earlier request */
+.ongoing-dropdown .dropdown-text {
+  margin-right: 80px; /* Adjust the value for the desired gap */
+}

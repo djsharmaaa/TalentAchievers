@@ -1,0 +1,15 @@
+.Accordion-section {
+  margin: 80px 40px; 
+}
+
+.accordion-item-custom {
+  margin-bottom: 20px; 
+}
+
+.accordion-item-custom .accordion-header {
+  border-top: 1px solid #ddd;
+}
+
+.accordion-body {
+  padding: 15px; 
+}

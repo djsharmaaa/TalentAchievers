@@ -4,7 +4,6 @@ import NavigationBar from '../../../components/LandingPageComponents/NavigationB
 import Footer from '../../../components/ReusableComponents/Footer/Footer';
 
 import Testimonial from '../../../components/ReusableComponents/Testimonial/Testimonial';
-import FrequentlyAskQuestions from '../../../components/AcademinComponents/Accordian/Accordion';
 import Getapp from '../../../components/LandingPageComponents/GetappSection/Getapp';
 import BookDemo from '../../../components/AcademinComponents/BookDemo/BookDemo';
 
@@ -21,6 +20,7 @@ import TeachersCard from '../../../components/ReusableComponents/TeachersCard/Te
 import SubjectCard from '../../../components/ReusableComponents/SubjectCard/SubjectCard';
 import { Link } from 'react-router-dom';
 import ReusableButtons from '../../../components/ReusableComponents/ReusableButtons/ReusableButtons';
+import FaqAccordion from '../../../components/ReusableComponents/Accordian/Accordion';
 
 
 
@@ -109,6 +109,8 @@ const Tweleth = () => {
 
 
     const [selectedClass, setSelectedClass] = useState('Class 12');
+    const [selectedDuration, setSelectedDuration] = useState('6 Months : (Apr 24 - jun 24)');
+
  
 
 
@@ -126,13 +128,40 @@ const Tweleth = () => {
       ];
 
       const duration=[
-        '6 Months :(Apr 24 - jun 24)',
-        '12 Months :(Apr 24 - jun 25)'
+        '6 Months : (Apr 24 - jun 24)',
+        '12 Months : (Apr 24 - jun 25)'
 
       ]
       const handleClassClick = (className) => {
         setSelectedClass(className);
       };
+
+      const handleDurationClick = (timeDuration) => {
+        setSelectedDuration(timeDuration);
+      };
+
+      const faqData = [
+        {
+            eventKey: '0',
+            header: 'Can I choose between Hindi and English language while selecting batches?',
+            body: 'Our IT consulting services stand out due to our extensive experience, client-centric approach, and a proven track record of delivering tailored solutions that align with business goals.'
+        },
+        {
+            eventKey: '1',
+            header: 'Can I choose between Hindi and English language while selecting batches?',
+            body: 'Our IT consulting services stand out due to our extensive experience, client-centric approach, and a proven track record of delivering tailored solutions that align with business goals.'
+        },
+        {
+          eventKey: '2',
+          header: 'Can I choose between Hindi and English language while selecting batches?',
+          body: 'Our IT consulting services stand out due to our extensive experience, client-centric approach, and a proven track record of delivering tailored solutions that align with business goals.'
+      },
+      {
+        eventKey: '3',
+        header: 'Can I choose between Hindi and English language while selecting batches?',
+        body: 'Our IT consulting services stand out due to our extensive experience, client-centric approach, and a proven track record of delivering tailored solutions that align with business goals.'
+    },
+    ];
 
 
  
@@ -369,44 +398,19 @@ const Tweleth = () => {
                        
                        </Col>
                     </Row>
-                    {/* <Row>
-                        <div className='offerings-buttons d-flex flex-row '>
-                        <Col md={3}>
-        <Button
-          variant='outline-dark'
-          style={{ width: '95%' }}
-          className={`mb-2 ${activeButton === '6 Months' ? 'button-active' : ''}`}
-          onClick={() => handleButtonClick('6 Months')}
-        >
-          6 Months : (Apr 24 - Jun 24)
-        </Button>
-        
-      </Col>
-      <Col md={3}>
-        <Button
-          variant='outline-dark'
-          style={{ width: '95%' }}
-          className={`mb-2 ${activeButton === '12 Months' ? 'bbutton-active' : ''}`}
-          onClick={() => handleButtonClick('12 Months')}
-        >
-          12 Months : (Apr 24 - Apr 25)
-        </Button>
-      </Col>
-
-                        </div>
-                    </Row> */}
+         
 
                     <Row className="duration-buttons my-5">
-          {duration.map((className) => (
+          {duration.map((timeDuration) => (
 
-            <Col key={className} xs={6} lg={1}>
+            <Col key={timeDuration} xs={6} lg={1}>
               <Button
 
                 variant="outline-dark"
-                className={selectedClass === className ? 'button-active' : ''}
-                onClick={() => handleClassClick(className)}
+                className={selectedDuration === timeDuration ? 'button-active' : ''}
+                onClick={() => handleDurationClick(timeDuration)}
               >
-                {className}
+                {timeDuration}
 
               </Button>
             </Col>
@@ -483,7 +487,10 @@ const Tweleth = () => {
             <BookDemo />
             <Testimonial  title="What makes Us so beloved by both parents and students?" testimonials={TwelethTestimonials}  />
 
-            <FrequentlyAskQuestions />
+            
+            <FaqAccordion title="Frequently Ask Questions" faqData={faqData} />
+            
+        
             <OtherCourses />
             <Getapp />
             <Footer />

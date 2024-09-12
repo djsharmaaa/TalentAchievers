@@ -4,7 +4,8 @@ import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import NavigationBar from '../../../components/LandingPageComponents/NavigationBar/NavigationBar'
 import Footer from '../../../components/ReusableComponents/Footer/Footer';
 import Testimonial from '../../../components/ReusableComponents/Testimonial/Testimonial';
-import FrequentlyAskQuestions from '../../../components/AcademinComponents/Accordian/Accordion';
+import FaqAccordion from '../../../components/ReusableComponents/Accordian/Accordion';
+
 import Getapp from '../../../components/LandingPageComponents/GetappSection/Getapp';
 import OtherCourses from '../../../components/AcademinComponents/OtherCourses/OtherCourses';
 import Batches from '../../../components/ReusableComponents/Batches/Batches';
@@ -110,6 +111,30 @@ const handleClassClick = (className) => {
 
 
   ];
+
+
+  const faqData = [
+    {
+        eventKey: '0',
+        header: 'Can I choose between Hindi and English language while selecting batches?',
+        body: 'Our IT consulting services stand out due to our extensive experience, client-centric approach, and a proven track record of delivering tailored solutions that align with business goals.'
+    },
+    {
+        eventKey: '1',
+        header: 'Can I choose between Hindi and English language while selecting batches?',
+        body: 'Our IT consulting services stand out due to our extensive experience, client-centric approach, and a proven track record of delivering tailored solutions that align with business goals.'
+    },
+    {
+      eventKey: '2',
+      header: 'Can I choose between Hindi and English language while selecting batches?',
+      body: 'Our IT consulting services stand out due to our extensive experience, client-centric approach, and a proven track record of delivering tailored solutions that align with business goals.'
+  },
+  {
+    eventKey: '3',
+    header: 'Can I choose between Hindi and English language while selecting batches?',
+    body: 'Our IT consulting services stand out due to our extensive experience, client-centric approach, and a proven track record of delivering tailored solutions that align with business goals.'
+},
+];
 
 
 
@@ -382,7 +407,8 @@ const handleClassClick = (className) => {
 
 
 
-      <FrequentlyAskQuestions />
+      <FaqAccordion title="Frequently Ask Questions" faqData={faqData} />
+
 
       <Testimonial title="Inspiring Tales" testimonials={BatchDetailsTestimonials} />
 

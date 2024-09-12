@@ -3,15 +3,20 @@ import React from 'react';
 import { Card, Button, Row } from 'react-bootstrap';
 import './Batches.css';
 
-const Batches = ({ image, name, date, timing, teachers,clock,showPlayIcon, showClock, showTeachers, showButton, showTiming,viewButton }) => {
+const Batches = ({ image, name, date, timing, teachers,clock,showPlayIcon, showClock, showTeachers, showButton, showTiming,viewButton, showLockIcon}) => {
   return (
     <Card className="course-batch-card mb-5">
       <Row>
-      <Row md={4} className="position-relative " style={{overflow:'hidden'}}>
-          <div className={`position-relative ${showPlayIcon ? 'play-icon-overlay' : ''}`}>
+      <Row md={4}  style={{overflow:'hidden'}}>
+          <div >
             <img className='Batches-card-img'  src={image} alt='batch' />
+
+            {showLockIcon && (
+              <img src="/images/Lock2.png" alt="Lock" className="lock-icon" />
+            )}
+
             {showPlayIcon && (
-              <img src="/images/play-icon.png" alt="Play" className="play-icon" />
+              <img src="/images/play-icon2.png" alt="Play" className="play-icon-overlay" />
             )}
           </div>
         </Row>

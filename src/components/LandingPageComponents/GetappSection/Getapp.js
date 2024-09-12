@@ -15,8 +15,8 @@ export const Getapp = () => {
                         Access our app to download lessons and learn at your convenience, anytime and anywhere, from our wide selection of free courses.
                         </p>
                         <div className='footer-btn'>
-                            <button><img src="/playstore-btn.png" alt='playstore' /></button>
-                            <button><img src='appstore-btn.png' alt='appstore' /></button>
+                            <button><img src="/images/playstore-btn.png" alt='playstore' /></button>
+                            <button><img src='/images/appstore-btn.png' alt='appstore' /></button>
                         </div>
                    
                     </Col>

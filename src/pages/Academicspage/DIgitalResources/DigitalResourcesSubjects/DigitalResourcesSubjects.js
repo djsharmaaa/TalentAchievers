@@ -8,9 +8,10 @@ import { FaChevronRight } from 'react-icons/fa';
 import Getapp from '../../../../components/LandingPageComponents/GetappSection/Getapp';
 import BackButton from '../../../../components/ReusableComponents/BackButton/Backbutton';
 import PracticeCard from '../../../../components/ReusableComponents/PracticeCard/PracticeCard';
+import ReusableButtons from '../../../../components/ReusableComponents/ReusableButtons/ReusableButtons';
 // import SubjectCard from '../../../components/ReusableComponents/SubjectCard/SubjectCard';
 
-const DigitalResources2 = () => {
+const DigitalResourcesSubjects = () => {
 
 
 
@@ -72,15 +73,22 @@ const DigitalResources2 = () => {
           </Row >
 
           <Row className='my-4'>
-            <Row className='mb-2'>
-              <h3>Physics</h3>
-            </Row>
+          <Row className='mb-2 d-flex align-items-center'>
+  <Col>
+    <h3>Physics</h3>
+  </Col>
+  <Col className="text-end">
+    <ReusableButtons  label="View All" linkTo="/Academics/Tweleth/DigitalResources/DigitalResourcesSubjectChapters" customClass="secondary"  style={{ padding: '8px 18px' }}  />
+  </Col>
+</Row>
+
+
             <Col md={4}>
               <Batches
                 image="/images/Phy1.png"
                 name="Detailed Courses on Ray Optics"
                 date="Ended on 25 Apr 2023 - 17 lessons"
-              
+                showLockIcon={true}
                 teachers="Anamika, Neha"
                 showTeachers={true}
              
@@ -91,6 +99,7 @@ const DigitalResources2 = () => {
                 image="/images/Phy2.png"
                 name="Semiconductors Boards"
                 date="Ended on 25 Apr 2023 - 17 lessons"
+                showLockIcon={true}
       
                 teachers="Anamika, Neha"
                 showTeachers={true}
@@ -101,6 +110,7 @@ const DigitalResources2 = () => {
                 image="/images/Phy3.png"
                 name="Electrostatics"
                 date="Ended on 25 Apr 2023 - 17 lessons"
+                showLockIcon={true} 
                 teachers="Anamika, Neha"
                 showTeachers={true}
               />
@@ -120,4 +130,4 @@ const DigitalResources2 = () => {
   );
 };
 
-export default DigitalResources2;
+export default DigitalResourcesSubjects;

@@ -17,10 +17,11 @@ import NCERTSolution from "./pages/Academicspage/NCERTsolution/NCERTSolution";
 import BestEducators from "./components/AcademinComponents/BestEducators/BestEducators";
 import TeacherProfile from "./pages/TeacherProfilePage/TeacherProfilepage";
 import Tweleth from "./pages/Academicspage/tweleth/Tweleth";
-import DigitalResources2 from "./pages/Academicspage/DIgitalResources/DigitalResources2/DigitalResources2";
 import TextbookSubject from "./pages/Academicspage/NCERTsolution/TexrbookSubject/TextbookSubject";
 import SubjectChapters from "./pages/Academicspage/NCERTsolution/TexrbookSubject/SubjectChapters/SubjectChapters";
 import PracticeTopics from "./pages/Academicspage/Practice/PracticeTopics/PracticeTopics";
+import DigitalResourcesSubjects from "./pages/Academicspage/DIgitalResources/DigitalResourcesSubjects/DigitalResourcesSubjects";
+import DigitalResourcesSubjectCHapters from "./pages/Academicspage/DIgitalResources/DigitalResourcesSubjects/DigitalResourcesSubjectChapters/DigitalResourcesSubjectChapters";
 
 
 const App = () => {
@@ -39,7 +40,11 @@ const App = () => {
     <Route path="/Academics/Tweleth/MultipleBatches" element={<MultipleBatches/>} />
     <Route path="/Academics/Tweleth/LiveSession" element={<LiveSession/>}/>
     <Route path="/Academics/Tweleth/DigitalResources" element={<DigitalResources/>} />
-    <Route path="/Academics/Tweleth/DigitalResources/DigitalResources2" element={<DigitalResources2/>}/>
+    <Route path="/Academics/Tweleth/DigitalResources/DigitalResourcesSubjects" element={<DigitalResourcesSubjects/>}/>
+    <Route path="/Academics/Tweleth/DigitalResources/DigitalResourcesSubjectChapters" element={<DigitalResourcesSubjectCHapters/>}/>
+
+
+
     <Route path="/Academics/Tweleth/Practice" element={<Practice/>}  />
     <Route path="/Academics/Tweleth/Practice/PracticeTopics" element={<PracticeTopics/>}  />
     

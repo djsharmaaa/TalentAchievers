@@ -43,4 +43,5 @@
 
 .blog-title:hover{
   color: turquoise;
+  cursor: pointer;
 }

@@ -57,7 +57,7 @@ const TestSeries = () => {
             </Col>
           ))}
         </Row>
-        <Row className="align-items-center mt-5">
+        <Row className="align-items-center mb-5">
   <Col md={1}>
     <BackButton />
   </Col>
@@ -75,44 +75,37 @@ const TestSeries = () => {
 </Row>
 
 
-          <Row className='my-4'>
-            <Row className='my-4'>
+          <Row className='my-5'>
+            <Row className='mb-4' >
               <h1>Test series for CBSE Class 12</h1>
+           
             </Row>
           
-            <Row className='my-3'>
-              <img src='/images/TestSeries-hero.png' alt='Practice' />
+            <Row  className='mb-5'>
+              <img src='/images/Testseries-hero.png' alt='Practice' />
             </Row>
 
           </Row>
-            <Row className='my-5'>
+           
+              <Row className='mb-5'>
               <h5>CBSE Class 12 Test Series</h5>
-              {/* <DropdownButton
-                // id="dropdown-variants-light"
-                variant="light"
-                title="Ongoing"
-              >
-             
-                <Dropdown.Item eventKey="1">Class 12 PCM</Dropdown.Item>
-                <Dropdown.Item eventKey="2">Class 12 PCB</Dropdown.Item>
-                <Dropdown.Item eventKey="3">Class 12 Commerce</Dropdown.Item>
-                <Dropdown.Item eventKey="4">Class 11 PCM</Dropdown.Item>
-                <Dropdown.Item eventKey="5">Class 11 PCB</Dropdown.Item>
-                <Dropdown.Item eventKey="6">Class 11 Commerce</Dropdown.Item>
-              
-              </DropdownButton> */}
-               <Dropdown>
-      <Dropdown.Toggle variant="light" id="dropdown-basic" className="ongoing-dropdown" style={{border:"1px solid"}}>
-        Ongoing {/* Add space with class 'ms-2' */}
-      </Dropdown.Toggle>
+              <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic" className="ongoing-dropdown custom-dropdown">
+    <span className="dropdown-text">Ongoing</span>
+  </Dropdown.Toggle>
 
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Expired</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Ongoing</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Upcoming</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-            </Row>
+  <Dropdown.Menu>
+    <Dropdown.Item href="#/action-1">Expired</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Ongoing</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Upcoming</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
+
+              </Row>
+          
+  
+ 
+       
           <Row>
             <Row>
             <h4>
@@ -122,7 +115,7 @@ const TestSeries = () => {
               </Row>
           <Col md={4}>
      <Card className='trendingclass-card'> 
-     <CardImg src='/images/trendingclass-card.png'  />
+     <CardImg src='/images/Trendingclass-card.png'  />
      <CardBody>
       <CardTitle >
         Talent NEET Test Series 2.0
@@ -140,7 +133,7 @@ const TestSeries = () => {
      </Col>
      <Col md={4}>
      <Card className='trendingclass-card'> 
-     <CardImg src='/images/trendingclass-card.png'  />
+     <CardImg src='/images/Trendingclass-card.png'  />
      <CardBody>
       <CardTitle >
         Talent NEET Test Series 2.0
@@ -158,7 +151,7 @@ const TestSeries = () => {
      </Col>
      <Col md={4}>
      <Card className='trendingclass-card'> 
-     <CardImg src='/images/trendingclass-card.png'  />
+     <CardImg src='/images/Trendingclass-card.png'  />
      <CardBody>
       <CardTitle >
         Talent NEET Test Series 2.0

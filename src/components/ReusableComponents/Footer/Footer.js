@@ -77,8 +77,8 @@ const Footer = () => {
                         <img src="/images/CompanyLogo.png" alt='Talent Achievers' />
                         <p>Don't miss out on the opportunity to elevate your education and achieve your goals. Click below to enroll now and take the first step towards a brighter future with Talent Achievers</p>
                         <div className='footer-btn'>
-                            <button><img src="/playstore-btn.png" alt='playstore' /></button>
-                            <button><img src='/appstore-btn.png' alt='appstore' /></button>
+                            <button><img src="/images/playstore-btn.png" alt='playstore' /></button>
+                            <button><img src='/images/appstore-btn.png' alt='appstore' /></button>
                         </div>
                         <h5>Reach out to Us</h5>
                         <a href="/">

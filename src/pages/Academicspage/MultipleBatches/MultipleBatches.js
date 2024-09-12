@@ -4,7 +4,8 @@ import NavigationBar from '../../../components/LandingPageComponents/NavigationB
 import Footer from '../../../components/ReusableComponents/Footer/Footer';
 
 import Testimonial from '../../../components/ReusableComponents/Testimonial/Testimonial';
-import FrequentlyAskQuestions from '../../../components/AcademinComponents/Accordian/Accordion';
+import FaqAccordion from '../../../components/ReusableComponents/Accordian/Accordion';
+
 import Getapp from '../../../components/LandingPageComponents/GetappSection/Getapp';
 import OtherCourses from '../../../components/AcademinComponents/OtherCourses/OtherCourses';
 import Batches from '../../../components/ReusableComponents/Batches/Batches';
@@ -18,19 +19,19 @@ const MultipleBatches = () => {
 
 
 
-  const [selectedClass, setSelectedClass] = useState('Class 12');
+    const [selectedDuration, setSelectedDuration] = useState('6 Months : (Apr 24 - jun 24)');
  
 
 
 
 
     const duration=[
-      '6 Months :(Apr 24 - jun 24)',
-      '12 Months :(Apr 24 - jun 25)'
+      '6 Months : (Apr 24 - jun 24)',
+      '12 Months : (Apr 24 - jun 25)'
 
     ]
-    const handleClassClick = (className) => {
-      setSelectedClass(className);
+    const handleDurationClick = (timeDuration) => {
+      setSelectedDuration(timeDuration);
     };
 
 
@@ -66,6 +67,30 @@ const MultipleBatches = () => {
     },
   ];
 
+  const faqData = [
+    {
+        eventKey: '0',
+        header: 'Can I choose between Hindi and English language while selecting batches?',
+        body: 'Our IT consulting services stand out due to our extensive experience, client-centric approach, and a proven track record of delivering tailored solutions that align with business goals.'
+    },
+    {
+        eventKey: '1',
+        header: 'Can I choose between Hindi and English language while selecting batches?',
+        body: 'Our IT consulting services stand out due to our extensive experience, client-centric approach, and a proven track record of delivering tailored solutions that align with business goals.'
+    },
+    {
+      eventKey: '2',
+      header: 'Can I choose between Hindi and English language while selecting batches?',
+      body: 'Our IT consulting services stand out due to our extensive experience, client-centric approach, and a proven track record of delivering tailored solutions that align with business goals.'
+  },
+  {
+    eventKey: '3',
+    header: 'Can I choose between Hindi and English language while selecting batches?',
+    body: 'Our IT consulting services stand out due to our extensive experience, client-centric approach, and a proven track record of delivering tailored solutions that align with business goals.'
+},
+];
+
+
   return (
     <div>
       <NavigationBar />
@@ -88,28 +113,30 @@ const MultipleBatches = () => {
 </Row>
         <section>
           <Row >
-            <Col md={12} className="d-flex align-items-center my-4">
+            <Col md={12} className="d-flex align-items-center my-3">
               <h1>Batches</h1>
               <h5 className="ms-2 pt-3" style={{color:"#470083"}}>CBSE(2024-2025)</h5>
             </Col>
           </Row>
         
-          <Row className="duration-buttons mb-4">
-          {duration.map((className) => (
+        
+          <Row className="duration-buttons my-4">
+          {duration.map((timeDuration) => (
 
-            <Col key={className} xs={6} lg={1}>
+            <Col key={timeDuration} xs={6} lg={1}>
               <Button
 
                 variant="outline-dark"
-                className={selectedClass === className ? 'button-active' : ''}
-                onClick={() => handleClassClick(className)}
+                className={selectedDuration === timeDuration ? 'button-active' : ''}
+                onClick={() => handleDurationClick(timeDuration)}
               >
-                {className}
+                {timeDuration}
 
               </Button>
             </Col>
           ))}
         </Row>
+
           <Row className="mb-4">
             <Col>
               <div className="d-flex align-items-center">
@@ -255,7 +282,8 @@ const MultipleBatches = () => {
           </Row>
         </section>
       </Container>
-      <FrequentlyAskQuestions />
+      <FaqAccordion title="Frequently Ask Questions" faqData={faqData} />
+          
       <Testimonial title="Inspiring Tales" testimonials={BatchDetailsTestimonials} />
       <OtherCourses />
       <Getapp />

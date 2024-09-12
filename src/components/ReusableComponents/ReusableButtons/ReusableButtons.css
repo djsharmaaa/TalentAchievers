@@ -1,7 +1,7 @@
 .custom-btn {
   color: black;
   background-color: #E6E1EA;
-  border: none;
+  border: 1px solid #E6E1EA ;
 }
 
 .custom-btn:hover {
