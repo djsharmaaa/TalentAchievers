@@ -87,8 +87,8 @@ const NavigationBar = () => {
 'CBSE Important Questions' : ['Class 12 Questions', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
 'CBSE Notes': ['Class 12 Notes', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
 'CBSE Sample Papers':['Class 12 Sample Papers', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
- 'Previous Year Question Paper Class 12':['Class 12 Previous Year Paper', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
- 'Previous Year Question Paper Class 10':['Class 12 Previous Year Paper', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3'],
+ 'Previous Year Question Paper Class 12':['Physics', 'Chemistry', 'Math', 'English', 'Biology', 'Commerce'],
+ 'Previous Year Question Paper Class 10':['Science', 'English', 'Math', 'Social Science'],
  'CBSE Syllabus':['Class 12 Syllabus', 'Class 11','Class 10', 'Class 9', 'Class 8', 'Class 7', 'Class 6', 'Class 5', 'Class 4', 'Class 3']
 
   }
