@@ -200,36 +200,23 @@ box-sizing: border-box;
 
 /* Login and signup buttons */
 
-.btn-login {
+
+
+.login-btn .custom-btn.primary{
   color: var(--primary-color);
-  font-weight: 600;
-  height: 45px;
-  width: 112px;
-  text-decoration: none;
-  border: none;
+  background-color: var(--white-color);
+  box-shadow: none;
+}
+
+.login-btn .custom-btn.primary:hover{
+  color: var(--primary-color);
+  background-color: var(--white-color);
+
 }
 
 
-.btn-join:hover {
-  background-color: #F8F1FF;
-  color: var(--primary-color);
-  border: 1px solid #470083;
 
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
-
-
-
-
+.login-btn .custom-btn.secondary{
+  padding: 12px 20px;
 
 }
-
-.btn-join {
-  background-color: var(--stroke-color);
-  color: var(--primary-color);
-  border: none;
-  font-weight: 600;
-  height: 48px;
-  width: 122px;
-  border-radius: 10px;
-}
-

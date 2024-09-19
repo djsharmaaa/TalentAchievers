@@ -1,17 +1,31 @@
 import React from 'react';
-import {  Row, Col, Carousel, Form, Button } from 'react-bootstrap';
+import {  Row, Col, Carousel, Form, Button, InputGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Select from 'react-select';
+
 import { faFacebook,  faLinkedin, faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
 
 import './LoginPage.css'; 
 import { faClose} from '@fortawesome/free-solid-svg-icons';
 
+const countryOptions = [
+  { value: '+91', label: '🇮🇳 +91' },
+  { value: '+1', label: '🇺🇸 +1' },
+  // Add more countries here
+];
+
 
 const LoginPage = () => {
+  const [selectedCountry, setSelectedCountry] = React.useState(countryOptions[0]);
+
+
+
     return (
 
-            <Row className="justify-content-center align-items-center ">
+           <section className='login-page-section'>
+           
+            <Row className="">
                 <Col lg={6} className="login-carousel">
                 <div className="carousel-overlay-text">
                         Believe you can and you're halfway there
@@ -44,72 +58,99 @@ const LoginPage = () => {
                     </Carousel>
                 </Col>
        
-                <Col  className="login-page">
-    {/* Close icon */}
-    <div className="close-icon  ">
-    <Link to="/">
-    <FontAwesomeIcon className='ms-auto' icon={faClose} />
-    </Link>
-    </div>
-    
-    {/* Company logo */}
-    <div className="company-logo">
-      <Link to="/">
+                <Col lg={6} className="login-page">
+
+                <Row>
+                <Col className='company-logo'>
+                  <Link to="/">
         <img src="/images/CompanyLogo.png" alt="Company Logo" />
       </Link>
-    </div>
+                  </Col>
+                  <Col className='close-icon'>
+                  <Link to="/">
+    <FontAwesomeIcon className='ms-auto' icon={faClose} style={{color:'black'}} />
+    </Link>
+                  </Col>
+                
+                </Row>
+   
 
-    <h2 className="text-center mt-4">Login</h2>
-
-    <p className=" mt-3">
-      Don't have an account? <Link to="/register">Create new account</Link>
+    <Row>
+    <h1 className=" mt-4">Log in</h1>
+    <p style={{fontSize:'18px' }}>
+      Don't have an account? <Link to="/register" style={{ color: 'var(--primary-color)', textDecoration:'none' }}>Create new account</Link>
     </p>
+    <Row>
+            <Form >
+              <Form.Group controlId="formMobileNumber" className="mb-1">
+                {/* Input group for country code and mobile number */}
+                <InputGroup>
+                  <InputGroup.Text style={{ padding: 0, border: 'none' }}>
+                    <Select
+                      options={countryOptions}
+                      value={selectedCountry}
+                      onChange={(option) => setSelectedCountry(option)}
+                      defaultValue={countryOptions[0]}
+                      className="country-select"
+                    />
+                  </InputGroup.Text>
+                  <Form.Control type="text" placeholder="Enter mobile number*" />
+                </InputGroup>
+              </Form.Group>
 
-    <Form className="mt-4">
-      <Form.Group controlId="formMobileNumber" className="mb-4">
-        <Form.Label>Mobile Number</Form.Label>
-        <Form.Control type="text" placeholder="Enter mobile number" />
-      </Form.Group>
+           
+            </Form>
+            <p style={{fontSize:'15px', color:'#B0B0B0'}} >We'll send an OTP for verification</p>
+              <a href='/f' className="text-center  mb-3" style={{ marginTop: '6rem',color:'var(--accent-color' }}>Continue with email</a>
 
-      <p className="text-center mb-4">Continue with email</p>
+              <Button style={{backgroundColor:'var(--primary-color)',border:'none'}} type="submit">
+                Request OTP
+              </Button>
+          </Row>
+     
+    </Row>
 
-      <Button variant="primary" type="submit" className="w-100 mb-4">
-        Request OTP
-      </Button>
-    </Form>
 
-    <p className="text-center mb-3">Or login with</p>
-
-    <Row >
-      <Col md={4}  className="mb-3">
-        <Button variant="outline-primary" className="w-100">
+    <p className="text-center my-3 ">Or login with</p>
+    <Row>
+    <Col lg={6}  className="mb-3">
+        <Button style={{backgroundColor:'#3B5999',border:'none'}}  className="Social-btn">
           <FontAwesomeIcon icon={faFacebook} className="pe-2" />
           Facebook
         </Button>
       </Col>
-      <Col md={4}  className="mb-3">
-        <Button variant="outline-danger" className="w-100">
+      <Col lg={6}  className="mb-3">
+        <Button style={{backgroundColor:'#DD4B39',border:'none'}}  className="Social-btn">
           <FontAwesomeIcon icon={faGoogle} className="pe-2" />
           Google
         </Button>
       </Col>
-      </Row>
-      <Row >
-      <Col md={4} className="mb-3">
-        <Button variant="outline-info" className="w-100">
+    </Row>
+
+     <Row>
+     <Col md={6} className="mb-3">
+        <Button style={{backgroundColor:'#0077B5',border:'none'}} className="Social-btn">
           <FontAwesomeIcon icon={faLinkedin} className="pe-2" />
           LinkedIn
         </Button>
       </Col>
-      <Col md={4}  className="mb-3">
-        <Button variant="outline-dark" className="w-100">
+      <Col md={6}  className="mb-3">
+        <Button style={{backgroundColor:'#000000',border:'none'}}  className="Social-btn">
           <FontAwesomeIcon icon={faApple} className="pe-2" />
           Apple
         </Button>
       </Col>
-    </Row>
+     </Row>
+    
+                       
+                        <p className="mt-2" style={{fontSize:'15px', color:'#B0B0B0'}}> Talent Achievers, Inc. All Right Reserved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Copyright &copy; 2019-2024</p>
+                      
+
+
   </Col>
             </Row>
+      
+           </section>
       
     );
 };

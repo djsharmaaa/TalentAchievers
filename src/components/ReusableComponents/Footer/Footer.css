@@ -70,6 +70,8 @@
 }
 
 
+/* 
+
 .text-center{
     color: #B0B0B0;
     display: flex;
@@ -78,7 +80,7 @@
     
 }
 
-/*  */
+
 
 .text-center ul {
     list-style: none;
@@ -96,7 +98,7 @@
     color: #707070;
     font-size: 20px; 
     transition: color 0.3s ease;
-}
+} */
 
 /* .text-center ul li a:hover {
     color: var(--primary-color);

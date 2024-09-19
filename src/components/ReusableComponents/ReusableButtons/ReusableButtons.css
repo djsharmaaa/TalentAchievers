@@ -32,14 +32,17 @@ box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
 
 .custom-btn.secondary {
   font-weight: 600;
-  color: var(--accent-color);
+  color: var(--primary-color);
   background-color: var(--stroke-color);
+ 
+
   padding: 16px 30px;
   border-radius: 8px;
   
 }
 
 .custom-btn.secondary:hover{
+  color: var(--accent-color);
 
 background: #F8F1FF;
 border: 1px solid #470083;

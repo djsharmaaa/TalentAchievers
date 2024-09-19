@@ -21,9 +21,9 @@ const CoursesFilter = () => {
   const languageOptions = ['English', 'Hindi'];
 
   const courses = [
-    {  image: '/images/CBSEbatch.png', name: 'CBSE Batch (2024-2025)', status:'Live Classes', syallabus: 'Full CBSE Class 6 Syllabus', notes:'Topic wise syllabus notes and revision',timing:'Evening Classes',teachers:'Anamika, Neha',    price: '₹280', previousPrice:'₹300' },
-    {  image: '/images/CBSEbatch.png', name: 'CBSE Batch (2024-2025)', status:'Live Classes', syallabus: 'Full CBSE Class 6 Syllabus', notes:'Topic wise syllabus notes and revision',timing:'Evening Classes',teachers:'Anamika, Neha',price: '₹280', previousPrice:'₹300' },
-    {  image: '/images/CBSEbatch.png', name: 'CBSE Batch (2024-2025)', status:'Live Classes', syallabus: 'Full CBSE Class 6 Syllabus', notes:'Topic wise syllabus notes and revision',timing:'Evening Classes',teachers:'Anamika, Neha',price: '₹280', previousPrice:'₹300'},
+    {  image: '/images/CBSEbatch.png', name: 'CBSE Batch (2024-2025)', status:'Live Classes', syallabus: 'Full CBSE Class 6 Syllabus', notes:'Topic wise syllabus notes and revision',timing:'Evening Classes',teachers:'Anamika, Neha',    price: '₹1999', previousPrice:'₹1999' },
+    {  image: '/images/CBSEbatch.png', name: 'CBSE Batch (2024-2025)', status:'Live Classes', syallabus: 'Full CBSE Class 6 Syllabus', notes:'Topic wise syllabus notes and revision',timing:'Evening Classes',teachers:'Anamika, Neha',price: '₹1999', previousPrice:'₹1999' },
+    {  image: '/images/CBSEbatch.png', name: 'CBSE Batch (2024-2025)', status:'Live Classes', syallabus: 'Full CBSE Class 6 Syllabus', notes:'Topic wise syllabus notes and revision',timing:'Evening Classes',teachers:'Anamika, Neha',price: '₹1999', previousPrice:'₹1999'},
   ];
 
   const handleFilterChange = (category, option) => {
@@ -85,7 +85,7 @@ const CoursesFilter = () => {
 
           
           </Col>
-          <Col md={2} className='text-center'>
+          <Col md={2} className='text-end'>
           <span>1,250 results</span>
           </Col>
 
@@ -218,7 +218,7 @@ const CoursesFilter = () => {
         <Col className="d-flex justify-content-center align-items-center">
                         <Pagination className="custom-pagination mt-3">
                             <Pagination.Prev className="custom-pagination-prev">
-                            <FontAwesomeIcon className='ms-auto' icon={faCircleChevronLeft} />
+                            <FontAwesomeIcon  className='ms-auto pagination-icon' icon={faCircleChevronLeft} />
                             </Pagination.Prev>
                             <Pagination.Item>{1}</Pagination.Item>
                             <Pagination.Item>{2}</Pagination.Item>
@@ -228,7 +228,7 @@ const CoursesFilter = () => {
                             <Pagination.Item>{5}</Pagination.Item>
 
                             <Pagination.Next className="custom-pagination-next">
-                            <FontAwesomeIcon className='ms-auto' icon={faCircleChevronRight} />
+                            <FontAwesomeIcon className='ms-auto pagination-icon' icon={faCircleChevronRight} />
                                 
                             </Pagination.Next>
                         </Pagination>

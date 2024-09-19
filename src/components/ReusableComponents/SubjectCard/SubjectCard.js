@@ -28,8 +28,8 @@ const SubjectCard = ({ endIcon,textIcon, imgSrc, imgAlt, title, text, colSize = 
                <div>
                {showButton && (
           <a href='/'
-          onClick={(e) => {
-            e.preventDefault();
+          onClick={() => {
+            // e.preventDefault();
             setShowModal(true);
           }}
           className='batchdetails-syllabus-link'>

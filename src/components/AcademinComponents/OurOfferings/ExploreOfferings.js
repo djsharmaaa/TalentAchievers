@@ -113,7 +113,7 @@ const ExploreOfferings = () => {
         
           <Row className="study-material ">
             <Col md={12}>
-              <h3 className='mb-4'>Study Materials</h3>
+              <h5 className='mb-4'>Study Materials</h5>
               <div className="resource-links">
                 {classResources[selectedClass].map((resource) => (
                   <a key={resource.name} href={resource.link} target="_blank" rel="noreferrer">

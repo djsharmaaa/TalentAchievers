@@ -20,54 +20,72 @@ const SyllabusModal = ({ show, onHide, initialSubject }) => {
         return (
           <Accordion>
             <Accordion.Item eventKey="0">
-              <Accordion.Header>Living and Non-Living</Accordion.Header>
+              <Accordion.Header >
+                Living and Non-Living
+                
+              </Accordion.Header>
               <Accordion.Body>
                 Living things and Non-living things description here.
               </Accordion.Body>
             </Accordion.Item>
+            <hr></hr>
+
             <Accordion.Item eventKey="1">
               <Accordion.Header>Plants</Accordion.Header>
               <Accordion.Body>
                 Description about plants, their types, and characteristics.
               </Accordion.Body>
             </Accordion.Item>
+            <hr></hr>
+
             <Accordion.Item eventKey="2">
               <Accordion.Header>Animal Anatomy</Accordion.Header>
               <Accordion.Body>
                 Description about animal anatomy and its various aspects.
               </Accordion.Body>
             </Accordion.Item>
+            <hr></hr>
+
             <Accordion.Item eventKey="3">
               <Accordion.Header>Human Body</Accordion.Header>
               <Accordion.Body>
                 Description about the human body and its functions.
               </Accordion.Body>
             </Accordion.Item>
+            
           </Accordion>
         );
       case 'Math':
         return (
           <Accordion>
             <Accordion.Item eventKey="0">
-              <Accordion.Header>Algebra</Accordion.Header>
+              <Accordion.Header>Introduction to Algebraic Numbers</Accordion.Header>
               <Accordion.Body>
                 Algebra description here.
               </Accordion.Body>
             </Accordion.Item>
+            <hr></hr>
+
             <Accordion.Item eventKey="1">
               <Accordion.Header>Geometry</Accordion.Header>
               <Accordion.Body>
                 Geometry description here.
               </Accordion.Body>
+              
             </Accordion.Item>
+            <hr></hr>
+
             <Accordion.Item eventKey="2">
               <Accordion.Header>Calculus</Accordion.Header>
               <Accordion.Body>
                 Calculus description here.
               </Accordion.Body>
             </Accordion.Item>
+           
           </Accordion>
+          
         );
+       
       case 'English':
         return (
           <Accordion>
@@ -77,12 +95,15 @@ const SyllabusModal = ({ show, onHide, initialSubject }) => {
                 Grammar description here.
               </Accordion.Body>
             </Accordion.Item>
+            <hr></hr>
+
             <Accordion.Item eventKey="1">
               <Accordion.Header>Literature</Accordion.Header>
               <Accordion.Body>
                 Literature description here.
               </Accordion.Body>
             </Accordion.Item>
+
           </Accordion>
         );
       case 'Social Science':
@@ -94,12 +115,15 @@ const SyllabusModal = ({ show, onHide, initialSubject }) => {
                 History description here.
               </Accordion.Body>
             </Accordion.Item>
+            <hr></hr>
+
             <Accordion.Item eventKey="1">
               <Accordion.Header>Geography</Accordion.Header>
               <Accordion.Body>
                 Geography description here.
               </Accordion.Body>
             </Accordion.Item>
+
           </Accordion>
         );
       default:

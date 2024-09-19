@@ -35,7 +35,7 @@ const Testimonial = ({ title, testimonials }) => {
         </Row>
 
         <Row className='pb-5'>
-          <Col md={12} className='my-2 '>
+          <Col md={12} className='my-4 '>
             <Carousel
               responsive={responsive}
               infinite={true}
@@ -48,7 +48,7 @@ const Testimonial = ({ title, testimonials }) => {
               
               {testimonials.map((testimonial) => (
                
-                <Card key={testimonial.id} className="testimonial-card p-3">
+                <Card key={testimonial.id} className="testimonial-card p-4">
                   <Card.Body >
                    <Row>
                    <Col md={4} >

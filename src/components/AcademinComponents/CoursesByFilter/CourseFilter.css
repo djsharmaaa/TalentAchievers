@@ -142,28 +142,5 @@ border-radius: 24px;
   text-decoration: none;
 }
 
-.custom-pagination .page-link:hover {
-  color: var(--primary-color);
-}
-
-.custom-pagination .page-item.active .page-link {
-  background-color: #007bff;
-  color: white;
-}
 
 
-.custom-pagination .custom-pagination-prev .page-link,
-.custom-pagination .custom-pagination-next .page-link {
-  border-radius: 50%; /* Circular shape */
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  font-size: 50px; /* Increased icon size */
-}
-
-.custom-pagination .page-item .page-link:focus {
-  outline: none; /* Remove Bootstrap's default outline */
-  box-shadow: none; /* Remove shadow on focus */
-  background-color: #ffffff;
-}

@@ -28,6 +28,7 @@
 }
 
 .Course-offering-card {
+  height: 100%;
   border: 1px solid #ddd;
   background-color: #FAF9FB;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

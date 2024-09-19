@@ -47,6 +47,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import './NavigationBar.css';
+import ReusableButtons from '../../ReusableComponents/ReusableButtons/ReusableButtons';
 
 const NavigationBar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -268,13 +269,13 @@ const  handleSubOptionMouseLeave =()=>{
           </Nav>
 
           {/* Login and Join buttons */}
-          <Nav>
-            <Link to='/LoginPage'>
-              <Button variant="outline-none btn-md" className="me-2 btn-login">Login</Button>
-            </Link>
-            <Link to="/LoginPage">
-              <Button variant="primary btn-sm" className="btn-join">Join for free</Button>
-            </Link>
+          <Nav className='login-btn'>
+          <ReusableButtons label="Login" linkTo="/LoginPage" customClass="primary me-4" />
+          
+      
+      
+            <ReusableButtons label="Join for free" linkTo="/LoginPage" customClass="secondary" />
+
           </Nav>
         </Navbar.Collapse>
       </Container>
