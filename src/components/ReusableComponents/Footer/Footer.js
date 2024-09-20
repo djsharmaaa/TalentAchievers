@@ -109,9 +109,9 @@ const Footer = () => {
                 <hr />
             </Container>
             <Container>
-                <Row>
-                    <Col xs={12} md={12} className="text-center">
-                        <Col md={2} >
+                <Row  className='d-flex align-items-center'>
+                   
+                        <Col  >
                         <p className="small">&copy; 2024 Your Company. All rights reserved.</p>
                         </Col>
                         <Col md={2} >
@@ -138,7 +138,7 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </Col>
-                    </Col>
+                  
                 </Row>
             </Container>
         </footer>
